@@ -1,71 +1,9 @@
-<?php
-// Include config file
-require_once "../../config/db.php";
- 
-// Define variables and initialize with empty values
-$snamee = $sdesc = "";
-$sname_err = $sdesc_err = "";
-$date = date('d-m-Y');
- 
-// Processing form data when form is submitted
-if($_SERVER["REQUEST_METHOD"] == "POST"){
-    // Validate name
-    $input_name = trim($_POST["sname"]);
-    if(empty($input_name)){
-        $sname_err = "Please enter service name";
-    } elseif(!filter_var($input_name, FILTER_VALIDATE_REGEXP, array("options"=>array("regexp"=>"/^[a-zA-Z\s]+$/")))){
-        $sname_err = "Please enter a valid service name";
-    } else{
-        $snamee = $input_name;
-    }
-    
-    // Validate address
-    $input_address = trim($_POST["sdescription"]);
-    if(empty($input_address)){
-        $sdesc_err = "Please enter service description";     
-    } else{
-        $sdesc = $input_address;
-    }
-   
-    
-    // Check input errors before inserting in database
-    if(empty($sname_err) && empty($sdesc_err)){
-        // Prepare an insert statement
-        $sql = "INSERT INTO add_service (sname, sdescription,dateposted) VALUES (?, ?,?)";
-         
-        if($stmt = mysqli_prepare($link, $sql)){
-            // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "sss", $param_sname, $param_sdesc,$param_date);
-            
-            // Set parameters
-            $param_sname = $snamee;
-            $param_sdesc = $sdesc;
-            $param_date=$date;
-            
-            // Attempt to execute the prepared statement
-            if(mysqli_stmt_execute($stmt)){
-                // Records created successfully. Redirect to landing page
-                header("location: ../../index.php");
-                exit();
-            } else{
-                echo "Something went wrong. Please try again later.";
-            }
-        }
-         
-        // Close statement
-        mysqli_stmt_close($stmt);
-    }
-    
-    // Close connection
-    mysqli_close($link);
-}
-?>
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 3 | Project Edit</title>
+  <title>AIDL</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -77,6 +15,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body class="hold-transition sidebar-mini">
 <!-- Site wrapper -->
@@ -95,12 +34,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Service Add</h1>
+            <h1>Add Photos</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Service Add</li>
+              <li class="breadcrumb-item active">Add Photos</li>
             </ol>
           </div>
         </div>
@@ -113,30 +52,32 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <div class="col-md-6">
           <div class="card card-primary">
             <div class="card-header">
-              <h3 class="card-title">General</h3>
+              <h3 class="card-title">Gallery</h3>
 
               <div class="card-tools">
                 <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
                   <i class="fas fa-minus"></i></button>
               </div>
             </div>
-            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" id="upload_multiple_images" method="post" enctype="multipart/form-data">
             <div class="card-body">
-              <div class="form-group<?php echo (!empty($sname_err)) ? 'has-error' : ''; ?>">
-                <label for="inputName">Service Name</label>
-                <input type="text" id="inputName" name="sname" class="form-control" value="<?php echo $snamee; ?>">
-                <span class="help-block" style="color: red;"><?php echo $sname_err;?></span>
+              <div class="form-group">
+                <label for="inputName">Image Tittle</label>
+                <input type="text" id="inputName" name="tittle" class="form-control" >
+             
               </div>
-              <div class="form-group<?php echo (!empty($sdesc_err)) ? 'has-error' : ''; ?>">
-                <label for="inputDescription">Service Description</label>
-                <textarea id="inputDescription" name="sdescription" class="form-control" rows="4"><?php echo $sdesc; ?></textarea>
-                <span class="help-block" style="color: red;"><?php echo $sdesc_err;?></span>
+              <div class="form-group">
+                <label for="inputDescription">Choose Image</label>
+                <label for="fileUpload" class="file-upload btn btn-primary btn-block rounded-pill shadow"><i class="fa fa-upload mr-2"></i>Browse for file ...
+                    <input id="fileUpload" type="file" name="image[]" id="image" multiple accept=".jpg, .png, .gif" >
+                </label>
+               
               </div>
              <div class="form-group">
              <a href="../../index.php" class="btn btn-secondary">Cancel</a>
-          <input type="submit" value="Add new service" class="btn btn-success float-right">
+          <input type="submit" value="Add Photo" name="insert" id="insert"  class="btn btn-success float-right">
              </div>
-              
+             <div id="images_list"></div>
             </div>
             <!-- /.card-body -->
           </div>
@@ -170,3 +111,54 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <script src="../../dist/js/demo.js"></script>
 </body>
 </html>
+
+
+
+<script>  
+$(document).ready(function(){
+  load_images();
+
+function load_images()
+{
+    $.ajax({
+        url:"fetch_images.php",
+        success:function(data)
+        {
+            $('#images_list').html(data);
+        }
+    });
+}
+   
+ 
+    $('#upload_multiple_images').on('submit', function(event){
+        event.preventDefault();
+        var image_name = $('#image').val();
+        if(image_name == '')
+        {
+            alert("Please Select Image");
+            return false;
+        }
+        else
+        {
+            $.ajax({
+                url:"multipleImages.php",
+                method:"POST",
+                data: new FormData(this),
+                contentType:false,
+                cache:false,
+                processData:false,
+                success:function(data)
+                {
+                  console.log("======",data)
+                    $('#image').val('');
+                    load_images();
+                   
+                }
+            });
+        }
+    });
+ 
+});  
+</script>
+
+

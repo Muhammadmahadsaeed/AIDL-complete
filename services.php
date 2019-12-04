@@ -1,7 +1,7 @@
 <?php require_once('../../config/db.php');
 
 
-$sql = "SELECT * FROM photos";
+$sql = "SELECT * FROM add_service";
 
 
 
@@ -48,12 +48,12 @@ $sql = "SELECT * FROM photos";
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1>Gallery</h1>
+                            <h1>Services</h1>
                         </div>
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item active">Gallery</li>
+                                <li class="breadcrumb-item active">Services</li>
                             </ol>
                         </div>
                     </div>
@@ -124,123 +124,87 @@ $sql = "SELECT * FROM photos";
                         </div>
                     </div>
 
-                    <div class="card-body">
+                    <div class="card-body p-0">
 
                         <!-- row start -->
                         <div class="row">
 
+
+
+
+
                             <div class="tab-content">
                                 <div id="allimg" class="tab-pane active"><br>
-                                    <div class="container">
-                                        <div class="row1">
-                                            <div class="column">
-                                                <div class="card1">
-                                                    <figure class="hover-effect-img move-down move-down-first">
-                                                        <a data-size="1920x1080" href="./images/friendship love.png">
-                                                            <img alt="Image description" class="img-responsive"
-                                                                src="./images/friendship love.png" height="100px"
-                                                                width="100px"></a>
-                                                        <figcaption>
-                                                            <span class="img-caption">Image description 1</span>
-                                                            <div class="hover-effect"></div>
-                                                            <div class="hover-icons">
-                                                                <a class="ion-ios-plus-empty " href="#"></a>
-                                                            </div>
-                                                        </figcaption>
-                                                    </figure>
-                                                </div>
-                                            </div>
-                                            <div class="column">
-                                                <div class="card1">
-                                                    <figure class="hover-effect-img move-down move-down-first">
-                                                        <a data-size="1920x1080" href="./images/friendship love.png">
-                                                            <img alt="Image description" class="img-responsive"
-                                                                src="./images/friendship love.png" height="100px"
-                                                                width="100px"></a>
-                                                        <figcaption>
-                                                            <span class="img-caption">Image description 1</span>
-                                                            <div class="hover-effect"></div>
-                                                            <div class="hover-icons">
-                                                                <a class="ion-ios-plus-empty " href="#"></a>
-                                                            </div>
-                                                        </figcaption>
-                                                    </figure>
-                                                </div>
-                                            </div>
-                                            <div class="column">
-                                                <div class="card1">
-                                                    <figure class="hover-effect-img move-down move-down-first">
-                                                        <a data-size="1920x1080" href="./images/friendship love.png">
-                                                            <img alt="Image description" class="img-responsive"
-                                                                src="./images/friendship love.png" height="100px"
-                                                                width="100px"></a>
-                                                        <figcaption>
-                                                            <span class="img-caption">Image description 1</span>
-                                                            <div class="hover-effect"></div>
-                                                            <div class="hover-icons">
-                                                                <a class="ion-ios-plus-empty " href="#"></a>
-                                                            </div>
-                                                        </figcaption>
-                                                    </figure>
-                                                </div>
-                                            </div>
-                                            <div class="column">
-                                                <div class="card1">
-                                                    <figure class="hover-effect-img move-down move-down-first">
-                                                        <a data-size="1920x1080" href="./images/friendship love.png">
-                                                            <img alt="Image description" class="img-responsive"
-                                                                src="./images/friendship love.png" height="100px"
-                                                                width="100px"></a>
-                                                        <figcaption>
-                                                            <span class="img-caption">Image description 1</span>
-                                                            <div class="hover-effect"></div>
-                                                            <div class="hover-icons">
-                                                                <a class="ion-ios-plus-empty " href="#"></a>
-                                                            </div>
-                                                        </figcaption>
-                                                    </figure>
-                                                </div>
-                                            </div>
-                                            <div class="column">
-                                                <div class="card1">
-                                                    <figure class="hover-effect-img move-down move-down-first">
-                                                        <a data-size="1920x1080" href="./images/friendship love.png">
-                                                            <img alt="Image description" class="img-responsive"
-                                                                src="./images/friendship love.png" height="200px"
-                                                                width="200px"></a>
-                                                        <figcaption>
-                                                            <span class="img-caption">Image description 1</span>
-                                                            <div class="hover-effect"></div>
-                                                            <div class="hover-icons">
-                                                                <a class="ion-ios-plus-empty " href="#"></a>
-                                                            </div>
-                                                        </figcaption>
-                                                    </figure>
-                                                </div>
-                                            </div>
-                                            <div class="column">
-                                                <div class="card1">
-                                                    <figure class="hover-effect-img move-down move-down-first">
-                                                        <a data-size="1920x1080" href="./images/friendship love.png">
-                                                            <img alt="Image description" class="img-responsive"
-                                                                src="./images/friendship love.png" height="100px"
-                                                                width="100px"></a>
-                                                        <figcaption>
-                                                            <span class="img-caption">Image description 1</span>
-                                                            <div class="hover-effect"></div>
-                                                            <div class="hover-icons">
-                                                                <a class="ion-ios-plus-empty " href="#"></a>
-                                                            </div>
-                                                        </figcaption>
-                                                    </figure>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <?php
+                                        if ($result = mysqli_query($link, $sql)) {
+                                          if (mysqli_num_rows($result) > 0) {
+                                    ?>
+                                    <table class="table table-striped projects">
+                                        <thead>
+                                            <tr>
+                                                <th style="width: 1%">
+                                                    SID
+                                                </th>
+                                                <th style="width: 20%">
+                                                    Service Name
+                                                </th>
+                                                <th style="width: 50%">
+                                                    Service Description
+                                                </th>
 
 
+                                                <th style="width: 20%">
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php while ($row = mysqli_fetch_array($result)) { ?>
+                                            <tr>
+                                                <td>
+                                                    <?= $row['sid'] ?>
+                                                </td>
+                                                <td>
+                                                    <a>
+                                                        <?= $row['sname'] ?>
+                                                    </a>
+                                                    <br />
+                                                    <small>
+                                                        Created <?= $row['dateposted'] ?>
+                                                    </small>
+                                                </td>
+                                                <td>
+                                                    <p><?= $row['sdescription'] ?></p>
+                                                </td>
 
+                                                <td class="project-actions text-right">
 
+                                                    <a class="btn btn-info btn-sm"
+                                                        href="services_update.php?id=<?= $row['sid'] ?>">
+                                                        <i class="fas fa-pencil-alt">
+                                                        </i>
+                                                        Edit
+                                                    </a>
+                                                    <a style="color: white;" class="btn btn-danger btn-sm"
+                                                        class="delbutton" id="<?= $row['sid'] ?>" onclick="dlt(this)">
+                                                        <i class="fas fa-trash">
+                                                        </i>
+                                                        Delete
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <?php
+                                                }
+                                                mysqli_free_result($result);
+                                              } else {
+                                                echo "No records matching your query were found.";
+                                              }
+                                            } else {
+                                              echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+                                            }
+                                            ?>
+
+                                        </tbody>
+                                    </table>
                                 </div>
                                 <div id="Alser" class="tab-pane fade"><br>
                                     <div class="legendary-gallery">

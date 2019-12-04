@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 03, 2019 at 04:28 PM
+-- Generation Time: Dec 04, 2019 at 04:28 PM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.1.33
 
@@ -63,7 +63,8 @@ CREATE TABLE `add_product` (
 INSERT INTO `add_product` (`p_id`, `p_name`, `p_description`, `p_img`) VALUES
 (14, 'as', 'fdhhdfhdfhdfhfdhddfhh', '250px-National_University_of_Computer_and_Emerging_Sciences_logo.png'),
 (15, 'new product', 'aaaaaa', '68710457_223450105240650_244696394365927424_n.jpg'),
-(16, 'new', 'product', 'punisher-1920x1080-logo-skull-dark-background-minimal-4k-17130.png');
+(16, 'new', 'product', 'punisher-1920x1080-logo-skull-dark-background-minimal-4k-17130.png'),
+(17, 'fdh', 'fdsg', 'backblue.gif');
 
 -- --------------------------------------------------------
 
@@ -83,7 +84,29 @@ CREATE TABLE `add_service` (
 --
 
 INSERT INTO `add_service` (`sid`, `sname`, `sdescription`, `dateposted`) VALUES
-(16, 'new service', 'hello world', '23-11-2019');
+(16, 'new service', 'hello world', '23-11-2019'),
+(17, 'sadf', 'sfsaf', '04-12-2019');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `photos`
+--
+
+CREATE TABLE `photos` (
+  `photo_id` int(11) NOT NULL,
+  `tittle` varchar(255) NOT NULL,
+  `images` longblob NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `photos`
+--
+
+INSERT INTO `photos` (`photo_id`, `tittle`, `images`) VALUES
+(1, 'metkon', ''),
+(2, 'metkon', ''),
+(3, 'metkon', 0x666164652e676966);
 
 --
 -- Indexes for dumped tables
@@ -108,6 +131,12 @@ ALTER TABLE `add_service`
   ADD PRIMARY KEY (`sid`);
 
 --
+-- Indexes for table `photos`
+--
+ALTER TABLE `photos`
+  ADD PRIMARY KEY (`photo_id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -121,13 +150,19 @@ ALTER TABLE `add_client`
 -- AUTO_INCREMENT for table `add_product`
 --
 ALTER TABLE `add_product`
-  MODIFY `p_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `p_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `add_service`
 --
 ALTER TABLE `add_service`
-  MODIFY `sid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `sid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+--
+-- AUTO_INCREMENT for table `photos`
+--
+ALTER TABLE `photos`
+  MODIFY `photo_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

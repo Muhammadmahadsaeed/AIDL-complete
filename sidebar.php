@@ -96,7 +96,7 @@ $chkk="/AIDL/pages/examples"
             <a href="./pages/services.html" class="nav-link">
               <i class="nav-icon fas fa-book"></i>
               <p>
-                Services
+                Gallery
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>
@@ -106,13 +106,13 @@ $chkk="/AIDL/pages/examples"
               <li class="nav-item">
                 <a href=<?php echo ($currURL==$chkk?"services.php":$chkk."/services.php") ?> class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>All Services</p>
+                  <p>All Photos</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href=<?php echo ($currURL==$chkk?"services_add.php":$chkk."/services_add.php") ?> class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Add Services</p>
+                  <p>Add Photos</p>
                 </a>
               </li>
              
