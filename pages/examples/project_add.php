@@ -17,6 +17,8 @@
   <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+  <link rel="stylesheet" href="./style.css">
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -73,15 +75,13 @@
                     <input id="inputDescription" name="email" class="form-control" ></textarea>
                   </div>
                   <div class="form-group">
-                    <label for="sel1">Product Category</label>
-                    <select class="form-control" id="sel1" name="sel1">
-                      <option>Physics</option>
-                      <option>Engineering Civil
-                  Mech.Materials. Metallurgy</option>
-                      <option>Earth Sciences</option>
-                      <option>Teaching Aids</option>
-                      <option>Nanotechnology</option>
-                    </select>
+                    <label for="sel1">Product Category</label><br>
+                    
+                    <input type="checkbox" name="check_list[]" value="Physices"><label>PHYSICS</label><br>
+                    <input type="checkbox" name="check_list[]" value="Engineering"><label>Engineering Civil Mech.Materials. Metallurgy</label><br>
+                    <input type="checkbox" name="check_list[]" value="Earth"><label>Earth Sciences</label><br>
+                    <input type="checkbox" name="check_list[]" value="Teaching"><label>Teaching Aids</label><br>
+                    
                   </div>
 
                 </div>
@@ -102,7 +102,12 @@
                 <div class="card-body">
                   <div class="form-group">
                     <label for="inputEstimatedBudget">Product Image</label>
-                    <input type="file" name="image" id="inputEstimatedBudget" class="form-control">
+                    <label for="inputEstimatedBudget" class="file-upload btn btn-primary btn-block rounded-pill shadow">
+                      <i class="fa fa-upload mr-2"></i>
+                      Browse for file ...
+                       <input type="file" name="image" id="inputEstimatedBudget">
+                    </label>
+                    <!-- <input type="file" name="image" id="inputEstimatedBudget" class="form-control"> -->
                   </div>
 
                 </div>
@@ -155,33 +160,49 @@ if (isset($_POST['submit'])) { // Fetching variables of the form which travels i
   $p_name = $_POST["name"];
   $p_des = $_POST["email"];
   $image = $_FILES['image']['name'];
-  $cat=$_POST['sel1'];
+  // $cat=$_POST['sel1'];
+  if(!empty($_POST['check_list'])) {
+    // Counting number of checked checkboxes.
+    $checked_count = count($_POST['check_list']);
+    echo "You have selected following ".$checked_count." option(s): <br/>";
+    // Loop to store and display values of individual checked checkbox.
+    $selectedCategories = array();
+    foreach($_POST['check_list'] as $selected) {
+      array_push($selectedCategories,strtolower($selected));
+   
+    }
+    print_r($selectedCategories);
+   
+    }
+    else{
+    echo "<b>Please Select Atleast One Option.</b>";
+    }
   // Get text
   // $image_text = mysqli_real_escape_string($db, $_POST['image_text']);
-  if(strtolower($cat)==strtolower('physics'))
-  {
-$cat='py';
-  }
-  else if (strtolower($cat)==strtolower('Engineering Civil Mech.Materials. Metallurgy'))
-  {
-$cat='ecmmm';
-  }
-  elseif (strtolower($cat)==strtolower('Earth Sciences'))
-  {
-$cat='es';
-  }
-  elseif (strtolower($cat)==strtolower('Teaching Aids'))
-  {
-$cat='ta';
-  }
-  else
-  {
-$cat='nt';
-  }
+//   if(strtolower($cat)==strtolower('physics'))
+//   {
+// $cat='py';
+//   }
+//   else if (strtolower($cat)==strtolower('Engineering Civil Mech.Materials. Metallurgy'))
+//   {
+// $cat='ecmmm';
+//   }
+//   elseif (strtolower($cat)==strtolower('Earth Sciences'))
+//   {
+// $cat='es';
+//   }
+//   elseif (strtolower($cat)==strtolower('Teaching Aids'))
+//   {
+// $cat='ta';
+//   }
+//   else
+//   {
+// $cat='nt';
+//   }
   // image file directory
   $target = "images/" . basename($image);
 
-  $sql = "INSERT INTO add_product (p_name,p_url,p_type,p_img) VALUES ('$p_name','$p_des','$cat','$image')";
+  $sql = "INSERT INTO add_product (p_name,p_url,p_type,p_img) VALUES ('$p_name','$p_des','$selectedCategories','$image')";
   // execute query
   mysqli_query($link, $sql);
 
