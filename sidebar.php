@@ -93,7 +93,7 @@ $chkk="/AIDL/pages/examples"
             </ul>
           </li>
           <li class="nav-item has-treeview">
-            <a href="./pages/services.html" class="nav-link">
+            <a href="#" class="nav-link">
               <i class="nav-icon fas fa-book"></i>
               <p>
                 Gallery
@@ -140,6 +140,33 @@ $chkk="/AIDL/pages/examples"
                 <a href=<?php echo ($currURL==$chkk?"clients_add.php":$chkk."/clients_add.php") ?> class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Add Client</p>
+                </a>
+              </li>
+             
+             
+            </ul>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-book"></i>
+              <p>
+                Our Teams
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+             
+              
+              <li class="nav-item">
+                <a href=<?php echo ($currURL==$chkk?"AllTeams.php":$chkk."/AllTeams.php") ?> class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>All Team Members</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href=<?php echo ($currURL==$chkk?"AllTeams_add.php":$chkk."/AllTeams_add.php") ?> class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Add Team Member</p>
                 </a>
               </li>
              

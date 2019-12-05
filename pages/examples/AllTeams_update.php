@@ -1,5 +1,61 @@
 <?php
-  include('cadd.php')
+require_once('../../config/db.php');
+$upload_dir = 'images/';
+
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
+    $sql = "select * from add_client where cid=" . $id;
+    $result = mysqli_query($link, $sql);
+    if (mysqli_num_rows($result) > 0) {
+        $row = mysqli_fetch_assoc($result);
+    } else {
+        $errorMsg = 'Could not Find Any Record';
+    }
+}
+
+if (isset($_POST['Submit'])) {
+    $name = $_POST['name'];
+    $desc = $_POST['desc'];
+
+    $imgName = $_FILES['image']['name'];
+    $imgTmp = $_FILES['image']['tmp_name'];
+    $imgSize = $_FILES['image']['size'];
+
+    if ($imgName) {
+
+        $imgExt = strtolower(pathinfo($imgName, PATHINFO_EXTENSION));
+
+        $allowExt  = array('jpeg', 'jpg', 'png', 'gif');
+
+        $userPic = time() . '_' . rand(1000, 9999) . '.' . $imgExt;
+
+        if (in_array($imgExt, $allowExt)) {
+
+            if ($imgSize < 5000000) {
+                unlink($upload_dir . $row['cimage']);
+                move_uploaded_file($imgTmp, $upload_dir . $userPic);
+            } else {
+                $errorMsg = 'Image too large';
+            }
+        } else {
+            $errorMsg = 'Please select a valid image';
+        }
+    } else {
+
+        $userPic = $row['cimage'];
+    }
+
+    if (!isset($errorMsg)) {
+        $sql = "update add_client set cname = '" . $name . "', cdesc = '" . $desc . "',cimage = '" . $userPic . "' where cid=" . $id;
+        $result = mysqli_query($link, $sql);
+        if ($result) {
+            $successMsg = 'New record updated successfully';
+            header('Location:clients.php');
+        } else {
+            $errorMsg = 'Error ' . mysqli_error($link);
+        }
+    }
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -19,8 +75,6 @@
     <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-
-    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -54,7 +108,7 @@
 
             <!-- Main content -->
             <section class="content">
-                <form class="" action="cadd.php" method="post" enctype="multipart/form-data">
+                <form class="" action="" method="post" enctype="multipart/form-data">
 
                     <div class="row">
 
@@ -64,8 +118,7 @@
                                     <h3 class="card-title">General</h3>
 
                                     <div class="card-tools">
-                                        <button type="button" class="btn btn-tool" data-card-widget="collapse"
-                                            data-toggle="tooltip" title="Collapse">
+                                        <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
                                             <i class="fas fa-minus"></i></button>
                                     </div>
                                 </div>
@@ -74,12 +127,11 @@
                                     <div class="card-body">
                                         <div class="form-group">
                                             <label for="inputName">Client Name</label>
-                                            <input type="text" id="inputName" name="name" class="form-control">
+                                            <input type="text" id="inputName" name="name" value="<?= $row['cname']; ?>" class="form-control">
                                         </div>
                                         <div class="form-group">
                                             <label for="inputDescription">Client Description</label>
-                                            <textarea id="inputDescription" name="desc" class="form-control"
-                                                rows="4"></textarea>
+                                            <textarea id="inputDescription" name="desc" class="form-control" rows="4"><?= $row['cdesc']; ?></textarea>
                                         </div>
 
 
@@ -94,20 +146,16 @@
                                     <h3 class="card-title">Client Image</h3>
 
                                     <div class="card-tools">
-                                        <button type="button" class="btn btn-tool" data-card-widget="collapse"
-                                            data-toggle="tooltip" title="Collapse">
+                                        <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
                                             <i class="fas fa-minus"></i></button>
                                     </div>
                                 </div>
                                 <div class="card-body">
                                     <div class="form-group">
-                                        <label for="inputEstimatedBudget"
-                                            class="file-upload btn btn-primary btn-block rounded-pill shadow"><i
-                                                class="fa fa-upload mr-2"></i>Browse for file ...
-                                            <input type="file" id="inputEstimatedBudget" name="image">
-                                        </label>
-                                        <!-- <label for="inputEstimatedBudget">Client Image</label>
-                                        <input type="file" id="inputEstimatedBudget" name="image" class="form-control"> -->
+                                        <label for="inputEstimatedBudget">Client Image</label>
+                                        <img src="<?php echo $upload_dir . $row['cimage'] ?>" width="100">
+
+                                        <input type="file" id="inputEstimatedBudget" name="image" class="form-control">
                                     </div>
 
                                 </div>
@@ -121,8 +169,7 @@
                     <div class="row">
                         <div class="col-12">
                             <a href="#" class="btn btn-secondary">Cancel</a>
-                            <input type="submit" name="Submit" value="Create new Client"
-                                class="btn btn-success float-right">
+                            <input type="submit" name="Submit" value="Create new Porject" class="btn btn-success float-right">
                         </div>
                     </div>
                 </form>

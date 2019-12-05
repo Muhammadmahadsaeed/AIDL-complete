@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 04, 2019 at 04:28 PM
+-- Generation Time: Dec 05, 2019 at 04:52 PM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.1.33
 
@@ -52,7 +52,8 @@ INSERT INTO `add_client` (`cid`, `cname`, `cdesc`, `cimage`) VALUES
 CREATE TABLE `add_product` (
   `p_id` int(11) NOT NULL,
   `p_name` varchar(255) NOT NULL,
-  `p_description` varchar(255) NOT NULL,
+  `p_url` varchar(255) NOT NULL,
+  `p_type` varchar(255) NOT NULL,
   `p_img` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -60,11 +61,21 @@ CREATE TABLE `add_product` (
 -- Dumping data for table `add_product`
 --
 
-INSERT INTO `add_product` (`p_id`, `p_name`, `p_description`, `p_img`) VALUES
-(14, 'as', 'fdhhdfhdfhdfhfdhddfhh', '250px-National_University_of_Computer_and_Emerging_Sciences_logo.png'),
-(15, 'new product', 'aaaaaa', '68710457_223450105240650_244696394365927424_n.jpg'),
-(16, 'new', 'product', 'punisher-1920x1080-logo-skull-dark-background-minimal-4k-17130.png'),
-(17, 'fdh', 'fdsg', 'backblue.gif');
+INSERT INTO `add_product` (`p_id`, `p_name`, `p_url`, `p_type`, `p_img`) VALUES
+(14, 'as', 'fdhhdfhdfhdfhfdhddfhh', '', '250px-National_University_of_Computer_and_Emerging_Sciences_logo.png'),
+(15, 'new product', 'aaaaaa', '', '68710457_223450105240650_244696394365927424_n.jpg'),
+(16, 'new', 'product', '', 'punisher-1920x1080-logo-skull-dark-background-minimal-4k-17130.png'),
+(17, 'hello', 'www.hello.com', 'Earth Sciences', '250px-National_University_of_Computer_and_Emerging_Sciences_logo.png'),
+(18, 'new', 'www.helloworld.com', 'nt', '250px-National_University_of_Computer_and_Emerging_Sciences_logo.png'),
+(19, 'sdfsdf', 'saudkhan@riu.edu.pk', 'ecmmm', 'fast_logo_text.png'),
+(20, 'sdfsdf', 'aaaa@a.com', 'ta', 'friendship love.png'),
+(21, 'habibi', 'muneeb_420@gmail.com', 'es', 'friendship love.png'),
+(22, 'client new', 'aaaa@a.com', 'py', 'friendship love.png'),
+(23, '', '', 'nt', ''),
+(24, '', '', 'nt', ''),
+(25, '', '', 'nt', ''),
+(26, '', '', 'nt', ''),
+(27, 'metkon', 'www.metkon.com', 'Array', 'about us.jpg');
 
 -- --------------------------------------------------------
 
@@ -96,7 +107,7 @@ INSERT INTO `add_service` (`sid`, `sname`, `sdescription`, `dateposted`) VALUES
 CREATE TABLE `photos` (
   `photo_id` int(11) NOT NULL,
   `tittle` varchar(255) NOT NULL,
-  `images` longblob NOT NULL
+  `images` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -104,9 +115,11 @@ CREATE TABLE `photos` (
 --
 
 INSERT INTO `photos` (`photo_id`, `tittle`, `images`) VALUES
-(1, 'metkon', ''),
-(2, 'metkon', ''),
-(3, 'metkon', 0x666164652e676966);
+(55, 'metkon', 'about us.jpg'),
+(56, 'metkon', 'Fast.jpg'),
+(57, 'metkon', 'fyp page 2.jpg'),
+(58, 'metkon', 'fyp page.jpg'),
+(59, 'metkon', 'fyp portal home.jpg');
 
 --
 -- Indexes for dumped tables
@@ -150,7 +163,7 @@ ALTER TABLE `add_client`
 -- AUTO_INCREMENT for table `add_product`
 --
 ALTER TABLE `add_product`
-  MODIFY `p_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `p_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `add_service`
@@ -162,7 +175,7 @@ ALTER TABLE `add_service`
 -- AUTO_INCREMENT for table `photos`
 --
 ALTER TABLE `photos`
-  MODIFY `photo_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `photo_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
