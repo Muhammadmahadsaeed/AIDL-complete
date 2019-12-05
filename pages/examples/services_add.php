@@ -1,3 +1,4 @@
+<?php require_once('../../config/db.php') ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -69,13 +70,13 @@
               <div class="form-group">
                 <label for="inputDescription">Choose Image</label>
                 <label for="fileUpload" class="file-upload btn btn-primary btn-block rounded-pill shadow"><i class="fa fa-upload mr-2"></i>Browse for file ...
-                    <input id="fileUpload" type="file" name="image[]" id="image" multiple accept=".jpg, .png, .gif" >
+                    <input id="fileUpload" type="file" multiple="" name="img[]">
                 </label>
                
               </div>
              <div class="form-group">
              <a href="../../index.php" class="btn btn-secondary">Cancel</a>
-          <input type="submit" value="Add Photo" name="insert" id="insert"  class="btn btn-success float-right">
+                <input type="submit" value="Add Photo" name="submit" id="insert"  class="btn btn-success float-right">
              </div>
              <div id="images_list"></div>
             </div>
@@ -112,53 +113,41 @@
 </body>
 </html>
 
+<?php 
 
-
-<script>  
-$(document).ready(function(){
-  load_images();
-
-function load_images()
-{
-    $.ajax({
-        url:"fetch_images.php",
-        success:function(data)
-        {
-            $('#images_list').html(data);
-        }
-    });
+if(isset($_POST["submit"])){
+$filename = $_FILES['img']['name'];
+$file_tmp = $_FILES['img']['tmp_name'];
+$filetype = $_FILES['img']['type'];
+$filesize = $_FILES['img']['size'];
+for($i=0; $i<=count($file_tmp)-1; $i++){
+if(!empty($file_tmp[$i])){
+$name = addslashes($filename[$i]);
+$temp = addslashes(file_get_contents($file_tmp[$i]));
+if(mysqli_query($link,"Insert into photos(tittle,images) values('$name','$temp')")){
 }
-   
- 
-    $('#upload_multiple_images').on('submit', function(event){
-        event.preventDefault();
-        var image_name = $('#image').val();
-        if(image_name == '')
-        {
-            alert("Please Select Image");
-            return false;
-        }
-        else
-        {
-            $.ajax({
-                url:"multipleImages.php",
-                method:"POST",
-                data: new FormData(this),
-                contentType:false,
-                cache:false,
-                processData:false,
-                success:function(data)
-                {
-                  console.log("======",data)
-                    $('#image').val('');
-                    load_images();
-                   
-                }
-            });
-        }
-    });
- 
-});  
-</script>
+else{
+echo "failed";
+echo "<br />";
+}
+}
+}
+}
+$res = mysqli_query($link,"SELECT * FROM photos");
+while($row = mysqli_fetch_array($res)){
+$displ = $row['images'];
+
+
+
+
+echo '<img src="data:image/jpeg;base64,'.base64_encode($displ).'" width = "250" height="250" />';
+echo "<br />";
+}
+
+
+?>
+
+
+
 
 

@@ -1,11 +1,5 @@
 <?php require_once('../../config/db.php');
 
-
-$sql = "SELECT * FROM photos";
-
-
-
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -131,17 +125,25 @@ $sql = "SELECT * FROM photos";
 
                             <div class="tab-content">
                                 <div id="allimg" class="tab-pane active"><br>
+                                  
+                                
                                     <div class="container">
                                         <div class="row1">
+                                        <?php $res = mysqli_query($link,"SELECT * FROM photos");
+                                                while($row = mysqli_fetch_array($res)){
+                                                    
+                                                    $displ = $row['images'];
+                                                    ?>
+                                               
                                             <div class="column">
+                                           
                                                 <div class="card1">
                                                     <figure class="hover-effect-img move-down move-down-first">
-                                                        <a data-size="1920x1080" href="./images/friendship love.png">
-                                                            <img alt="Image description" class="img-responsive"
-                                                                src="./images/friendship love.png" height="100px"
-                                                                width="100px"></a>
+                                                        <a data-size="1920x1080" href="">
+                                                        <?php echo '<img src="data:image/jpeg;base64,'.base64_encode($displ).'" width = "250" height="250" />';?>
+                                                        </a>
                                                         <figcaption>
-                                                            <span class="img-caption">Image description 1</span>
+                                                            <span class="img-caption"><?=$row['tittle'];?></span>
                                                             <div class="hover-effect"></div>
                                                             <div class="hover-icons">
                                                                 <a class="ion-ios-plus-empty " href="#"></a>
@@ -149,92 +151,9 @@ $sql = "SELECT * FROM photos";
                                                         </figcaption>
                                                     </figure>
                                                 </div>
+                                                
                                             </div>
-                                            <div class="column">
-                                                <div class="card1">
-                                                    <figure class="hover-effect-img move-down move-down-first">
-                                                        <a data-size="1920x1080" href="./images/friendship love.png">
-                                                            <img alt="Image description" class="img-responsive"
-                                                                src="./images/friendship love.png" height="100px"
-                                                                width="100px"></a>
-                                                        <figcaption>
-                                                            <span class="img-caption">Image description 1</span>
-                                                            <div class="hover-effect"></div>
-                                                            <div class="hover-icons">
-                                                                <a class="ion-ios-plus-empty " href="#"></a>
-                                                            </div>
-                                                        </figcaption>
-                                                    </figure>
-                                                </div>
-                                            </div>
-                                            <div class="column">
-                                                <div class="card1">
-                                                    <figure class="hover-effect-img move-down move-down-first">
-                                                        <a data-size="1920x1080" href="./images/friendship love.png">
-                                                            <img alt="Image description" class="img-responsive"
-                                                                src="./images/friendship love.png" height="100px"
-                                                                width="100px"></a>
-                                                        <figcaption>
-                                                            <span class="img-caption">Image description 1</span>
-                                                            <div class="hover-effect"></div>
-                                                            <div class="hover-icons">
-                                                                <a class="ion-ios-plus-empty " href="#"></a>
-                                                            </div>
-                                                        </figcaption>
-                                                    </figure>
-                                                </div>
-                                            </div>
-                                            <div class="column">
-                                                <div class="card1">
-                                                    <figure class="hover-effect-img move-down move-down-first">
-                                                        <a data-size="1920x1080" href="./images/friendship love.png">
-                                                            <img alt="Image description" class="img-responsive"
-                                                                src="./images/friendship love.png" height="100px"
-                                                                width="100px"></a>
-                                                        <figcaption>
-                                                            <span class="img-caption">Image description 1</span>
-                                                            <div class="hover-effect"></div>
-                                                            <div class="hover-icons">
-                                                                <a class="ion-ios-plus-empty " href="#"></a>
-                                                            </div>
-                                                        </figcaption>
-                                                    </figure>
-                                                </div>
-                                            </div>
-                                            <div class="column">
-                                                <div class="card1">
-                                                    <figure class="hover-effect-img move-down move-down-first">
-                                                        <a data-size="1920x1080" href="./images/friendship love.png">
-                                                            <img alt="Image description" class="img-responsive"
-                                                                src="./images/friendship love.png" height="200px"
-                                                                width="200px"></a>
-                                                        <figcaption>
-                                                            <span class="img-caption">Image description 1</span>
-                                                            <div class="hover-effect"></div>
-                                                            <div class="hover-icons">
-                                                                <a class="ion-ios-plus-empty " href="#"></a>
-                                                            </div>
-                                                        </figcaption>
-                                                    </figure>
-                                                </div>
-                                            </div>
-                                            <div class="column">
-                                                <div class="card1">
-                                                    <figure class="hover-effect-img move-down move-down-first">
-                                                        <a data-size="1920x1080" href="./images/friendship love.png">
-                                                            <img alt="Image description" class="img-responsive"
-                                                                src="./images/friendship love.png" height="100px"
-                                                                width="100px"></a>
-                                                        <figcaption>
-                                                            <span class="img-caption">Image description 1</span>
-                                                            <div class="hover-effect"></div>
-                                                            <div class="hover-icons">
-                                                                <a class="ion-ios-plus-empty " href="#"></a>
-                                                            </div>
-                                                        </figcaption>
-                                                    </figure>
-                                                </div>
-                                            </div>
+                                            <?php }; ?>
                                         </div>
                                     </div>
 
