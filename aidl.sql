@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 06, 2019 at 11:04 AM
--- Server version: 10.1.26-MariaDB
--- PHP Version: 7.0.23
+-- Generation Time: Dec 06, 2019 at 05:14 PM
+-- Server version: 10.4.8-MariaDB
+-- PHP Version: 7.1.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -144,7 +144,7 @@ CREATE TABLE `team_members` (
   `team_email` varchar(255) NOT NULL,
   `team_num` varchar(255) NOT NULL,
   `team_image` varchar(255) NOT NULL,
-  `create_on` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `create_on` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -152,8 +152,10 @@ CREATE TABLE `team_members` (
 --
 
 INSERT INTO `team_members` (`team_id`, `team_name`, `team_post`, `team_email`, `team_num`, `team_image`, `create_on`) VALUES
-(1, 'mahad', 'CEO', 'mahad@gamil.com', '0336', '72045293_2405902189548979_3466253820093267968_n.jpg', '2019-12-06 00:18:44'),
-(2, 'haq', 'CEO', 'haq@gmail.com', '0314', 'IMG-20191109-WA0004.jpg', '2019-12-06 00:45:39');
+(3, 'sohail tayyab', 'ceo', 'sohail.aidl@gmail.com', '0512348220', 'about us.jpg', '2019-12-06 17:01:32'),
+(4, 'ghulam rabbani', 'director faince', 'rabbanigorayya@yahoo.com', '02132729361', 'Fast.jpg', '2019-12-06 17:08:15'),
+(5, 'aqsa mehdi', 'sales and service engineer', 'aqsa@gmail.com', '0336', 'fyp page 2.jpg', '2019-12-06 17:09:41'),
+(6, 'aqsa mehdi', 'sales and service engineer', 'aqsa@gmail.com', '0336', 'fyp page 2.jpg', '2019-12-06 18:54:56');
 
 --
 -- Indexes for dumped tables
@@ -221,7 +223,7 @@ ALTER TABLE `photos`
 -- AUTO_INCREMENT for table `team_members`
 --
 ALTER TABLE `team_members`
-  MODIFY `team_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `team_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
