@@ -77,10 +77,11 @@
                   <div class="form-group">
                     <label for="sel1">Product Category</label><br>
                     
-                    <input type="checkbox" name="check_list[]" value="Physices"><label>PHYSICS</label><br>
-                    <input type="checkbox" name="check_list[]" value="Engineering"><label>Engineering Civil Mech.Materials. Metallurgy</label><br>
-                    <input type="checkbox" name="check_list[]" value="Earth"><label>Earth Sciences</label><br>
-                    <input type="checkbox" name="check_list[]" value="Teaching"><label>Teaching Aids</label><br>
+                    <input type="checkbox" name="check_list[]" value="py"><label>PHYSICS</label><br>
+                    <input type="checkbox" name="check_list[]" value="ecmmm"><label>Engineering Civil Mech.Materials. Metallurgy</label><br>
+                    <input type="checkbox" name="check_list[]" value="es"><label>Earth Sciences</label><br>
+                    <input type="checkbox" name="check_list[]" value="ta"><label>Teaching Aids</label><br>
+                    <input type="checkbox" name="check_list[]" value="nt"><label>Nano Technology</label><br>
                     
                   </div>
 
@@ -171,8 +172,8 @@ if (isset($_POST['submit'])) { // Fetching variables of the form which travels i
       array_push($selectedCategories,strtolower($selected));
    
     }
-    print_r($selectedCategories);
-   
+    // debug_to_console($selectedCategories);
+    $output = implode(',', $selectedCategories);
     }
     else{
     echo "<b>Please Select Atleast One Option.</b>";
@@ -202,7 +203,7 @@ if (isset($_POST['submit'])) { // Fetching variables of the form which travels i
   // image file directory
   $target = "images/" . basename($image);
 
-  $sql = "INSERT INTO add_product (p_name,p_url,p_type,p_img) VALUES ('$p_name','$p_des','$selectedCategories','$image')";
+  $sql = "INSERT INTO add_product (p_name,p_url,p_type,p_img) VALUES ('$p_name','$p_des','$output','$image')";
   // execute query
   mysqli_query($link, $sql);
 
