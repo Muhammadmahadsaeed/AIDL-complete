@@ -1,18 +1,37 @@
 <?php require_once('../../config/db.php');
-$sql="select * from add_product";
+$sql="select * from add_product where p_type LIKE '%,%'";
+$result = mysqli_query($link, $sql);
+$output = '';
+while($row = mysqli_fetch_assoc($result)){
+if(mysqli_num_rows($result) > 0){
+  
+  print_r(explode(',',$row['p_type'])); 
+}
 
-$sql1 = "SELECT * FROM add_product where p_type='py'";
+// else{
+//   $sql="select * from add_product where p_type not LIKE '%,%'";
+//   $result = mysqli_query($link, $sql);
+//   while ($row = mysqli_fetch_assoc($result)) {
+//     debug_to_console($row['p_type']);
+//   }
+}
 
-$sql2 = "SELECT * FROM add_product where p_type='ecmmm'";
-
-$sql3 = "SELECT * FROM add_product where p_type='es'";
-
-$sql4 = "SELECT * FROM add_product where p_type='ta'";
-
-$sql5 = "SELECT * FROM add_product where p_type='nt'";
-
-
-
+         
+$upload_dir = 'images/';
+if(isset($_GET['delete'])){
+  $id = $_GET['delete'];
+  $sql = "select * from add_product where p_id = ".$id;
+  $result = mysqli_query($link, $sql);
+  if(mysqli_num_rows($result) > 0){
+    $row = mysqli_fetch_assoc($result);
+    $image = $row['p_img'];
+    unlink($upload_dir.$image);
+    $sql = "delete from add_product where p_id=".$id;
+    if(mysqli_query($link, $sql)){
+      header('location:projects.php');
+    }
+  }
+}
 
 ?>
 
@@ -166,11 +185,7 @@ $sql5 = "SELECT * FROM add_product where p_type='nt'";
                                 </i>
                                 Edit
                               </a>
-                              <a class="btn btn-danger btn-sm" href="#">
-                                <i class="fas fa-trash">
-                                </i>
-                                Delete
-                              </a>
+                             <a href="projects.php?delete=<?php echo $row['p_id'] ?>" class="btn btn-danger" onclick="return confirm('Are you sure to delete this record?')"><i class="fas fa-trash"></i>Delete</a>
                             </td>
                           </tr>
                     <?php
@@ -245,11 +260,7 @@ $sql5 = "SELECT * FROM add_product where p_type='nt'";
                                 </i>
                                 Edit
                               </a>
-                              <a class="btn btn-danger btn-sm" href="#">
-                                <i class="fas fa-trash">
-                                </i>
-                                Delete
-                              </a>
+                             <a href="projects.php?delete=<?php echo $row['p_id'] ?>" class="btn btn-danger" onclick="return confirm('Are you sure to delete this record?')"><i class="fas fa-trash"></i>Delete</a>
                             </td>
                           </tr>
                     <?php
@@ -324,11 +335,7 @@ $sql5 = "SELECT * FROM add_product where p_type='nt'";
                                 </i>
                                 Edit
                               </a>
-                              <a class="btn btn-danger btn-sm" href="#">
-                                <i class="fas fa-trash">
-                                </i>
-                                Delete
-                              </a>
+                             <a href="projects.php?delete=<?php echo $row['p_id'] ?>" class="btn btn-info btn-sm" onclick="return confirm('Are you sure to delete this record?')"><i class="fas fa-trash"></i>Delete</a>
                             </td>
                           </tr>
                     <?php
@@ -403,11 +410,7 @@ $sql5 = "SELECT * FROM add_product where p_type='nt'";
                                 </i>
                                 Edit
                               </a>
-                              <a class="btn btn-danger btn-sm" href="#">
-                                <i class="fas fa-trash">
-                                </i>
-                                Delete
-                              </a>
+                             <a href="projects.php?delete=<?php echo $row['p_id'] ?>" class="btn btn-danger" onclick="return confirm('Are you sure to delete this record?')"><i class="fas fa-trash"></i>Delete</a>
                             </td>
                           </tr>
                     <?php
@@ -482,11 +485,7 @@ $sql5 = "SELECT * FROM add_product where p_type='nt'";
                                 </i>
                                 Edit
                               </a>
-                              <a class="btn btn-danger btn-sm" href="#">
-                                <i class="fas fa-trash">
-                                </i>
-                                Delete
-                              </a>
+                             <a href="projects.php?delete=<?php echo $row['p_id'] ?>" class="btn btn-danger" onclick="return confirm('Are you sure to delete this record?')"><i class="fas fa-trash"></i>Delete</a>
                             </td>
                           </tr>
                     <?php
@@ -561,11 +560,7 @@ $sql5 = "SELECT * FROM add_product where p_type='nt'";
                                 </i>
                                 Edit
                               </a>
-                              <a class="btn btn-danger btn-sm" href="#">
-                                <i class="fas fa-trash">
-                                </i>
-                                Delete
-                              </a>
+                             <a href="projects.php?delete=<?php echo $row['p_id'] ?>" class="btn btn-danger" onclick="return confirm('Are you sure to delete this record?')"><i class="fas fa-trash"></i>Delete</a>
                             </td>
                           </tr>
                     <?php
