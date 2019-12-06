@@ -104,13 +104,13 @@ $chkk="/AIDL/pages/examples"
              
               
               <li class="nav-item">
-                <a href=<?php echo ($currURL==$chkk?"services.php":$chkk."/services.php") ?> class="nav-link">
+                <a href=<?php echo ($currURL==$chkk?"gallery.php":$chkk."/gallery.php") ?> class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>All Photos</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href=<?php echo ($currURL==$chkk?"services_add.php":$chkk."/services_add.php") ?> class="nav-link">
+                <a href=<?php echo ($currURL==$chkk?"gallery_add.php":$chkk."/gallery_add.php") ?> class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Add Photos</p>
                 </a>
@@ -167,6 +167,33 @@ $chkk="/AIDL/pages/examples"
                 <a href=<?php echo ($currURL==$chkk?"AllTeams_add.php":$chkk."/AllTeams_add.php") ?> class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Add Team Member</p>
+                </a>
+              </li>
+             
+             
+            </ul>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-book"></i>
+              <p>
+                Promotions
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+             
+              
+              <li class="nav-item">
+                <a href=<?php echo ($currURL==$chkk?"promotions.php":$chkk."/promotions.php") ?> class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Promotions</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href=<?php echo ($currURL==$chkk?"add_promotions.php":$chkk."/add_promotions.php") ?> class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Add Promotions</p>
                 </a>
               </li>
              

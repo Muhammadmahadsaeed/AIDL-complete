@@ -1,3 +1,4 @@
+<?php require_once('../config/db.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -713,144 +714,338 @@
 
                                     <div class="tab-content">
                                         <div id="allimg" class="tab-pane active"><br>
-
-                                        </div>
-                                        <div id="Alser" class="tab-pane fade"><br>
                                             <div class="legendary-gallery">
                                                 <!-- gallery item 1 start -->
+                                                <?php $res = mysqli_query($link,"SELECT * FROM photos");
+                                                while($row = mysqli_fetch_array($res)){
+                                                    
+                                                   
+                                                    ?>
                                                 <figure
                                                     class="col-sm-6 col-md-4 col-lg-4 hover-effect-img move-down move-down-first">
-                                                    <a data-size="1920x1080" href="./img/background/hero-bg-1.jpg">
+                                                    <a data-size="1920x1080" href="../pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
                                                         <img alt="Image description" class="img-responsive"
-                                                            src="./img/background/hero-bg-1.jpg"></a>
+                                                            src="../pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
                                                     <figcaption>
                                                         <span class="img-caption">Image description 1</span>
                                                         <div class="hover-effect"></div>
                                                         <div class="hover-icons">
-                                                            <a class="ion-ios-plus-empty " href="#"></a>
+                                                            <a class="ion-ios-plus-empty " href="#">
+                                                                <span style="text-align:center"><?=$row['tittle'];?></span>
+                                                            </a>
                                                         </div>
                                                     </figcaption>
                                                 </figure>
-                                                <!-- gallery item 1 end -->
-                                                <!-- gallery item 2 start -->
-                                                <figure class="col-sm-6 col-md-4 col-lg-4 hover-effect-img move-down">
-                                                    <a data-size="1920x1080" href="./img/background/hero-bg-2.jpg"><img
-                                                            alt="Image description" class="img-responsive"
-                                                            src="./img/background/hero-bg-2.jpg"></a>
-                                                    <figcaption>
-                                                        <span class="img-caption">Image description 2</span>
-                                                        <div class="hover-effect"></div>
-                                                        <div class="hover-icons">
-                                                            <a class="ion-ios-plus-empty" href="#"></a>
-                                                        </div>
-                                                    </figcaption>
-                                                </figure><!-- gallery item 2 end -->
-                                                <!-- gallery item 3 start -->
-                                                <figure class="col-sm-6 col-md-4 col-lg-4 hover-effect-img move-down">
-                                                    <a data-size="1920x1080" href="./img/background/hero-bg-3.jpg"><img
-                                                            alt="Image description" class="img-responsive"
-                                                            src="./img/background/hero-bg-3.jpg"></a>
-                                                    <figcaption>
-                                                        <span class="img-caption">Image description 3</span>
-                                                        <div class="hover-effect"></div>
-                                                        <div class="hover-icons">
-                                                            <a class="ion-ios-plus-empty" href="#"></a>
-                                                        </div>
-                                                    </figcaption>
-                                                </figure><!-- gallery item 3 end -->
-                                                <!-- gallery item 4 start -->
-                                                <figure
-                                                    class="col-sm-6 col-md-4 col-lg-4 hover-effect-img move-down move-down-last">
-                                                    <a data-size="1920x1080" href="./img/background/hero-bg-4.jpg"><img
-                                                            alt="Image description" class="img-responsive"
-                                                            src="./img/background/hero-bg-4.jpg"></a>
-                                                    <figcaption>
-                                                        <span class="img-caption">Image description 4</span>
-                                                        <div class="hover-effect"></div>
-                                                        <div class="hover-icons">
-                                                            <a class="ion-ios-plus-empty" href="#"></a>
-                                                        </div>
-                                                    </figcaption>
-                                                </figure>
-                                                <figure class="col-sm-6 col-md-4 col-lg-4 hover-effect-img move-down">
-                                                    <a data-size="1920x1080" href="./img/background/hero-bg-5.jpg"><img
-                                                            alt="Image description" class="img-responsive"
-                                                            src="./img/background/hero-bg-3.jpg"></a>
-                                                    <figcaption>
-                                                        <span class="img-caption">Image description 3</span>
-                                                        <div class="hover-effect"></div>
-                                                        <div class="hover-icons">
-                                                            <a class="ion-ios-plus-empty" href="#"></a>
-                                                        </div>
-                                                    </figcaption>
-                                                </figure><!-- gallery item 3 end -->
-                                                <!-- gallery item 4 start -->
-                                                <figure
-                                                    class="col-sm-6 col-md-4 col-lg-4 hover-effect-img move-down move-down-last">
-                                                    <a data-size="1920x1080" href="./img/background/hero-bg-6.jpg"><img
-                                                            alt="Image description" class="img-responsive"
-                                                            src="./img/background/hero-bg-4.jpg"></a>
-                                                    <figcaption>
-                                                        <span class="img-caption">Image description 4</span>
-                                                        <div class="hover-effect"></div>
-                                                        <div class="hover-icons">
-                                                            <a class="ion-ios-plus-empty" href="#"></a>
-                                                        </div>
-                                                    </figcaption>
-                                                </figure>
+                                                <?php }; ?>
                                                 <!-- gallery item 4 end -->
                                             </div>
                                         </div>
+                                        <div id="Alser" class="tab-pane fade"><br>
+                                            <div class="legendary-gallery">
+                                                    <!-- gallery item 1 start -->
+                                                    <?php $res = mysqli_query($link,"SELECT * FROM photos where tittle = 'alser'");
+                                                    while($row = mysqli_fetch_array($res)){
+                                                        
+                                                    
+                                                        ?>
+                                                    <figure
+                                                        class="col-sm-6 col-md-4 col-lg-4 hover-effect-img move-down move-down-first">
+                                                        <a data-size="1920x1080" href="../pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
+                                                            <img alt="Image description" class="img-responsive"
+                                                                src="../pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
+                                                        <figcaption>
+                                                            <span class="img-caption">Image description 1</span>
+                                                            <div class="hover-effect"></div>
+                                                            <div class="hover-icons">
+                                                                <a class="ion-ios-plus-empty " href="#">
+                                                                    <span style="text-align:center"><?=$row['tittle'];?></span>
+                                                                </a>
+                                                            </div>
+                                                        </figcaption>
+                                                    </figure>
+                                                    <?php }; ?>
+                                                    <!-- gallery item 4 end -->
+                                                </div>
+                                        </div>
                                         <div id="Edmond" class="tab-pane fade"><br>
-                                            <h3>Menu 2</h3>
-                                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                                                accusantium doloremque laudantium, totam rem aperiam.</p>
+                                            <div class="legendary-gallery">
+                                                    <!-- gallery item 1 start -->
+                                                    <?php $res = mysqli_query($link,"SELECT * FROM photos where tittle = 'edmond'");
+                                                    while($row = mysqli_fetch_array($res)){
+                                                        
+                                                    
+                                                        ?>
+                                                    <figure
+                                                        class="col-sm-6 col-md-4 col-lg-4 hover-effect-img move-down move-down-first">
+                                                        <a data-size="1920x1080" href="../pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
+                                                            <img alt="Image description" class="img-responsive"
+                                                                src="../pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
+                                                        <figcaption>
+                                                            <span class="img-caption">Image description 1</span>
+                                                            <div class="hover-effect"></div>
+                                                            <div class="hover-icons">
+                                                                <a class="ion-ios-plus-empty " href="#">
+                                                                    <span style="text-align:center"><?=$row['tittle'];?></span>
+                                                                </a>
+                                                            </div>
+                                                        </figcaption>
+                                                    </figure>
+                                                    <?php }; ?>
+                                                    <!-- gallery item 4 end -->
+                                                </div>
                                         </div>
+                                        
                                         <div id="Edwards" class="tab-pane fade"><br>
-                                            <h3>Menu 2</h3>
-                                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                                                accusantium doloremque laudantium, totam rem aperiam.</p>
+                                            <div class="legendary-gallery">
+                                                    <!-- gallery item 1 start -->
+                                                    <?php $res = mysqli_query($link,"SELECT * FROM photos where tittle = 'edwards'");
+                                                    while($row = mysqli_fetch_array($res)){
+                                                        
+                                                    
+                                                        ?>
+                                                    <figure
+                                                        class="col-sm-6 col-md-4 col-lg-4 hover-effect-img move-down move-down-first">
+                                                        <a data-size="1920x1080" href="../pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
+                                                            <img alt="Image description" class="img-responsive"
+                                                                src="../pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
+                                                        <figcaption>
+                                                            <span class="img-caption">Image description 1</span>
+                                                            <div class="hover-effect"></div>
+                                                            <div class="hover-icons">
+                                                                <a class="ion-ios-plus-empty " href="#">
+                                                                    <span style="text-align:center"><?=$row['tittle'];?></span>
+                                                                </a>
+                                                            </div>
+                                                        </figcaption>
+                                                    </figure>
+                                                    <?php }; ?>
+                                                    <!-- gallery item 4 end -->
+                                                </div>
                                         </div>
+                                        
                                         <div id="Suss" class="tab-pane fade"><br>
-                                            <h3>Menu 2</h3>
-                                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                                                accusantium doloremque laudantium, totam rem aperiam.</p>
+                                            <div class="legendary-gallery">
+                                                    <!-- gallery item 1 start -->
+                                                    <?php $res = mysqli_query($link,"SELECT * FROM photos where tittle = 'suss'");
+                                                    while($row = mysqli_fetch_array($res)){
+                                                        
+                                                    
+                                                        ?>
+                                                    <figure
+                                                        class="col-sm-6 col-md-4 col-lg-4 hover-effect-img move-down move-down-first">
+                                                        <a data-size="1920x1080" href="../pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
+                                                            <img alt="Image description" class="img-responsive"
+                                                                src="../pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
+                                                        <figcaption>
+                                                            <span class="img-caption">Image description 1</span>
+                                                            <div class="hover-effect"></div>
+                                                            <div class="hover-icons">
+                                                                <a class="ion-ios-plus-empty " href="#">
+                                                                    <span style="text-align:center"><?=$row['tittle'];?></span>
+                                                                </a>
+                                                            </div>
+                                                        </figcaption>
+                                                    </figure>
+                                                    <?php }; ?>
+                                                    <!-- gallery item 4 end -->
+                                                </div>
+                                           
                                         </div>
                                         <div id="Metkon" class="tab-pane fade"><br>
-                                            <h3>Menu 2</h3>
-                                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                                                accusantium doloremque laudantium, totam rem aperiam.</p>
+                                            <div class="legendary-gallery">
+                                                    <!-- gallery item 1 start -->
+                                                    <?php $res = mysqli_query($link,"SELECT * FROM photos where tittle = 'metkon'");
+                                                    while($row = mysqli_fetch_array($res)){
+                                                        
+                                                    
+                                                        ?>
+                                                    <figure
+                                                        class="col-sm-6 col-md-4 col-lg-4 hover-effect-img move-down move-down-first">
+                                                        <a data-size="1920x1080" href="../pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
+                                                            <img alt="Image description" class="img-responsive"
+                                                                src="../pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
+                                                        <figcaption>
+                                                            <span class="img-caption">Image description 1</span>
+                                                            <div class="hover-effect"></div>
+                                                            <div class="hover-icons">
+                                                                <a class="ion-ios-plus-empty " href="#">
+                                                                    <span style="text-align:center"><?=$row['tittle'];?></span>
+                                                                </a>
+                                                            </div>
+                                                        </figcaption>
+                                                    </figure>
+                                                    <?php }; ?>
+                                                    <!-- gallery item 4 end -->
+                                                </div>
+
                                         </div>
                                         <div id="Micos" class="tab-pane fade"><br>
-                                            <h3>Menu 2</h3>
-                                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                                                accusantium doloremque laudantium, totam rem aperiam.</p>
-                                        </div>
+                                            <div class="legendary-gallery">
+                                                    <!-- gallery item 1 start -->
+                                                    <?php $res = mysqli_query($link,"SELECT * FROM photos where tittle = 'micos'");
+                                                    while($row = mysqli_fetch_array($res)){
+                                                        
+                                                    
+                                                        ?>
+                                                    <figure
+                                                        class="col-sm-6 col-md-4 col-lg-4 hover-effect-img move-down move-down-first">
+                                                        <a data-size="1920x1080" href="../pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
+                                                            <img alt="Image description" class="img-responsive"
+                                                                src="../pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
+                                                        <figcaption>
+                                                            <span class="img-caption">Image description 1</span>
+                                                            <div class="hover-effect"></div>
+                                                            <div class="hover-icons">
+                                                                <a class="ion-ios-plus-empty " href="#">
+                                                                    <span style="text-align:center"><?=$row['tittle'];?></span>
+                                                                <a>
+                                                            </div>/
+                                                        </figcaption>
+                                                    </figure>
+                                                    <?php }; ?>
+                                                    <!-- gallery item 4 end -->
+                                                </div>
+                                            </div>                                        
+                                        
                                         <div id="Neocera" class="tab-pane fade"><br>
-                                            <h3>Menu 2</h3>
-                                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                                                accusantium doloremque laudantium, totam rem aperiam.</p>
+                                            <div class="legendary-gallery">
+                                                    <!-- gallery item 1 start -->
+                                                    <?php $res = mysqli_query($link,"SELECT * FROM photos where tittle = 'neocera'");
+                                                    while($row = mysqli_fetch_array($res)){
+                                                        
+                                                    
+                                                        ?>
+                                                    <figure
+                                                        class="col-sm-6 col-md-4 col-lg-4 hover-effect-img move-down move-down-first">
+                                                        <a data-size="1920x1080" href="../pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
+                                                            <img alt="Image description" class="img-responsive"
+                                                                src="../pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
+                                                        <figcaption>
+                                                            <span class="img-caption">Image description 1</span>
+                                                            <div class="hover-effect"></div>
+                                                            <div class="hover-icons">
+                                                                <a class="ion-ios-plus-empty " href="#">
+                                                                    <span style="text-align:center"><?=$row['tittle'];?></span>
+                                                                </a>
+                                                            </div>
+                                                        </figcaption>
+                                                    </figure>
+                                                    <?php }; ?>
+                                                    <!-- gallery item 4 end -->
+                                                </div>
+                                            
                                         </div>
                                         <div id="Pasco" class="tab-pane fade"><br>
-                                            <h3>Menu 2</h3>
-                                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                                                accusantium doloremque laudantium, totam rem aperiam.</p>
+                                            <div class="legendary-gallery">
+                                                    <!-- gallery item 1 start -->
+                                                    <?php $res = mysqli_query($link,"SELECT * FROM photos where tittle = 'pasco'");
+                                                    while($row = mysqli_fetch_array($res)){
+                                                        
+                                                    
+                                                        ?>
+                                                    <figure
+                                                        class="col-sm-6 col-md-4 col-lg-4 hover-effect-img move-down move-down-first">
+                                                        <a data-size="1920x1080" href="../pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
+                                                            <img alt="Image description" class="img-responsive"
+                                                                src="../pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
+                                                        <figcaption>
+                                                            <span class="img-caption">Image description 1</span>
+                                                            <div class="hover-effect"></div>
+                                                            <div class="hover-icons">
+                                                                <a class="ion-ios-plus-empty " href="#">
+                                                                    <span style="text-align:center"><?=$row['tittle'];?></span>
+                                                                </a>
+                                                            </div>
+                                                        </figcaption>
+                                                    </figure>
+                                                    <?php }; ?>
+                                                    <!-- gallery item 4 end -->
+                                                </div>
+                                            
                                         </div>
                                         <div id="RBRL" class="tab-pane fade"><br>
-                                            <h3>Menu 2</h3>
-                                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                                                accusantium doloremque laudantium, totam rem aperiam.</p>
+                                            <div class="legendary-gallery">
+                                                    <!-- gallery item 1 start -->
+                                                    <?php $res = mysqli_query($link,"SELECT * FROM photos where tittle = 'rbrl'");
+                                                    while($row = mysqli_fetch_array($res)){
+                                                        
+                                                    
+                                                        ?>
+                                                    <figure
+                                                        class="col-sm-6 col-md-4 col-lg-4 hover-effect-img move-down move-down-first">
+                                                        <a data-size="1920x1080" href="../pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
+                                                            <img alt="Image description" class="img-responsive"
+                                                                src="../pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
+                                                        <figcaption>
+                                                            <span class="img-caption">Image description 1</span>
+                                                            <div class="hover-effect"></div>
+                                                            <div class="hover-icons">
+                                                                <a class="ion-ios-plus-empty " href="#">
+                                                                    <span style="text-align:center"><?=$row['tittle'];?></span>
+                                                                </a>
+                                                            </div>
+                                                        </figcaption>
+                                                    </figure>
+                                                    <?php }; ?>
+                                                    <!-- gallery item 4 end -->
+                                                </div>
+                                            
                                         </div>
                                         <div id="Sentech" class="tab-pane fade"><br>
-                                            <h3>Menu 2</h3>
-                                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                                                accusantium doloremque laudantium, totam rem aperiam.</p>
+                                            <div class="legendary-gallery">
+                                                    <!-- gallery item 1 start -->
+                                                    <?php $res = mysqli_query($link,"SELECT * FROM photos where tittle = 'sentech'");
+                                                    while($row = mysqli_fetch_array($res)){
+                                                        
+                                                    
+                                                        ?>
+                                                    <figure
+                                                        class="col-sm-6 col-md-4 col-lg-4 hover-effect-img move-down move-down-first">
+                                                        <a data-size="1920x1080" href="../pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
+                                                            <img alt="Image description" class="img-responsive"
+                                                                src="../pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
+                                                        <figcaption>
+                                                            <span class="img-caption">Image description 1</span>
+                                                            <div class="hover-effect"></div>
+                                                            <div class="hover-icons">
+                                                                <a class="ion-ios-plus-empty " href="#">
+                                                                    <span style="text-align:center"><?=$row['tittle'];?></span>
+                                                                </a>
+                                                            </div>
+                                                        </figcaption>
+                                                    </figure>
+                                                    <?php }; ?>
+                                                    <!-- gallery item 4 end -->
+                                                </div>
+                                            
                                         </div>
                                         <div id="Shore" class="tab-pane fade"><br>
-                                            <h3>Menu 2</h3>
-                                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                                                accusantium doloremque laudantium, totam rem aperiam.</p>
-                                        </div>
+                                            <div class="legendary-gallery">
+                                                    <!-- gallery item 1 start -->
+                                                    <?php $res = mysqli_query($link,"SELECT * FROM photos where tittle = 'shore'");
+                                                    while($row = mysqli_fetch_array($res)){
+                                                        
+                                                    
+                                                        ?>
+                                                    <figure
+                                                        class="col-sm-6 col-md-4 col-lg-4 hover-effect-img move-down move-down-first">
+                                                        <a data-size="1920x1080" href="../pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
+                                                            <img alt="Image description" class="img-responsive"
+                                                                src="../pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
+                                                        <figcaption>
+                                                            <span class="img-caption">Image description 1</span>
+                                                            <div class="hover-effect"></div>
+                                                            <div class="hover-icons">
+                                                                <a class="ion-ios-plus-empty " href="#">
+                                                                    <span style="text-align:center"><?=$row['tittle'];?></span>
+                                                                </a>
+                                                            </div>
+                                                        </figcaption>
+                                                    </figure>
+                                                    <?php }; ?>
+                                                    <!-- gallery item 4 end -->
+                                                </div>
+                                            </div>
                                     </div>
 
 
@@ -932,58 +1127,58 @@
                                 <div class="row1">
 
 
-                                    
-                                        <div class="column2">
-                                                <div class="officeAddress">
-                                                    
-                                                    <h1 style="color: black;">Associated Instrument Distributors (Pvt) Ltd</h1>
-                                                    <!-- <p class="title">CEO & Founder, Example</p> -->
-                                                    <p>Room# 7, 8, 5th Floor, Rimpa Plaza, Office Tower</p>
-                                                    <p>M.A.Jinnah Road</p>
-                                                    <p>Karachi-74400</p>
-                                                    <p>Pakistan.</p>
-                                                    <p>Tel: 92-21-32735734 - 32767475-7 - 32729361</p>
-                                                    <p>Fax: 92-21-32736582</p>
-                                                    <p><a href="">Email: aidl@cyber.net.pk</a></p>
-                                                   <p>URL: www.aidlpk.com</p>
-                                                </div>
-                                            </div>
-    
-                                            <div class="column2">
-                                                    <div class="officeAddress">
-                                                        
-                                                        <h1 style="color: black;">Associated Instrument Distributors (Pvt) Ltd</h1>
-                                                        <!-- <p class="title">CEO & Founder, Example</p> -->
-                                                        <p>Room# 7, 8, 5th Floor, Rimpa Plaza, Office Tower</p>
-                                                        <p>M.A.Jinnah Road</p>
-                                                        <p>Karachi-74400</p>
-                                                        <p>Pakistan.</p>
-                                                        <p>Tel: 92-21-32735734 - 32767475-7 - 32729361</p>
-                                                        <p>Fax: 92-21-32736582</p>
-                                                        <p><a href="">Email: aidl@cyber.net.pk</a></p>
-                                                       <p>URL: www.aidlpk.com</p>
-                                                    </div>
-                                                </div>
-        
-                                       
-                                                <div class="column2">
-                                                        <div class="officeAddress">
-                                                            
-                                                            <h1 style="color: black;">Associated Instrument Distributors (Pvt) Ltd</h1>
-                                                            <!-- <p class="title">CEO & Founder, Example</p> -->
-                                                            <p>Room# 7, 8, 5th Floor, Rimpa Plaza, Office Tower</p>
-                                                            <p>M.A.Jinnah Road</p>
-                                                            <p>Karachi-74400</p>
-                                                            <p>Pakistan.</p>
-                                                            <p>Tel: 92-21-32735734 - 32767475-7 - 32729361</p>
-                                                            <p>Fax: 92-21-32736582</p>
-                                                            <p><a href="">Email: aidl@cyber.net.pk</a></p>
-                                                           <p>URL: www.aidlpk.com</p>
-                                                        </div>
-                                                    </div>
-            
-    
-                                     
+
+                                    <div class="column2">
+                                        <div class="officeAddress">
+
+                                            <h1 style="color: black;">Associated Instrument Distributors (Pvt) Ltd</h1>
+                                            <!-- <p class="title">CEO & Founder, Example</p> -->
+                                            <p>Room# 7, 8, 5th Floor, Rimpa Plaza, Office Tower</p>
+                                            <p>M.A.Jinnah Road</p>
+                                            <p>Karachi-74400</p>
+                                            <p>Pakistan.</p>
+                                            <p>Tel: 92-21-32735734 - 32767475-7 - 32729361</p>
+                                            <p>Fax: 92-21-32736582</p>
+                                            <p><a href="">Email: aidl@cyber.net.pk</a></p>
+                                            <p>URL: www.aidlpk.com</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="column2">
+                                        <div class="officeAddress">
+
+                                            <h1 style="color: black;">Associated Instrument Distributors (Pvt) Ltd</h1>
+                                            <!-- <p class="title">CEO & Founder, Example</p> -->
+                                            <p>Room# 7, 8, 5th Floor, Rimpa Plaza, Office Tower</p>
+                                            <p>M.A.Jinnah Road</p>
+                                            <p>Karachi-74400</p>
+                                            <p>Pakistan.</p>
+                                            <p>Tel: 92-21-32735734 - 32767475-7 - 32729361</p>
+                                            <p>Fax: 92-21-32736582</p>
+                                            <p><a href="">Email: aidl@cyber.net.pk</a></p>
+                                            <p>URL: www.aidlpk.com</p>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="column2">
+                                        <div class="officeAddress">
+
+                                            <h1 style="color: black;">Associated Instrument Distributors (Pvt) Ltd</h1>
+                                            <!-- <p class="title">CEO & Founder, Example</p> -->
+                                            <p>Room# 7, 8, 5th Floor, Rimpa Plaza, Office Tower</p>
+                                            <p>M.A.Jinnah Road</p>
+                                            <p>Karachi-74400</p>
+                                            <p>Pakistan.</p>
+                                            <p>Tel: 92-21-32735734 - 32767475-7 - 32729361</p>
+                                            <p>Fax: 92-21-32736582</p>
+                                            <p><a href="">Email: aidl@cyber.net.pk</a></p>
+                                            <p>URL: www.aidlpk.com</p>
+                                        </div>
+                                    </div>
+
+
+
                                 </div>
                                 <div class="divider"></div>
 
@@ -1074,13 +1269,16 @@
                                                 Our Team
                                             </h1><!-- section title end -->
                                             <!-- divider start -->
-                                            <div class="inner-divider-half"></div><!-- divider end -->
+                                            <!-- <div class="inner-divider-half"></div> -->
+                                            <!-- divider end -->
                                             <!-- section subtitle start -->
-                                            <h2 class="section-heading section-heading-all">
+                                            <!-- <h2 class="section-heading section-heading-all">
                                                 This is Team
-                                            </h2><!-- section subtitle end -->
+                                            </h2> -->
+                                            <!-- section subtitle end -->
                                             <!-- extra line start -->
-                                            <div class="the-extra-line"></div><!-- extra line end -->
+                                            <!-- <div class="the-extra-line"></div> -->
+                                            <!-- extra line end -->
                                         </div><!-- section title wrapper end -->
                                     </div><!-- col end -->
                                 </div>
@@ -1089,39 +1287,24 @@
                                 <div class="inner-divider"></div><!-- divider end -->
                                 <!-- row start -->
                                 <div class="row1">
-
+                                    <?php
+                       
+                                 $sql = "select * from team_members";
+                                 $result = mysqli_query($link, $sql);
+                    				if(mysqli_num_rows($result)){
+                    					while($row = mysqli_fetch_assoc($result)){
+                                ?>
                                     <div class="column">
                                         <div class="our-team">
                                             <div class="picture">
                                                 <img class="img-fluid"
-                                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn2H479DHWSkqk7oPZrXJ3yupcX9pmZDppSpmL2N1vHi5hvIzn-Q&s">
+                                                    src="../pages/examples/teamImages/<?=$row['team_image'] ?>">
                                             </div>
                                             <div class="team-content">
-                                                <h3 class="name">Michele Miller</h3>
-                                                <h4 class="title">Web Developer</h4>
-                                            </div>
-                                            <ul class="social">
-                                                <li><a href="https://codepen.io/collection/XdWJOQ/"
-                                                        class="fa fa-facebook" aria-hidden="true"></a></li>
-                                                <li><a href="https://codepen.io/collection/XdWJOQ/"
-                                                        class="fa fa-twitter" aria-hidden="true"></a></li>
-                                                <li><a href="https://codepen.io/collection/XdWJOQ/"
-                                                        class="fa fa-google-plus" aria-hidden="true"></a></li>
-                                                <li><a href="https://codepen.io/collection/XdWJOQ/"
-                                                        class="fa fa-linkedin" aria-hidden="true"></a></li>
-                                            </ul>
-                                        </div>
-
-                                    </div>
-                                    <div class="column">
-                                        <div class="our-team">
-                                            <div class="picture">
-                                                <img class="img-fluid"
-                                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn2H479DHWSkqk7oPZrXJ3yupcX9pmZDppSpmL2N1vHi5hvIzn-Q&s">
-                                            </div>
-                                            <div class="team-content">
-                                                <h3 class="name">Michele Miller</h3>
-                                                <h4 class="title">Web Developer</h4>
+                                                <h3 class="name"><?php echo $row['team_name'] ?></h3>
+                                                <h4 class="title"><?php echo $row['team_post'] ?></h4>
+                                                <h4 class="title"><?php echo $row['team_email'] ?></h4>
+                                                <h4 class="title"><?php echo $row['team_num'] ?></h4>
                                             </div>
                                             <ul class="social">
                                                 <li><a href="https://codepen.io/collection/XdWJOQ/"
@@ -1137,6 +1320,9 @@
 
                                     </div>
 
+                                    <?php 
+                                       }
+                                    } ?>
 
 
 
@@ -1701,119 +1887,122 @@
 </body>
 <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNibPJgALZ7EFCwZgPjW105jhUyABADgY&callback=initMap">
-    </script>
+</script>
 <!-- Mirrored from www.11-76.com/themes/liex/index-KENBURNS-SLIDESHOW.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Nov 2019 13:54:44 GMT -->
 <script>
-    // Initialize and add the map
+// Initialize and add the map
 
-    // The location of Uluru
-    //   var uluru = {lat: -25.344, lng: 131.036};
-    //   // The map, centered at Uluru
-    //   var map = new google.maps.Map(
-    //       document.getElementById('map'), {zoom: 4, center: uluru});
-    //   // The marker, positioned at Uluru
-    //   var marker = new google.maps.Marker({position: uluru, map: map});
+// The location of Uluru
+//   var uluru = {lat: -25.344, lng: 131.036};
+//   // The map, centered at Uluru
+//   var map = new google.maps.Map(
+//       document.getElementById('map'), {zoom: 4, center: uluru});
+//   // The marker, positioned at Uluru
+//   var marker = new google.maps.Marker({position: uluru, map: map});
 
-    //   var map2 = new google.maps.Map(
-    //       document.getElementById('map2'), {zoom: 4, center: uluru});
-    //   // The marker, positioned at Uluru
-    //   var marker2 = new google.maps.Marker({position: uluru, map: map2});
-    //   var map3 = new google.maps.Map(
-    //       document.getElementById('map3'), {zoom: 4, center: uluru});
-    //   // The marker, positioned at Uluru
-    //   var marker3 = new google.maps.Marker({position: uluru, map: map3});
-    var map;
-    var geocoder;
-    var marker;
-    var people = new Array();
-    var latlng;
-    var infowindow;
+//   var map2 = new google.maps.Map(
+//       document.getElementById('map2'), {zoom: 4, center: uluru});
+//   // The marker, positioned at Uluru
+//   var marker2 = new google.maps.Marker({position: uluru, map: map2});
+//   var map3 = new google.maps.Map(
+//       document.getElementById('map3'), {zoom: 4, center: uluru});
+//   // The marker, positioned at Uluru
+//   var marker3 = new google.maps.Marker({position: uluru, map: map3});
+var map;
+var geocoder;
+var marker;
+var people = new Array();
+var latlng;
+var infowindow;
 
-    // $(document).ready(function() {
-    //     ViewCustInGoogleMap();
-    // });
+// $(document).ready(function() {
+//     ViewCustInGoogleMap();
+// });
 
-    function initMap() {
+function initMap() {
 
-        var mapOptions = {
-            center: new google.maps.LatLng(24.911743, 67.087920),   // Coimbatore = (11.0168445, 76.9558321)
-            zoom: 13,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
-        };
-        map = new google.maps.Map(document.getElementById("map"), mapOptions);
+    var mapOptions = {
+        center: new google.maps.LatLng(24.911743, 67.087920), // Coimbatore = (11.0168445, 76.9558321)
+        zoom: 13,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
-        // Get data from database. It should be like below format or you can alter it.
+    // Get data from database. It should be like below format or you can alter it.
 
-        var data = '[{ "DisplayText": "Nipa", "ADDRESS": "Nipa", "LatitudeLongitude": "24.918367,67.097284", "MarkerId": "Customer" },{ "DisplayText": "Software Chimps", "ADDRESS": "Software Chimps", "LatitudeLongitude": "24.885764, 67.089149", "MarkerId": "Customer"},{ "DisplayText": "Buffer Zone", "ADDRESS": "Buffer Zone", "LatitudeLongitude": "24.956355, 67.061385", "MarkerId": "Customer"}]';
+    var data =
+        '[{ "DisplayText": "Nipa", "ADDRESS": "Nipa", "LatitudeLongitude": "24.918367,67.097284", "MarkerId": "Customer" },{ "DisplayText": "Software Chimps", "ADDRESS": "Software Chimps", "LatitudeLongitude": "24.885764, 67.089149", "MarkerId": "Customer"},{ "DisplayText": "Buffer Zone", "ADDRESS": "Buffer Zone", "LatitudeLongitude": "24.956355, 67.061385", "MarkerId": "Customer"}]';
 
-        people = JSON.parse(data);
+    people = JSON.parse(data);
 
-        for (var i = 0; i < people.length; i++) {
-            setMarker(people[i]);
-        }
-
+    for (var i = 0; i < people.length; i++) {
+        setMarker(people[i]);
     }
 
-    function setMarker(people) {
-        geocoder = new google.maps.Geocoder();
-        infowindow = new google.maps.InfoWindow();
-        if ((people["LatitudeLongitude"] == null) || (people["LatitudeLongitude"] == 'null') || (people["LatitudeLongitude"] == '')) {
-            geocoder.geocode({ 'address': people["Address"] }, function (results, status) {
-                if (status == google.maps.GeocoderStatus.OK) {
-                    latlng = new google.maps.LatLng(results[0].geometry.location.lat(), results[0].geometry.location.lng());
-                    marker = new google.maps.Marker({
-                        position: latlng,
-                        map: map,
-                        draggable: false,
-                        html: people["DisplayText"],
-                        icon: "images/marker/" + people["MarkerId"] + ".png"
-                    });
-                    //marker.setPosition(latlng);
-                    //map.setCenter(latlng);
-                    google.maps.event.addListener(marker, 'click', function (event) {
-                        infowindow.setContent(this.html);
-                        infowindow.setPosition(event.latLng);
-                        infowindow.open(map, this);
-                    });
-                }
-                else {
-                    alert(people["DisplayText"] + " -- " + people["Address"] + ". This address couldn't be found");
-                }
-            });
-        }
-        else {
-            var latlngStr = people["LatitudeLongitude"].split(",");
-            var lat = parseFloat(latlngStr[0]);
-            var lng = parseFloat(latlngStr[1]);
-            latlng = new google.maps.LatLng(lat, lng);
-            marker = new google.maps.Marker({
-                position: latlng,
-                map: map,
-                draggable: false,               // cant drag it
-                html: people["DisplayText"]    // Content display on marker click
-                //icon: "images/marker.png"       // Give ur own image
-            });
-            //marker.setPosition(latlng);
-            //map.setCenter(latlng);
-            google.maps.event.addListener(marker, 'click', function (event) {
-                infowindow.setContent(this.html);
-                infowindow.setPosition(event.latLng);
-                infowindow.open(map, this);
-            });
-        }
-    }
+}
 
-    function displaySubMenu() {
-        document.getElementById('displaySubmenu').style.display = 'block'
-        document.getElementById('displaySubmenu').style.margin = '5% 0% 0% 15%'
-        //    document.getElementById('displaySubmenu').style.transition = '1s'
+function setMarker(people) {
+    geocoder = new google.maps.Geocoder();
+    infowindow = new google.maps.InfoWindow();
+    if ((people["LatitudeLongitude"] == null) || (people["LatitudeLongitude"] == 'null') || (people[
+            "LatitudeLongitude"] == '')) {
+        geocoder.geocode({
+            'address': people["Address"]
+        }, function(results, status) {
+            if (status == google.maps.GeocoderStatus.OK) {
+                latlng = new google.maps.LatLng(results[0].geometry.location.lat(), results[0].geometry.location
+                    .lng());
+                marker = new google.maps.Marker({
+                    position: latlng,
+                    map: map,
+                    draggable: false,
+                    html: people["DisplayText"],
+                    icon: "images/marker/" + people["MarkerId"] + ".png"
+                });
+                //marker.setPosition(latlng);
+                //map.setCenter(latlng);
+                google.maps.event.addListener(marker, 'click', function(event) {
+                    infowindow.setContent(this.html);
+                    infowindow.setPosition(event.latLng);
+                    infowindow.open(map, this);
+                });
+            } else {
+                alert(people["DisplayText"] + " -- " + people["Address"] + ". This address couldn't be found");
+            }
+        });
+    } else {
+        var latlngStr = people["LatitudeLongitude"].split(",");
+        var lat = parseFloat(latlngStr[0]);
+        var lng = parseFloat(latlngStr[1]);
+        latlng = new google.maps.LatLng(lat, lng);
+        marker = new google.maps.Marker({
+            position: latlng,
+            map: map,
+            draggable: false, // cant drag it
+            html: people["DisplayText"] // Content display on marker click
+            //icon: "images/marker.png"       // Give ur own image
+        });
+        //marker.setPosition(latlng);
+        //map.setCenter(latlng);
+        google.maps.event.addListener(marker, 'click', function(event) {
+            infowindow.setContent(this.html);
+            infowindow.setPosition(event.latLng);
+            infowindow.open(map, this);
+        });
     }
+}
+
+function displaySubMenu() {
+    document.getElementById('displaySubmenu').style.display = 'block'
+    document.getElementById('displaySubmenu').style.margin = '5% 0% 0% 15%'
+    //    document.getElementById('displaySubmenu').style.transition = '1s'
+}
 
 
-    function nonSubMenu() {
-        document.getElementById('displaySubmenu').style.display = 'none'
-        //    document.getElementById('displaySubmenu').style.marginLeft = '45%'
-    }
+function nonSubMenu() {
+    document.getElementById('displaySubmenu').style.display = 'none'
+    //    document.getElementById('displaySubmenu').style.marginLeft = '45%'
+}
 </script>
 
 </html>

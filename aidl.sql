@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 05, 2019 at 04:52 PM
--- Server version: 10.4.8-MariaDB
--- PHP Version: 7.1.33
+-- Generation Time: Dec 06, 2019 at 11:04 AM
+-- Server version: 10.1.26-MariaDB
+-- PHP Version: 7.0.23
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -119,7 +119,41 @@ INSERT INTO `photos` (`photo_id`, `tittle`, `images`) VALUES
 (56, 'metkon', 'Fast.jpg'),
 (57, 'metkon', 'fyp page 2.jpg'),
 (58, 'metkon', 'fyp page.jpg'),
-(59, 'metkon', 'fyp portal home.jpg');
+(59, 'metkon', 'fyp portal home.jpg'),
+(60, 'pasco', '485a7eb55f98667ba8f9d66c2f8bb096.jpg'),
+(61, 'pasco', '575ed69fe8ddb4991c12b3d4ee01d9f7.jpg'),
+(62, 'pasco', '7815cf0be771ed94034885f44e935225.jpg'),
+(63, 'pasco', 'af86ecf734db6bda94836da813d2b2fa.jpg'),
+(64, 'pasco', 'IMG-20180413-WA0002.jpg'),
+(65, 'pasco', 'IMG-20180413-WA0003.jpg'),
+(66, 'alser', '2f2c7e34e43d3b480bdb65498870f943.jpg'),
+(67, 'alser', '3b2e5b9c85f39e0ea530f8a399c279ef.jpg'),
+(68, 'edwards', '1ddec5d80e00d005809a4146b16830cd.jpg'),
+(69, 'edwards', '2bfc9e293a7802d28bcc03a16e7379fe.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `team_members`
+--
+
+CREATE TABLE `team_members` (
+  `team_id` int(11) NOT NULL,
+  `team_name` varchar(255) NOT NULL,
+  `team_post` varchar(255) NOT NULL,
+  `team_email` varchar(255) NOT NULL,
+  `team_num` varchar(255) NOT NULL,
+  `team_image` varchar(255) NOT NULL,
+  `create_on` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `team_members`
+--
+
+INSERT INTO `team_members` (`team_id`, `team_name`, `team_post`, `team_email`, `team_num`, `team_image`, `create_on`) VALUES
+(1, 'mahad', 'CEO', 'mahad@gamil.com', '0336', '72045293_2405902189548979_3466253820093267968_n.jpg', '2019-12-06 00:18:44'),
+(2, 'haq', 'CEO', 'haq@gmail.com', '0314', 'IMG-20191109-WA0004.jpg', '2019-12-06 00:45:39');
 
 --
 -- Indexes for dumped tables
@@ -150,6 +184,12 @@ ALTER TABLE `photos`
   ADD PRIMARY KEY (`photo_id`);
 
 --
+-- Indexes for table `team_members`
+--
+ALTER TABLE `team_members`
+  ADD PRIMARY KEY (`team_id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -175,7 +215,13 @@ ALTER TABLE `add_service`
 -- AUTO_INCREMENT for table `photos`
 --
 ALTER TABLE `photos`
-  MODIFY `photo_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
+  MODIFY `photo_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
+
+--
+-- AUTO_INCREMENT for table `team_members`
+--
+ALTER TABLE `team_members`
+  MODIFY `team_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

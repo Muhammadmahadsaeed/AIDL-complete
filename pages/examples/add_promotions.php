@@ -143,7 +143,7 @@ if(isset($_POST['submit'])){
               
               try {
                 move_uploaded_file($_FILES["files"]["tmp_name"][$key], $targetFilePath);
-                $insertValuesSQL .= "('".$_POST['tittle']."','".$fileName."'),";
+                $insertValuesSQL .= "('".strtolower($_POST['tittle'])."','".$fileName."'),";
                 
                 
                 //code...
