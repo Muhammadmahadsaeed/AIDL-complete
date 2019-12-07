@@ -201,6 +201,7 @@ $sql6="select * from add_product where cat_5=1";
 
         <!-- section inner start -->
         <div class="fireOT-inner">
+
             <!-- copyright home start -->
             <div class="fadeIn-element">
                 <?php $news = "select * from news";
@@ -243,6 +244,7 @@ $sql6="select * from add_product where cat_5=1";
                         <div class="upper-content">
                             <!-- container start -->
                             <div class="container sections">
+                            
                                 <!-- row start -->
                                 <div class="row">
                                     <!-- intro start -->
@@ -276,19 +278,16 @@ $sql6="select * from add_product where cat_5=1";
 
 
                 <!-- center container start -->
-
-
-
-
-
-
                 <div class="center-container">
 
                     <!-- center block start -->
                     <div class="center-block">
-
+                    <div>
+                        <a href="#contactUs" style="float:right;top:0" class="btn btn-primary" data-toggle="modal" >Contact Us</a>
+                        </div>
                         <!-- upper content start -->
                         <div class="upper-content">
+                        
 
                             <!-- quotes start -->
                             <div class="flexslider-quotes-wrap">
@@ -2127,6 +2126,7 @@ $sql6="select * from add_product where cat_5=1";
 
 
     <div class="modal fade" id="myModal" role="dialog">
+<<<<<<< HEAD
     <div class="modal-dialog" style="width:40%;border-radius: 5px;" role="document">
         <div class="modal-content">
            
@@ -2134,10 +2134,42 @@ $sql6="select * from add_product where cat_5=1";
                 <div class="fetched-data"></div> 
             </div>
             
+=======
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title" style="color:black">Bio Data</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="fetched-data"></div> 
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+>>>>>>> a6bee18681120c753484ce1d6bf4903854a6c3fa
         </div>
-    </div>
 </div>
-
+<div class="modal fade" id="contactUs" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
     <script src="js/plugins.js">
     </script>
     <script src="js/liex.js">

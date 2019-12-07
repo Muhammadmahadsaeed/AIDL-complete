@@ -171,7 +171,7 @@ if(isset($_GET['delete'])){
                                 </i>
                                 View
                               </a>
-                              <a class="btn btn-info btn-sm" href="./project_edit.html">
+                              <a class="btn btn-info btn-sm" href="project_update.php?id=<?php echo $row['p_id'] ?>">
                                 <i class="fas fa-pencil-alt">
                                 </i>
                                 Edit
@@ -246,7 +246,7 @@ if(isset($_GET['delete'])){
                                 </i>
                                 View
                               </a>
-                              <a class="btn btn-info btn-sm" href="./project_edit.html">
+                              <a class="btn btn-info btn-sm" href="project_update.php?id=<?php echo $row['p_id'] ?>">
                                 <i class="fas fa-pencil-alt">
                                 </i>
                                 Edit
@@ -321,7 +321,7 @@ if(isset($_GET['delete'])){
                                 </i>
                                 View
                               </a>
-                              <a class="btn btn-info btn-sm" href="./project_edit.html">
+                              <a class="btn btn-info btn-sm" href="project_update.php?id=<?php echo $row['p_id'] ?>">
                                 <i class="fas fa-pencil-alt">
                                 </i>
                                 Edit
@@ -396,7 +396,7 @@ if(isset($_GET['delete'])){
                                 </i>
                                 View
                               </a>
-                              <a class="btn btn-info btn-sm" href="./project_edit.html">
+                              <a class="btn btn-info btn-sm" href="project_update.php?id=<?php echo $row['p_id'] ?>">
                                 <i class="fas fa-pencil-alt">
                                 </i>
                                 Edit
@@ -471,7 +471,7 @@ if(isset($_GET['delete'])){
                                 </i>
                                 View
                               </a>
-                              <a class="btn btn-info btn-sm" href="./project_edit.html">
+                              <a class="btn btn-info btn-sm" href="project_update.php?id=<?php echo $row['p_id'] ?>">
                                 <i class="fas fa-pencil-alt">
                                 </i>
                                 Edit
@@ -546,7 +546,7 @@ if(isset($_GET['delete'])){
                                 </i>
                                 View
                               </a>
-                              <a class="btn btn-info btn-sm" href="./project_edit.html">
+                              <a class="btn btn-info btn-sm" href="project_update.php?id=<?php echo $row['p_id'] ?>">
                                 <i class="fas fa-pencil-alt">
                                 </i>
                                 Edit

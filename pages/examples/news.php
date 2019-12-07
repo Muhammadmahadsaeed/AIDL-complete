@@ -1,7 +1,10 @@
 <?php require_once('../../config/db.php');
 $sql = "select * from news";
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> a6bee18681120c753484ce1d6bf4903854a6c3fa
 ?>
 
 <!DOCTYPE html>
@@ -22,11 +25,14 @@ $sql = "select * from news";
     <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+<<<<<<< HEAD
     <script>
       if(window.history.replaceState){
         window.history.replaceState(null,null,window.location.href)
       }
     </script>
+=======
+>>>>>>> a6bee18681120c753484ce1d6bf4903854a6c3fa
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -68,12 +74,20 @@ $sql = "select * from news";
 
                         <div class="card-tools">
 
+<<<<<<< HEAD
                             <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Add
                                 News</button>
                             <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip"
                                 title="Collapse">
                                 <i class="fas fa-minus"></i>
                             </button>
+=======
+                            <button type="button" class="btn btn-info " data-toggle="modal" data-target="#myModal">Add
+                                News</button>
+                            <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip"
+                                title="Collapse">
+                                <i class="fas fa-minus"></i></button>
+>>>>>>> a6bee18681120c753484ce1d6bf4903854a6c3fa
                         </div>
                         <div class="modal fade" id="myModal" role="dialog">
                             <div class="modal-dialog">
@@ -81,6 +95,7 @@ $sql = "select * from news";
                                 <!-- Modal content-->
                                 <div class="modal-content">
                                     <div class="modal-header">
+<<<<<<< HEAD
                                     <button type="button" class="close" data-dismiss="modal">&times;</button>
          
                                     </div>
@@ -100,6 +115,28 @@ $sql = "select * from news";
                                         </form>
                                     </div>
                                    
+=======
+
+                                    </div>
+                                    <div class="modal-body">
+                                        <form action="" method="post">
+                                            <div class="form-group">
+                                                <label for="news">Write News</label>
+                                                <textarea id="news" name="news" class="form-control"
+                                                rows="4"></textarea>
+
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="submit" value="Add News" name="submit" id="insert"
+                                                    class="btn btn-success float-right">
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default"
+                                            data-dismiss="modal">Close</button>
+                                    </div>
+>>>>>>> a6bee18681120c753484ce1d6bf4903854a6c3fa
                                 </div>
 
                             </div>
@@ -120,6 +157,7 @@ $sql = "select * from news";
                                     <thead>
                                         <tr>
 
+<<<<<<< HEAD
 
 
                                             <th style="width: 15%" >
@@ -129,15 +167,30 @@ $sql = "select * from news";
                                                 Status
                                             </th>
                                             <th style="width: 8%" class="text-center">
+=======
+                                            <th style="width: 20%">
+                                                News
+                                            </th>
+
+
+
+                                            <th style="width: 20%" class="project-actions text-center">
+>>>>>>> a6bee18681120c753484ce1d6bf4903854a6c3fa
                                                 Action
                                             </th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <?php
+<<<<<<< HEAD
                                         if ($result = mysqli_query($link, $sql)) {
                                         if (mysqli_num_rows($result) > 0) {
                                         ?>
+=======
+                    if ($result = mysqli_query($link, $sql)) {
+                      if (mysqli_num_rows($result) > 0) {
+                        ?>
+>>>>>>> a6bee18681120c753484ce1d6bf4903854a6c3fa
 
 
                                         <?php while ($row = mysqli_fetch_array($result)) { ?>
@@ -152,6 +205,7 @@ $sql = "select * from news";
                                                     <?= $row['created_on'] ?>
                                                 </small>
                                             </td>
+<<<<<<< HEAD
                                             <td>
                                                 <a style="color:red">
                                                     <b><?= strtoupper($row['flag']) ?></b>
@@ -169,6 +223,20 @@ $sql = "select * from news";
                                                 <a class="btn btn-info btn-sm" href="./stopNews.php?id=<?php echo $row['news_id'] ?>">
                                                
                                                 <i class="fas fa-stop"></i>
+=======
+
+
+
+                                            <td class="project-actions text-center">
+                                                <a class="btn btn-primary btn-sm" href="./project_detail.html">
+                                                    <i class="fas fa-folder">
+                                                    </i>
+                                                    Start
+                                                </a>
+                                                <a class="btn btn-info btn-sm" href="./project_edit.html">
+                                                    <i class="fas fa-pencil-alt">
+                                                    </i>
+>>>>>>> a6bee18681120c753484ce1d6bf4903854a6c3fa
                                                     Stop
                                                 </a>
                                                 <a class="btn btn-danger btn-sm" href="#">
@@ -189,13 +257,20 @@ $sql = "select * from news";
                     }
                     ?>
                                     </tbody>
+<<<<<<< HEAD
 
                                 </table>
                             </div>
 
                         </div>
 
+=======
 
+                                </table>
+                            </div>
+>>>>>>> a6bee18681120c753484ce1d6bf4903854a6c3fa
+
+                        </div>
 
 
 
@@ -205,13 +280,28 @@ $sql = "select * from news";
                 </div>
                 <!-- /.card -->
 
+<<<<<<< HEAD
+=======
+
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+
+>>>>>>> a6bee18681120c753484ce1d6bf4903854a6c3fa
             </section>
             <!-- /.content -->
         </div>
         <!-- /.content-wrapper -->
+<<<<<<< HEAD
 
 
 
+=======
+
+
+
+>>>>>>> a6bee18681120c753484ce1d6bf4903854a6c3fa
         <!-- Control Sidebar -->
         <aside class="control-sidebar control-sidebar-dark">
             <!-- Control sidebar content goes here -->
@@ -232,6 +322,7 @@ $sql = "select * from news";
 
 </html>
 
+<<<<<<< HEAD
 
 <?php
 
@@ -259,4 +350,20 @@ else{
 
 
 
+=======
+<?php 
+
+
+if(isset($_POST['submit'])){
+
+    $news = $_POST['news'];
+    $sql = "INSERT INTO news (news) VALUES ('$news')";
+    // execute query
+    mysqli_query($link, $sql);
+  
+    
+}
+
+
+>>>>>>> a6bee18681120c753484ce1d6bf4903854a6c3fa
 ?>
