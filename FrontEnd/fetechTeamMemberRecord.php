@@ -14,61 +14,29 @@ if($_POST['rowid']) {
 
             echo '
             
-            <div class="row">
-
-                <div class="twPc-div">
-                    <a class="twPc-bg twPc-block"></a>
-
-                    <div>
-                        <a title="'.$row['team_name'].'" href="https://twitter.com/mertskaplan" class="twPc-avatarLink">
-                            <img alt="'.$row['team_name'].'" src="../pages/examples/teamImages/'.$row['team_image'].'" class="twPc-avatarImg">
-                        </a>
-
-                        <div class="twPc-divUser">
-                            <div class="twPc-divName">
-                                <a href="https://twitter.com/mertskaplan">Mert S. Kaplan</a>
-                            </div>
-                            <span>
-                                <a href="https://twitter.com/mertskaplan"><span>'.$row['team_name'].'</span></a>
-                            </span>
-                        </div>
-
-                        <div class="twPc-divStats">
-                            <ul class="twPc-Arrange">
-                                <li class="twPc-ArrangeSizeFit">
-                                    <a href="#" title="9.840 Tweet">
-                                        <span class="twPc-StatLabel twPc-block">'.$row['team_email'].'</span>
-                                       
-                                    </a>
-                                </li>
-                                <li class="twPc-ArrangeSizeFit">
-                                    <a href="#" title="885 Following">
-                                        <span class="twPc-StatLabel twPc-block">'.$row['team_num'].'</span>
-                                       
-                                    </a>
-                                </li>
-                               
-                            </ul>
-                        </div>
-                        <br>
-                        <br>
-                    
-                    </div>
-                </div>
-                <br>
-                <br> 
-               
-                    <div class="des">
-                        <span style="color:red">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys
-                            standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                            and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
-                        
-                        </span>
-                    </div>
-            </div>
             
-      
+           
+            <div class="bio-info" >
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="bio-image">
+                                    <img alt="'.$row['team_name'].'" src="../pages/examples/teamImages/'.$row['team_image'].'"  height="300px" width="300px" />
+                                </div>			
+                            </div>
+                        </div>	
+                    </div>
+                    <div class="col-md-6" style="background-color:#9e060f">
+                        <div class="bio-content"  style="padding-left: 5%;">
+                            <h1 style="color:white">'.strtoupper($row['team_name']).'</h1>
+                            <h6 style="color:white">I am a fresh web designer and I create custom web designs. Im skilled at writing well-designed, testable and efficient code using current best practices in Web development. Im a fast learner, hard worker and team player who is proficient in making creative and innovative web pages.</h6>
+                            
+                        </div>
+                    </div>
+                </div>	
+            </div>
+       
             
             ';
            
@@ -78,3 +46,9 @@ if($_POST['rowid']) {
  }
 }
 ?>
+
+
+
+
+
+

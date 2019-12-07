@@ -1,20 +1,11 @@
 <?php require_once('../../config/db.php');
-$sql="select * from add_product where p_type LIKE '%,%'";
-$result = mysqli_query($link, $sql);
-$output = '';
-while($row = mysqli_fetch_assoc($result)){
-if(mysqli_num_rows($result) > 0){
-  
-  print_r(explode(',',$row['p_type'])); 
-}
+$sql="select * from add_product";
+$sql1="select * from add_product where cat_1=1";
+$sql2="select * from add_product where cat_2=1";
+$sql3="select * from add_product where cat_3=1";
+$sql4="select * from add_product where cat_4=1";
+$sql5="select * from add_product where cat_5=1";
 
-// else{
-//   $sql="select * from add_product where p_type not LIKE '%,%'";
-//   $result = mysqli_query($link, $sql);
-//   while ($row = mysqli_fetch_assoc($result)) {
-//     debug_to_console($row['p_type']);
-//   }
-}
 
          
 $upload_dir = 'images/';
@@ -41,7 +32,7 @@ if(isset($_GET['delete'])){
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 3 | Projects</title>
+  <title>AIDL</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 

@@ -1,4 +1,13 @@
-<?php require_once('../config/db.php'); ?>
+<?php require_once('../config/db.php');
+$sql1="select * from add_product";
+$sql2="select * from add_product where cat_1=1";
+$sql3="select * from add_product where cat_2=1";
+$sql4="select * from add_product where cat_3=1";
+$sql5="select * from add_product where cat_4=1";
+$sql6="select * from add_product where cat_5=1";
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,14 +28,14 @@
     <!-- style start -->
     <link href="./css/plugins.css" media="all" rel="stylesheet" type="text/css">
     <link href="./css/style.css" media="all" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="./profile.css">
+    
     <!-- style end -->
     <!-- google fonts start -->
     <link href="http://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900%7COswald:300,400,700"
         rel="stylesheet" type="text/css">
         <!-- google fonts end -->
 
-
+        <link rel="stylesheet" href="./profile.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -194,12 +203,32 @@
         <div class="fireOT-inner">
             <!-- copyright home start -->
             <div class="fadeIn-element">
-                <div class="copyright-home">
-                    <marquee behavior="" direction="left">
-                        <h1 class="mar">WELCOME TO ASSOCIATED INSTRUMENT DISTRIBUTORS (PVT) LIMITED</h1>
+                <?php $news = "select * from news";
+                    $newsResult = mysqli_query($link, $news);
+                    if(mysqli_num_rows($newsResult)){
+                    
+                                            
+                    ?>
+                <div class="copyright-home" style="width:95%">
+                    
+                    <marquee behavior="" direction="left"> 
+                    <h2 class="mar">
+                    <?php 
+                    while($row = mysqli_fetch_assoc($newsResult)){ 
+                        if($row['flag'] == 'start'){
+                            $myDate = date('F j, Y',strtotime($row["created_on"]));
+                            $new='['.$myDate.']-';
+                            echo '<small style="color:white">'.$new.'</small>'.$row["news"]; 
+                     }}
+                      ?>
+                     </h2>
                     </marquee>
+               
                 </div>
-
+                <?php 
+                    
+                    } 
+                ?>
             </div>
             <!-- copyright home end -->
             <!-- upper page start -->
@@ -1164,52 +1193,48 @@
                                 <div class="row1">
 
 
-
-                                    <div class="column2">
+                                <div class="column2">
                                         <div class="officeAddress">
 
                                             <h1 style="color: black;">Associated Instrument Distributors (Pvt) Ltd</h1>
                                             <!-- <p class="title">CEO & Founder, Example</p> -->
-                                            <p><span><i class="fa fa-home fa-lg" aria-hidden="true"></i></span><a href=""> Room# 7, 8, 5th Floor, Rimpa Plaza, Office Tower</a></p>
-                                            <p>M.A.Jinnah Road</p>
-                                            <p>Karachi-74400</p>
-                                            <p>Pakistan.</p>
+                                            <p><span><i class="fa fa-home fa-lg" aria-hidden="true"></i></span>
+                                            <a href=""> Room# 7, 8, 5th Floor, Rimpa Plaza, Office Tower M.A.Jinnah Road Karachi-74400 Pakistan.</a></p>
+                                           
                                             <p><span><i class="fa fa-phone fa-lg" aria-hidden="true"></i></span> 92-21-32735734 - 32767475-7 - 32729361</p>
                                             <p>Fax: 92-21-32736582</p>
-                                            <p><span style="padding-left:1%"><i class="fa fa-envelope-o fa-lg" aria-hidden="true"></i></span><a href="">Email: aidl@cyber.net.pk</a></p>
+                                            <p><span><i class="fa fa-envelope-o fa-lg"  aria-hidden="true"></i></span>
+                                            <a href=""  style="padding-left:1%"> aidl@cyber.net.pk</a></p>
                                             <p>URL: www.aidlpk.com</p>
                                         </div>
                                     </div>
-
                                     <div class="column2">
                                         <div class="officeAddress">
 
                                             <h1 style="color: black;">Associated Instrument Distributors (Pvt) Ltd</h1>
                                             <!-- <p class="title">CEO & Founder, Example</p> -->
-                                            <p><a href=""> Room# 7, 8, 5th Floor, Rimpa Plaza, Office Tower</a></p>
-                                            <p>M.A.Jinnah Road</p>
-                                            <p>Karachi-74400</p>
-                                            <p>Pakistan.</p>
-                                            <p>Tel: 92-21-32735734 - 32767475-7 - 32729361</p>
+                                            <p><span><i class="fa fa-home fa-lg" aria-hidden="true"></i></span>
+                                            <a href=""> Room# 7, 8, 5th Floor, Rimpa Plaza, Office Tower M.A.Jinnah Road Karachi-74400 Pakistan.</a></p>
+                                           
+                                            <p><span><i class="fa fa-phone fa-lg" aria-hidden="true"></i></span> 92-21-32735734 - 32767475-7 - 32729361</p>
                                             <p>Fax: 92-21-32736582</p>
-                                            <p><a href="">Email: aidl@cyber.net.pk</a></p>
+                                            <p><span><i class="fa fa-envelope-o fa-lg"  aria-hidden="true"></i></span>
+                                            <a href=""  style="padding-left:1%"> aidl@cyber.net.pk</a></p>
                                             <p>URL: www.aidlpk.com</p>
                                         </div>
                                     </div>
-
-
                                     <div class="column2">
                                         <div class="officeAddress">
 
                                             <h1 style="color: black;">Associated Instrument Distributors (Pvt) Ltd</h1>
                                             <!-- <p class="title">CEO & Founder, Example</p> -->
-                                            <p><a href=""> Room# 7, 8, 5th Floor, Rimpa Plaza, Office Tower</a></p>
-                                            <p>M.A.Jinnah Road</p>
-                                            <p>Karachi-74400</p>
-                                            <p>Pakistan.</p>
-                                            <p>Tel: 92-21-32735734 - 32767475-7 - 32729361</p>
+                                            <p><span><i class="fa fa-home fa-lg" aria-hidden="true"></i></span>
+                                            <a href=""> Room# 7, 8, 5th Floor, Rimpa Plaza, Office Tower M.A.Jinnah Road Karachi-74400 Pakistan.</a></p>
+                                           
+                                            <p><span><i class="fa fa-phone fa-lg" aria-hidden="true"></i></span> 92-21-32735734 - 32767475-7 - 32729361</p>
                                             <p>Fax: 92-21-32736582</p>
-                                            <p><a href="">Email: aidl@cyber.net.pk</a></p>
+                                            <p><span><i class="fa fa-envelope-o fa-lg"  aria-hidden="true"></i></span>
+                                            <a href=""  style="padding-left:1%"> aidl@cyber.net.pk</a></p>
                                             <p>URL: www.aidlpk.com</p>
                                         </div>
                                     </div>
@@ -1471,34 +1496,202 @@
                                     </ul>
                                     <div class="tab-content">
                                         <div id="all" class="tab-pane active"><br>
-                                            <h3>HOME</h3>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                tempor incididunt ut labore et dolore magna aliqua.</p>
+                                            <div class="row1">
+                                                <?php 
+                                                    if ($result = mysqli_query($link, $sql1)) {
+                                                    if (mysqli_num_rows($result) > 0) {
+                                                ?>
+                                                <?php
+                                                while ($row = mysqli_fetch_array($result)) { ?>
+                                                    <div class="column" style=" margin-bottom: 2%;">
+                                                        <div class="card1">
+                                                            <img src="../pages/examples/images/<?= $row['p_img'] ?>"
+                                                                alt="John" style="width:100%">
+                                                            <h1 style="color:black"><?= strtoupper($row['p_name']) ?></h1>
+                                                            <p class="title">CEO & Founder, Example</p>
+                                                            <p>Harvard University</p>
+
+                                                            <p><button
+                                                                    class="button1 page-open-clicker open-page-11 link">Contact</button>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <?php
+                                                    }
+                                                    mysqli_free_result($result);
+                                                } else {
+                                                    echo "No records matching your query were found.";
+                                                }
+                                                } else {
+                                                echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+                                                }
+                                                ?>
+                                            </div>
                                         </div>
                                         <div id="phy" class="tab-pane fade"><br>
-                                            <h3>Menu 1</h3>
-                                            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                                                ut aliquip ex ea commodo consequat.</p>
+                                            <div class="row1">
+                                                <?php 
+                                                    if ($result = mysqli_query($link, $sql2)) {
+                                                    if (mysqli_num_rows($result) > 0) {
+                                                ?>
+                                                <?php
+                                                while ($row = mysqli_fetch_array($result)) { ?>
+                                                    <div class="column" style=" margin-bottom: 2%;">
+                                                        <div class="card1">
+                                                            <img src="../pages/examples/images/<?= $row['p_img'] ?>"
+                                                                alt="John" style="width:100%">
+                                                            <h1 style="color:black"><?= strtoupper($row['p_name']) ?></h1>
+                                                            <p class="title">CEO & Founder, Example</p>
+                                                            <p>Harvard University</p>
+
+                                                            <p><button
+                                                                    class="button1 page-open-clicker open-page-11 link">Contact</button>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <?php
+                                                    }
+                                                    mysqli_free_result($result);
+                                                } else {
+                                                    echo "No records matching your query were found.";
+                                                }
+                                                } else {
+                                                echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+                                                }
+                                                ?>
+                                            </div>
                                         </div>
                                         <div id="eng" class="tab-pane fade"><br>
-                                            <h3>Menu 2</h3>
-                                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                                                accusantium doloremque laudantium, totam rem aperiam.</p>
+                                            <div class="row1">
+                                                <?php 
+                                                    if ($result = mysqli_query($link, $sql3)) {
+                                                    if (mysqli_num_rows($result) > 0) {
+                                                ?>
+                                                <?php
+                                                while ($row = mysqli_fetch_array($result)) { ?>
+                                                    <div class="column" style=" margin-bottom: 2%;">
+                                                        <div class="card1">
+                                                            <img src="../pages/examples/images/<?= $row['p_img'] ?>"
+                                                                alt="John" style="width:100%">
+                                                            <h1 style="color:black"><?= strtoupper($row['p_name']) ?></h1>
+                                                            <p class="title">CEO & Founder, Example</p>
+                                                            <p>Harvard University</p>
+
+                                                            <p><button
+                                                                    class="button1 page-open-clicker open-page-11 link">Contact</button>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <?php
+                                                    }
+                                                    mysqli_free_result($result);
+                                                } else {
+                                                    echo "No records matching your query were found.";
+                                                }
+                                                } else {
+                                                echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+                                                }
+                                                ?>
+                                            </div>
                                         </div>
                                         <div id="earth" class="tab-pane fade"><br>
-                                            <h3>Menu 2</h3>
-                                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                                                accusantium doloremque laudantium, totam rem aperiam.</p>
+                                            <div class="row1">
+                                                <?php 
+                                                    if ($result = mysqli_query($link, $sql4)) {
+                                                    if (mysqli_num_rows($result) > 0) {
+                                                ?>
+                                                <?php
+                                                while ($row = mysqli_fetch_array($result)) { ?>
+                                                    <div class="column" style=" margin-bottom: 2%;">
+                                                        <div class="card1">
+                                                            <img src="../pages/examples/images/<?= $row['p_img'] ?>"
+                                                                alt="John" style="width:100%">
+                                                            <h1 style="color:black"><?= strtoupper($row['p_name']) ?></h1>
+                                                            <p class="title">CEO & Founder, Example</p>
+                                                            <p>Harvard University</p>
+
+                                                            <p><button
+                                                                    class="button1 page-open-clicker open-page-11 link">Contact</button>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <?php
+                                                    }
+                                                    mysqli_free_result($result);
+                                                } else {
+                                                    echo "No records matching your query were found.";
+                                                }
+                                                } else {
+                                                echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+                                                }
+                                                ?>
+                                            </div>
                                         </div>
                                         <div id="teaching" class="tab-pane fade"><br>
-                                            <h3>Menu 2</h3>
-                                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                                                accusantium doloremque laudantium, totam rem aperiam.</p>
+                                            <div class="row1">
+                                                <?php 
+                                                    if ($result = mysqli_query($link, $sql5)) {
+                                                    if (mysqli_num_rows($result) > 0) {
+                                                ?>
+                                                <?php
+                                                while ($row = mysqli_fetch_array($result)) { ?>
+                                                    <div class="column" style=" margin-bottom: 2%;">
+                                                        <div class="card1">
+                                                            <img src="../pages/examples/images/<?= $row['p_img'] ?>"
+                                                                alt="John" style="width:100%">
+                                                            <h1 style="color:black"><?= strtoupper($row['p_name']) ?></h1>
+                                                            <p class="title">CEO & Founder, Example</p>
+                                                            <p>Harvard University</p>
+
+                                                            <p><button
+                                                                    class="button1 page-open-clicker open-page-11 link">Contact</button>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <?php
+                                                    }
+                                                    mysqli_free_result($result);
+                                                } else {
+                                                    echo "No records matching your query were found.";
+                                                }
+                                                } else {
+                                                echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+                                                }
+                                                ?>
+                                            </div>
                                         </div>
                                         <div id="nano" class="tab-pane fade"><br>
-                                            <h3>Menu 2</h3>
-                                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                                                accusantium doloremque laudantium, totam rem aperiam.</p>
+                                        <div class="row1">
+                                                <?php 
+                                                    if ($result = mysqli_query($link, $sql6)) {
+                                                    if (mysqli_num_rows($result) > 0) {
+                                                ?>
+                                                <?php
+                                                while ($row = mysqli_fetch_array($result)) { ?>
+                                                    <div class="column" style=" margin-bottom: 2%;">
+                                                        <div class="card1">
+                                                            <img src="../pages/examples/images/<?= $row['p_img'] ?>"
+                                                                alt="John" style="width:100%">
+                                                            <h1 style="color:black"><?= strtoupper($row['p_name']) ?></h1>
+                                                            <p class="title">CEO & Founder, Example</p>
+                                                            <p>Harvard University</p>
+
+                                                            <p><button
+                                                                    class="button1 page-open-clicker open-page-11 link">Contact</button>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <?php
+                                                    }
+                                                    mysqli_free_result($result);
+                                                } else {
+                                                    echo "No records matching your query were found.";
+                                                }
+                                                } else {
+                                                echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+                                                }
+                                                ?>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -1934,18 +2127,13 @@
 
 
     <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog" style="width:40%;border-radius: 5px;" role="document">
         <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title" style="color:black">Bio Data</h4>
-            </div>
-            <div class="modal-body">
+           
+            <div class="modal-body" style="background-color: rgba(0, 0, 0, 0.8);">
                 <div class="fetched-data"></div> 
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
+            
         </div>
     </div>
 </div>

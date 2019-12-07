@@ -77,11 +77,11 @@
                   <div class="form-group">
                     <label for="sel1">Product Category</label><br>
                     
-                    <input type="checkbox" name="check_list[]" value="py"><label>PHYSICS</label><br>
-                    <input type="checkbox" name="check_list[]" value="ecmmm"><label>Engineering Civil Mech.Materials. Metallurgy</label><br>
-                    <input type="checkbox" name="check_list[]" value="es"><label>Earth Sciences</label><br>
-                    <input type="checkbox" name="check_list[]" value="ta"><label>Teaching Aids</label><br>
-                    <input type="checkbox" name="check_list[]" value="nt"><label>Nano Technology</label><br>
+                    <input type="checkbox" name="py" value="py"><label>PHYSICS</label><br>
+                    <input type="checkbox" name="ecmmm" value="ecmmm"><label>Engineering Civil Mech.Materials. Metallurgy</label><br>
+                    <input type="checkbox" name="es" value="es"><label>Earth Sciences</label><br>
+                    <input type="checkbox" name="ta" value="ta"><label>Teaching Aids</label><br>
+                    <input type="checkbox" name="nt" value="nt"><label>Nano Technology</label><br>
                     
                   </div>
 
@@ -161,6 +161,11 @@ if (isset($_POST['submit'])) { // Fetching variables of the form which travels i
   $p_name = $_POST["name"];
   $p_des = $_POST["email"];
   $image = $_FILES['image']['name'];
+  $c1 = $_POST["py"];
+  $c2 = $_POST["ecmmm"];
+  $c3 = $_POST["es"];
+  $c4 = $_POST["ta"];
+  $c5 = $_POST["nt"];
   // $cat=$_POST['sel1'];
   if(!empty($_POST['check_list'])) {
     // Counting number of checked checkboxes.
@@ -178,6 +183,49 @@ if (isset($_POST['submit'])) { // Fetching variables of the form which travels i
     else{
     echo "<b>Please Select Atleast One Option.</b>";
     }
+    if(!empty($c1))
+    {
+      $c1=1;
+    }
+    else
+    {
+      $c1=0;
+    }
+    if(!empty($c2))
+    {
+      $c2=1;
+    }
+    else
+    {
+      $c2=0;
+    }
+    if(!empty($c3))
+    {
+      $c3=1;
+    }
+    else
+    {
+      $c3=0;
+    }
+    if(!empty($c4))
+    {
+      $c4=1;
+    }
+    else
+    {
+      $c4=0;
+    }
+    if(!empty($c5))
+    {
+      $c5=1;
+    }
+    else
+    {
+      $c5=0;
+    }
+    
+    
+    
   // Get text
   // $image_text = mysqli_real_escape_string($db, $_POST['image_text']);
 //   if(strtolower($cat)==strtolower('physics'))
@@ -203,10 +251,16 @@ if (isset($_POST['submit'])) { // Fetching variables of the form which travels i
   // image file directory
   $target = "images/" . basename($image);
 
-  $sql = "INSERT INTO add_product (p_name,p_url,p_type,p_img) VALUES ('$p_name','$p_des','$output','$image')";
+  $sql = "INSERT INTO add_product (p_name,p_url,cat_1,cat_2,cat_3,cat_4,cat_5,p_img) VALUES ('$p_name','$p_des','$c1','$c2','$c3','$c4','$c5','$image')";
   // execute query
-  mysqli_query($link, $sql);
-
+  
+  $result = mysqli_query($link, $sql);
+  if($result){
+    $successMsg = 'New record added successfully';
+    header('Location: projects.php');
+  }else{
+    $errorMsg = 'Error '.mysqli_error($link);
+  }
   if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
     $msg = "Image uploaded successfully";
   } else {
