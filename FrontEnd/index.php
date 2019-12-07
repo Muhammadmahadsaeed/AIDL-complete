@@ -192,6 +192,7 @@
 
         <!-- section inner start -->
         <div class="fireOT-inner">
+
             <!-- copyright home start -->
             <div class="fadeIn-element">
                 <div class="copyright-home">
@@ -214,6 +215,7 @@
                         <div class="upper-content">
                             <!-- container start -->
                             <div class="container sections">
+                            
                                 <!-- row start -->
                                 <div class="row">
                                     <!-- intro start -->
@@ -247,19 +249,16 @@
 
 
                 <!-- center container start -->
-
-
-
-
-
-
                 <div class="center-container">
 
                     <!-- center block start -->
                     <div class="center-block">
-
+                    <div>
+                        <a href="#contactUs" style="float:right;top:0" class="btn btn-primary" data-toggle="modal" >Contact Us</a>
+                        </div>
                         <!-- upper content start -->
                         <div class="upper-content">
+                        
 
                             <!-- quotes start -->
                             <div class="flexslider-quotes-wrap">
@@ -1170,13 +1169,13 @@
 
                                             <h1 style="color: black;">Associated Instrument Distributors (Pvt) Ltd</h1>
                                             <!-- <p class="title">CEO & Founder, Example</p> -->
-                                            <p><span><i class="fa fa-home fa-lg" aria-hidden="true"></i></span><a href=""> Room# 7, 8, 5th Floor, Rimpa Plaza, Office Tower</a></p>
-                                            <p>M.A.Jinnah Road</p>
-                                            <p>Karachi-74400</p>
-                                            <p>Pakistan.</p>
+                                            <p><span><i class="fa fa-home fa-lg" aria-hidden="true"></i></span>
+                                            <a href=""> Room# 7, 8, 5th Floor, Rimpa Plaza, Office Tower M.A.Jinnah Road Karachi-74400 Pakistan.</a></p>
+                                           
                                             <p><span><i class="fa fa-phone fa-lg" aria-hidden="true"></i></span> 92-21-32735734 - 32767475-7 - 32729361</p>
                                             <p>Fax: 92-21-32736582</p>
-                                            <p><span style="padding-left:1%"><i class="fa fa-envelope-o fa-lg" aria-hidden="true"></i></span><a href="">Email: aidl@cyber.net.pk</a></p>
+                                            <p><span><i class="fa fa-envelope-o fa-lg"  aria-hidden="true"></i></span>
+                                            <a href=""  style="padding-left:1%"> aidl@cyber.net.pk</a></p>
                                             <p>URL: www.aidlpk.com</p>
                                         </div>
                                     </div>
@@ -1186,13 +1185,13 @@
 
                                             <h1 style="color: black;">Associated Instrument Distributors (Pvt) Ltd</h1>
                                             <!-- <p class="title">CEO & Founder, Example</p> -->
-                                            <p><a href=""> Room# 7, 8, 5th Floor, Rimpa Plaza, Office Tower</a></p>
-                                            <p>M.A.Jinnah Road</p>
-                                            <p>Karachi-74400</p>
-                                            <p>Pakistan.</p>
-                                            <p>Tel: 92-21-32735734 - 32767475-7 - 32729361</p>
+                                            <p><span><i class="fa fa-home fa-lg" aria-hidden="true"></i></span>
+                                            <a href=""> Room# 7, 8, 5th Floor, Rimpa Plaza, Office Tower M.A.Jinnah Road Karachi-74400 Pakistan.</a></p>
+                                           
+                                            <p><span><i class="fa fa-phone fa-lg" aria-hidden="true"></i></span> 92-21-32735734 - 32767475-7 - 32729361</p>
                                             <p>Fax: 92-21-32736582</p>
-                                            <p><a href="">Email: aidl@cyber.net.pk</a></p>
+                                            <p><span><i class="fa fa-envelope-o fa-lg"  aria-hidden="true"></i></span>
+                                            <a href=""  style="padding-left:1%"> aidl@cyber.net.pk</a></p>
                                             <p>URL: www.aidlpk.com</p>
                                         </div>
                                     </div>
@@ -1203,13 +1202,13 @@
 
                                             <h1 style="color: black;">Associated Instrument Distributors (Pvt) Ltd</h1>
                                             <!-- <p class="title">CEO & Founder, Example</p> -->
-                                            <p><a href=""> Room# 7, 8, 5th Floor, Rimpa Plaza, Office Tower</a></p>
-                                            <p>M.A.Jinnah Road</p>
-                                            <p>Karachi-74400</p>
-                                            <p>Pakistan.</p>
-                                            <p>Tel: 92-21-32735734 - 32767475-7 - 32729361</p>
+                                            <p><span><i class="fa fa-home fa-lg" aria-hidden="true"></i></span>
+                                            <a href=""> Room# 7, 8, 5th Floor, Rimpa Plaza, Office Tower M.A.Jinnah Road Karachi-74400 Pakistan.</a></p>
+                                           
+                                            <p><span><i class="fa fa-phone fa-lg" aria-hidden="true"></i></span> 92-21-32735734 - 32767475-7 - 32729361</p>
                                             <p>Fax: 92-21-32736582</p>
-                                            <p><a href="">Email: aidl@cyber.net.pk</a></p>
+                                            <p><span><i class="fa fa-envelope-o fa-lg"  aria-hidden="true"></i></span>
+                                            <a href=""  style="padding-left:1%"> aidl@cyber.net.pk</a></p>
                                             <p>URL: www.aidlpk.com</p>
                                         </div>
                                     </div>
@@ -1934,22 +1933,40 @@
 
 
     <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title" style="color:black">Bio Data</h4>
-            </div>
-            <div class="modal-body">
-                <div class="fetched-data"></div> 
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title" style="color:black">Bio Data</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="fetched-data"></div> 
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
             </div>
         </div>
-    </div>
 </div>
-
+<div class="modal fade" id="contactUs" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
     <script src="js/plugins.js">
     </script>
     <script src="js/liex.js">
