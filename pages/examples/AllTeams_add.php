@@ -83,7 +83,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="num">Mobile Number</label>
-                                        <input type="text" pattern="03[0-9]{2}(?!1234567)(?!1111111)(?!7654321)[0-9]{7}" name="num" id="num" class="form-control" required>
+                                        <input type="text" pattern="03[0-9]{2}(?!1234567)(?!1111111)(?!7654321)[0-9]{7}" name="num" id="num" class="form-control"  required>
                                      
                                     </div>
                                     <div class="form-group">

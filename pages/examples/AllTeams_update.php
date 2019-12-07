@@ -4,7 +4,7 @@ $upload_dir = 'images/';
 
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
-    $sql = "select * from add_client where cid=" . $id;
+    $sql = "select * from team_memebers where team_id=" . $id;
     $result = mysqli_query($link, $sql);
     if (mysqli_num_rows($result) > 0) {
         $row = mysqli_fetch_assoc($result);
@@ -126,11 +126,11 @@ if (isset($_POST['Submit'])) {
 
                                     <div class="card-body">
                                         <div class="form-group">
-                                            <label for="inputName">Client Name</label>
-                                            <input type="text" id="inputName" name="name" value="<?= $row['cname']; ?>" class="form-control">
+                                            <label for="inputName">Team Member Name</label>
+                                            <input type="text" id="inputName" name="name" value="<?= $row['team_name']; ?>" class="form-control">
                                         </div>
                                         <div class="form-group">
-                                            <label for="inputDescription">Client Description</label>
+                                            <label for="inputDescription">Team Member Description</label>
                                             <textarea id="inputDescription" name="desc" class="form-control" rows="4"><?= $row['cdesc']; ?></textarea>
                                         </div>
 
