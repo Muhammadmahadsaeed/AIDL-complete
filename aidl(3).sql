@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 06, 2019 at 05:14 PM
+-- Generation Time: Dec 07, 2019 at 05:38 PM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.1.33
 
@@ -53,7 +53,11 @@ CREATE TABLE `add_product` (
   `p_id` int(11) NOT NULL,
   `p_name` varchar(255) NOT NULL,
   `p_url` varchar(255) NOT NULL,
-  `p_type` varchar(255) NOT NULL,
+  `cat_1` tinyint(1) NOT NULL,
+  `cat_2` tinyint(1) NOT NULL,
+  `cat_3` tinyint(1) NOT NULL,
+  `cat_4` tinyint(1) NOT NULL,
+  `cat_5` tinyint(1) NOT NULL,
   `p_img` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -61,21 +65,14 @@ CREATE TABLE `add_product` (
 -- Dumping data for table `add_product`
 --
 
-INSERT INTO `add_product` (`p_id`, `p_name`, `p_url`, `p_type`, `p_img`) VALUES
-(14, 'as', 'fdhhdfhdfhdfhfdhddfhh', '', '250px-National_University_of_Computer_and_Emerging_Sciences_logo.png'),
-(15, 'new product', 'aaaaaa', '', '68710457_223450105240650_244696394365927424_n.jpg'),
-(16, 'new', 'product', '', 'punisher-1920x1080-logo-skull-dark-background-minimal-4k-17130.png'),
-(17, 'hello', 'www.hello.com', 'Earth Sciences', '250px-National_University_of_Computer_and_Emerging_Sciences_logo.png'),
-(18, 'new', 'www.helloworld.com', 'nt', '250px-National_University_of_Computer_and_Emerging_Sciences_logo.png'),
-(19, 'sdfsdf', 'saudkhan@riu.edu.pk', 'ecmmm', 'fast_logo_text.png'),
-(20, 'sdfsdf', 'aaaa@a.com', 'ta', 'friendship love.png'),
-(21, 'habibi', 'muneeb_420@gmail.com', 'es', 'friendship love.png'),
-(22, 'client new', 'aaaa@a.com', 'py', 'friendship love.png'),
-(23, '', '', 'nt', ''),
-(24, '', '', 'nt', ''),
-(25, '', '', 'nt', ''),
-(26, '', '', 'nt', ''),
-(27, 'metkon', 'www.metkon.com', 'Array', 'about us.jpg');
+INSERT INTO `add_product` (`p_id`, `p_name`, `p_url`, `cat_1`, `cat_2`, `cat_3`, `cat_4`, `cat_5`, `p_img`) VALUES
+(31, 'helloo', 'superadmin@fypms.comm', 0, 1, 1, 1, 1, 'fast_logo_text.png'),
+(32, 'as', 'haider@example.com', 1, 0, 0, 0, 0, '250px-National_University_of_Computer_and_Emerging_Sciences_logo.png'),
+(33, 'habibi', 'haider@example.com', 0, 1, 0, 0, 0, 'friendship love.png'),
+(34, 'sdfsdfsss', 'haider@example.com', 1, 1, 1, 1, 1, 'fast_logo_text.png'),
+(35, 'check123', 'aaaa@a.com', 1, 0, 0, 1, 0, '250px-National_University_of_Computer_and_Emerging_Sciences_logo.png'),
+(36, 'testt', 'saudkhan@riu.edu.pk', 1, 0, 1, 1, 1, 'friendship love.png'),
+(37, 'habibi', 'superadmin@fypms.com', 1, 0, 0, 1, 1, '250px-National_University_of_Computer_and_Emerging_Sciences_logo.png');
 
 -- --------------------------------------------------------
 
@@ -152,10 +149,9 @@ CREATE TABLE `team_members` (
 --
 
 INSERT INTO `team_members` (`team_id`, `team_name`, `team_post`, `team_email`, `team_num`, `team_image`, `create_on`) VALUES
-(3, 'sohail tayyab', 'ceo', 'sohail.aidl@gmail.com', '0512348220', 'about us.jpg', '2019-12-06 17:01:32'),
-(4, 'ghulam rabbani', 'director faince', 'rabbanigorayya@yahoo.com', '02132729361', 'Fast.jpg', '2019-12-06 17:08:15'),
-(5, 'aqsa mehdi', 'sales and service engineer', 'aqsa@gmail.com', '0336', 'fyp page 2.jpg', '2019-12-06 17:09:41'),
-(6, 'aqsa mehdi', 'sales and service engineer', 'aqsa@gmail.com', '0336', 'fyp page 2.jpg', '2019-12-06 18:54:56');
+(1, 'mahad', 'CEO', 'mahad@gamil.com', '0336', '72045293_2405902189548979_3466253820093267968_n.jpg', '2019-12-06 00:18:44'),
+(2, 'haq', 'CEO', 'haq@gmail.com', '0314', 'IMG-20191109-WA0004.jpg', '2019-12-06 00:45:39'),
+(3, '', '', '', '0307-2010420', '', '2019-12-07 21:14:41');
 
 --
 -- Indexes for dumped tables
@@ -205,7 +201,7 @@ ALTER TABLE `add_client`
 -- AUTO_INCREMENT for table `add_product`
 --
 ALTER TABLE `add_product`
-  MODIFY `p_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `p_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT for table `add_service`
@@ -223,7 +219,7 @@ ALTER TABLE `photos`
 -- AUTO_INCREMENT for table `team_members`
 --
 ALTER TABLE `team_members`
-  MODIFY `team_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `team_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -1,20 +1,11 @@
 <?php require_once('../../config/db.php');
-$sql="select * from add_product where p_type LIKE '%,%'";
-$result = mysqli_query($link, $sql);
-$output = '';
-while($row = mysqli_fetch_assoc($result)){
-if(mysqli_num_rows($result) > 0){
-  
-  print_r(explode(',',$row['p_type'])); 
-}
+$sql="select * from add_product";
+$sql1="select * from add_product where cat_1=1";
+$sql2="select * from add_product where cat_2=1";
+$sql3="select * from add_product where cat_3=1";
+$sql4="select * from add_product where cat_4=1";
+$sql5="select * from add_product where cat_5=1";
 
-// else{
-//   $sql="select * from add_product where p_type not LIKE '%,%'";
-//   $result = mysqli_query($link, $sql);
-//   while ($row = mysqli_fetch_assoc($result)) {
-//     debug_to_console($row['p_type']);
-//   }
-}
 
          
 $upload_dir = 'images/';
@@ -180,7 +171,7 @@ if(isset($_GET['delete'])){
                                 </i>
                                 View
                               </a>
-                              <a class="btn btn-info btn-sm" href="./project_edit.html">
+                              <a class="btn btn-info btn-sm" href="project_update.php?id=<?php echo $row['p_id'] ?>">
                                 <i class="fas fa-pencil-alt">
                                 </i>
                                 Edit
@@ -255,7 +246,7 @@ if(isset($_GET['delete'])){
                                 </i>
                                 View
                               </a>
-                              <a class="btn btn-info btn-sm" href="./project_edit.html">
+                              <a class="btn btn-info btn-sm" href="project_update.php?id=<?php echo $row['p_id'] ?>">
                                 <i class="fas fa-pencil-alt">
                                 </i>
                                 Edit
@@ -330,7 +321,7 @@ if(isset($_GET['delete'])){
                                 </i>
                                 View
                               </a>
-                              <a class="btn btn-info btn-sm" href="./project_edit.html">
+                              <a class="btn btn-info btn-sm" href="project_update.php?id=<?php echo $row['p_id'] ?>">
                                 <i class="fas fa-pencil-alt">
                                 </i>
                                 Edit
@@ -405,7 +396,7 @@ if(isset($_GET['delete'])){
                                 </i>
                                 View
                               </a>
-                              <a class="btn btn-info btn-sm" href="./project_edit.html">
+                              <a class="btn btn-info btn-sm" href="project_update.php?id=<?php echo $row['p_id'] ?>">
                                 <i class="fas fa-pencil-alt">
                                 </i>
                                 Edit
@@ -480,7 +471,7 @@ if(isset($_GET['delete'])){
                                 </i>
                                 View
                               </a>
-                              <a class="btn btn-info btn-sm" href="./project_edit.html">
+                              <a class="btn btn-info btn-sm" href="project_update.php?id=<?php echo $row['p_id'] ?>">
                                 <i class="fas fa-pencil-alt">
                                 </i>
                                 Edit
@@ -555,7 +546,7 @@ if(isset($_GET['delete'])){
                                 </i>
                                 View
                               </a>
-                              <a class="btn btn-info btn-sm" href="./project_edit.html">
+                              <a class="btn btn-info btn-sm" href="project_update.php?id=<?php echo $row['p_id'] ?>">
                                 <i class="fas fa-pencil-alt">
                                 </i>
                                 Edit

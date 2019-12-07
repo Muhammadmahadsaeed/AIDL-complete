@@ -3,15 +3,15 @@
 $upload_dir = 'images/';
 if(isset($_GET['delete'])){
   $id = $_GET['delete'];
-  $sql = "select * from add_client where cid = ".$id;
+  $sql = "select * from team_memebers where team_id = ".$id;
   $result = mysqli_query($link, $sql);
   if(mysqli_num_rows($result) > 0){
     $row = mysqli_fetch_assoc($result);
     $image = $row['cimage'];
     unlink($upload_dir.$image);
-    $sql = "delete from add_client where cid=".$id;
+    $sql = "delete from team_memebers where team_id=".$id;
     if(mysqli_query($link, $sql)){
-      header('location:clients.php');
+      header('location:AllTeams.php');
     }
   }
 }
@@ -97,7 +97,7 @@ if(isset($_GET['delete'])){
                         <div class="container">
                     <div class="row">
                         <?php
-                        require_once('../../config/db.php');
+                        
                         $sql = "select * from team_members";
                             $result = mysqli_query($link, $sql);
                     				if(mysqli_num_rows($result)){

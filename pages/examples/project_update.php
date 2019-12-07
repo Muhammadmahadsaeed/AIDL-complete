@@ -1,4 +1,94 @@
-<?php require_once('../../config/db.php') ?>
+<?php 
+
+require_once('../../config/db.php');
+$upload_dir = 'images/';
+
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
+    $sql = "select * from add_product where p_id=" . $id;
+    $result = mysqli_query($link, $sql);
+    if (mysqli_num_rows($result) > 0) {
+        $row = mysqli_fetch_assoc($result);
+    } else {
+        $errorMsg = 'Could not Find Any Record';
+    }
+}
+
+if (isset($_POST['submit'])) {
+    $p_name = $_POST["name"];
+  $p_des = $_POST["email"];
+  $image = $_FILES['image']['name'];
+  $c1 = $_POST["py"];
+  $c2 = $_POST["ecmmm"];
+  $c3 = $_POST["es"];
+  $c4 = $_POST["ta"];
+  $c5 = $_POST["nt"];
+
+    
+    if(!empty($c1))
+    {
+      $c1=1;
+    }
+    else
+    {
+      $c1=0;
+    }
+    if(!empty($c2))
+    {
+      $c2=1;
+    }
+    else
+    {
+      $c2=0;
+    }
+    if(!empty($c3))
+    {
+      $c3=1;
+    }
+    else
+    {
+      $c3=0;
+    }
+    if(!empty($c4))
+    {
+      $c4=1;
+    }
+    else
+    {
+      $c4=0;
+    }
+    if(!empty($c5))
+    {
+      $c5=1;
+    }
+    else
+    {
+      $c5=0;
+    }
+    $target = "images/" . basename($image);
+    
+    if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
+        $msg = "Image uploaded successfully";
+      } else {
+        $msg = "Failed to upload image";
+      }
+
+    if (!isset($errorMsg)) {
+        $sql = "update add_product set p_name = '" . $p_name . "', p_url = '" . $p_des . "',cat_1 = '" . $c1 . "',cat_2 = '" . $c2 . "',cat_3 = '" . $c3 . "',cat_4 = '" . $c4 . "',cat_5 = '" . $c5 . "',p_img = '" . $image . "' where p_id=" . $id;
+        $result = mysqli_query($link, $sql);
+        if ($result) {
+            $successMsg = 'New record updated successfully';
+            header('Location:projects.php');
+        } else {
+            $errorMsg = 'Error ' . mysqli_error($link);
+        }
+    }
+}
+
+
+
+
+?>
 <!DOCTYPE html>
 <html>
 
@@ -68,20 +158,62 @@
 
                   <div class="form-group">
                     <label for="inputName">Product Name</label>
-                    <input type="text" name="name" id="inputName" class="form-control">
+                    <input type="text" name="name" id="inputName" class="form-control" value="<?= $row['p_name']; ?>">
                   </div>
                   <div class="form-group">
                     <label for="inputDescription">Product Webiste URL</label>
-                    <input id="inputDescription" name="email" class="form-control" ></textarea>
+                    <input id="inputDescription" name="email" class="form-control" value="<?= $row['p_url']; ?>">
                   </div>
                   <div class="form-group">
                     <label for="sel1">Product Category</label><br>
-                    
-                    <input type="checkbox" name="py" value="py"><label>PHYSICS</label><br>
+                    <?php
+                    if($row['cat_1'])
+                    {?>
+                        <input type="checkbox" name="py" value="py" checked="checked"><label>PHYSICS</label><br>  
+                   <?php }
+                   else{
+                    ?>
+                    <input type="checkbox" name="py" value="py"><label>PHYSICS</label><br>  
+                   <?php } 
+                    if($row['cat_2'])
+                    {?>
+                        <input type="checkbox" name="ecmmm" value="ecmmm" checked="checked"><label>Engineering Civil Mech.Materials. Metallurgy</label><br>
+                   <?php }
+                   else{
+                    ?>
+                     <input type="checkbox" name="ecmmm" value="ecmmm" ><label>Engineering Civil Mech.Materials. Metallurgy</label><br> 
+                   <?php } 
+                    if($row['cat_3'])
+                    {?>
+                        <input type="checkbox" name="es" value="es" checked="checked"><label>Earth Sciences</label><br>  
+                   <?php }
+                   else{
+                    ?>
+                   <input type="checkbox" name="es" value="es"><label>Earth Sciences</label><br>  
+                   <?php } 
+                   
+                   if($row['cat_4'])
+                    {?>
+                        <input type="checkbox" name="ta" value="ta" checked="checked"><label>Teaching Aids</label><br>>  
+                   <?php }
+                   else{
+                    ?>
+                   <input type="checkbox" name="ta" value="ta"><label>Teaching Aids</label><br>  
+                   <?php } 
+                   if($row['cat_5'])
+                    {?>
+                         <input type="checkbox" name="nt" value="nt" checked="checked"><label>Nano Technology</label><br>  
+                   <?php }
+                   else{
+                    ?>
+                    <input type="checkbox" name="nt" value="nt"><label>Nano Technology</label><br>  
+                   <?php } ?>
+
+                    <!-- <input type="checkbox" name="py" value="py"><label>PHYSICS</label><br>
                     <input type="checkbox" name="ecmmm" value="ecmmm"><label>Engineering Civil Mech.Materials. Metallurgy</label><br>
                     <input type="checkbox" name="es" value="es"><label>Earth Sciences</label><br>
                     <input type="checkbox" name="ta" value="ta"><label>Teaching Aids</label><br>
-                    <input type="checkbox" name="nt" value="nt"><label>Nano Technology</label><br>
+                    <input type="checkbox" name="nt" value="nt"><label>Nano Technology</label><br> -->
                     
                   </div>
 
@@ -103,6 +235,8 @@
                 <div class="card-body">
                   <div class="form-group">
                     <label for="inputEstimatedBudget">Product Image</label>
+                    
+                                        <img src="<?php echo $upload_dir . $row['p_img'] ?>" width="100"><br> <br>
                     <label for="inputEstimatedBudget" class="file-upload btn btn-primary btn-block rounded-pill shadow">
                       <i class="fa fa-upload mr-2"></i>
                       Browse for file ...
@@ -151,101 +285,3 @@
 </body>
 
 </html>
-
-
-<?php
-$img = "";
-if (isset($_POST['submit'])) { // Fetching variables of the form which travels in URL
-
-  // Get image name
-  $p_name = $_POST["name"];
-  $p_des = $_POST["email"];
-  $image = $_FILES['image']['name'];
-  $c1 = $_POST["py"];
-  $c2 = $_POST["ecmmm"];
-  $c3 = $_POST["es"];
-  $c4 = $_POST["ta"];
-  $c5 = $_POST["nt"];
-  // $cat=$_POST['sel1'];
-  // if(!empty($_POST['check_list'])) {
-  //   // Counting number of checked checkboxes.
-  //   $checked_count = count($_POST['check_list']);
-  //   echo "You have selected following ".$checked_count." option(s): <br/>";
-  //   // Loop to store and display values of individual checked checkbox.
-  //   $selectedCategories = array();
-  //   foreach($_POST['check_list'] as $selected) {
-  //     array_push($selectedCategories,strtolower($selected));
-   
-  //   }
-  //   // debug_to_console($selectedCategories);
-  //   $output = implode(',', $selectedCategories);
-  //   }
-  //   else{
-  //   echo "<b>Please Select Atleast One Option.</b>";
-  //   }
-    if(!empty($c1))
-    {
-      $c1=1;
-    }
-    else
-    {
-      $c1=0;
-    }
-    if(!empty($c2))
-    {
-      $c2=1;
-    }
-    else
-    {
-      $c2=0;
-    }
-    if(!empty($c3))
-    {
-      $c3=1;
-    }
-    else
-    {
-      $c3=0;
-    }
-    if(!empty($c4))
-    {
-      $c4=1;
-    }
-    else
-    {
-      $c4=0;
-    }
-    if(!empty($c5))
-    {
-      $c5=1;
-    }
-    else
-    {
-      $c5=0;
-    }
-    
-  
-  $target = "images/" . basename($image);
-
-  $sql = "INSERT INTO add_product (p_name,p_url,cat_1,cat_2,cat_3,cat_4,cat_5,p_img) VALUES ('$p_name','$p_des','$c1','$c2','$c3','$c4','$c5','$image')";
-  // execute query
-  
-  $result = mysqli_query($link, $sql);
-  if($result){
-    $successMsg = 'New record added successfully';
-    header('Location: projects.php');
-  }else{
-    $errorMsg = 'Error '.mysqli_error($link);
-  }
-  if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
-    $msg = "Image uploaded successfully";
-  } else {
-    $msg = "Failed to upload image";
-  }
-}
-
-
-
-
-
-?>
