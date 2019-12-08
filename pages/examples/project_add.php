@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 3 | Project Edit</title>
+  <title>AIDL</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -195,7 +195,6 @@ if (isset($_POST['submit'])) { // Fetching variables of the form which travels i
     {
       $c2=1;
     }
-<<<<<<< HEAD
     if(!empty($c1))
     {
       $c1=1;
@@ -208,8 +207,6 @@ if (isset($_POST['submit'])) { // Fetching variables of the form which travels i
     {
       $c2=1;
     }
-=======
->>>>>>> a6bee18681120c753484ce1d6bf4903854a6c3fa
     else
     {
       $c2=0;
@@ -239,7 +236,6 @@ if (isset($_POST['submit'])) { // Fetching variables of the form which travels i
       $c5=0;
     }
     
-<<<<<<< HEAD
     
     
   // Get text
@@ -265,9 +261,6 @@ if (isset($_POST['submit'])) { // Fetching variables of the form which travels i
 // $cat='nt';
 //   }
   // image file directory
-=======
-  
->>>>>>> a6bee18681120c753484ce1d6bf4903854a6c3fa
   $target = "images/" . basename($image);
 
   $sql = "INSERT INTO add_product (p_name,p_url,cat_1,cat_2,cat_3,cat_4,cat_5,p_img) VALUES ('$p_name','$p_des','$c1','$c2','$c3','$c4','$c5','$image')";

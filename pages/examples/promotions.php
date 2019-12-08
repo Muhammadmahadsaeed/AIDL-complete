@@ -74,22 +74,21 @@
                         <div class="row">
                             <ul class="nav nav-tabs" role="tablist">
                                 <li class="nav-item">
-                                    <a class="nav-link active" data-toggle="tab" href="#allimg">ALL</a>
+                                    <a class="nav-link active" data-toggle="tab" href="#allImages">ALL</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#Alser">Alser</a>
+                                    <a class="nav-link" data-toggle="tab" href="#images">IMAGES</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#Edmond">Edmond
-                                        Buhler</a>
+                                    <a class="nav-link" data-toggle="tab" href="#wab">WABINERS
+                                    </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#Edwards">Edwards</a>
+                                    <a class="nav-link" data-toggle="tab" href="#videos">VIDEOS</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#Suss">Suss</a>
+                                    <a class="nav-link" data-toggle="tab" href="#promotions">PROMOTIONS</a>
                                 </li>
-                                
                             </ul>
 
 
@@ -102,227 +101,203 @@
                         <div class="row">
 
                             <div class="tab-content">
-                                <div id="allimg" class="tab-pane active"><br>
-                                  
-                                
-                                    <div class="container">
-                                        <div class="row1">
-                                        <?php $res = mysqli_query($link,"SELECT * FROM photos");
+                                    <div id="allImages" class="tab-pane active">
+                                        <br>
+                                    
+                                        <div class="container">
+                                            <div class="row1">
+                                                <?php $res = mysqli_query($link,"SELECT * FROM promotions");
+                                                    while($row = mysqli_fetch_array($res)){
+                                                        
+                                                    
+                                                        ?>
+
+                                                <div class="column">
+
+                                                    <div class="card1">
+                                                        <figure class="hover-effect-img move-down move-down-first">
+                                                            <a data-size="1920x1080"
+                                                                href="./promotionsImages/<?=$row['tittle']?>_<?=$row['images']?>">
+                                                                <img alt="<?=$row['tittle'];?>" class="img-responsive"
+                                                                    src="./promotionsImages/<?=$row['tittle']?>_<?=$row['images']?>"
+                                                                    height='200px' width='200px'>
+                                                            </a>
+                                                            <figcaption>
+                                                                <span
+                                                                    class="img-caption"><?=strtoupper($row['tittle']);?></span>
+                                                                <div class="hover-effect"></div>
+                                                                <div class="hover-icons">
+
+                                                                </div>
+                                                            </figcaption>
+                                                        </figure>
+                                                    </div>
+
+                                                </div>
+                                                <?php }; ?>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                    <div id="images" class="tab-pane fade"><br>
+                                        <div class="container">
+                                            <div class="row1">
+                                                <?php $res = mysqli_query($link,"SELECT * FROM promotions where pro_type = 'image'");
                                                 while($row = mysqli_fetch_array($res)){
                                                     
                                                    
                                                     ?>
-                                               
-                                            <div class="column">
-                                           
-                                                <div class="card1">
-                                                    <figure class="hover-effect-img move-down move-down-first">
-                                                    <a data-size="1920x1080" href="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
-                                                    <img
-                                                            alt="<?=$row['tittle'];?>" class="img-responsive"
-                                                            src="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>" height='200px' width='200px'>
-                                                    </a>
-                                                        <figcaption>
-                                                            <span class="img-caption"><?=$row['tittle'];?></span>
-                                                            <div class="hover-effect"></div>
-                                                            <div class="hover-icons">
-                                                                
-                                                            </div>
-                                                        </figcaption>
-                                                    </figure>
+
+                                                <div class="column">
+
+                                                    <div class="card1">
+                                                        <figure class="hover-effect-img move-down move-down-first">
+                                                            <a data-size="1920x1080"
+                                                                href="./promotionsImages/<?=$row['tittle']?>_<?=$row['images']?>">
+                                                                <img alt="<?=$row['tittle'];?>" class="img-responsive"
+                                                                    src="./promotionsImages/<?=$row['tittle']?>_<?=$row['images']?>"
+                                                                    height='200px' width='200px'>
+                                                            </a>
+                                                            <figcaption>
+                                                                <span
+                                                                    class="img-caption"><?=strtoupper($row['tittle']);?></span>
+                                                                <div class="hover-effect"></div>
+                                                                <div class="hover-icons">
+
+                                                                </div>
+                                                            </figcaption>
+                                                        </figure>
+                                                    </div>
+
                                                 </div>
-                                                
+                                                <?php }; ?>
                                             </div>
-                                            <?php }; ?>
+                                        </div>
+                                    </div>
+                                    <div id="wab" class="tab-pane fade"><br>
+                                        <div class="container">
+                                            <div class="row1">
+                                                <?php $res = mysqli_query($link,"SELECT * FROM promotions where pro_type = 'wabiners'");
+                                                while($row = mysqli_fetch_array($res)){
+                                                    
+                                                   
+                                                    ?>
+
+                                                <div class="column">
+
+                                                    <div class="card1">
+                                                        <figure class="hover-effect-img move-down move-down-first">
+                                                            <a data-size="1920x1080"
+                                                                href="./promotionsImages/<?=$row['tittle']?>_<?=$row['images']?>">
+                                                                <img alt="<?=$row['tittle'];?>" class="img-responsive"
+                                                                    src="./promotionsImages/<?=$row['tittle']?>_<?=$row['images']?>"
+                                                                    height='200px' width='200px'>
+                                                            </a>
+                                                            <figcaption>
+                                                                <span
+                                                                    class="img-caption"><?=strtoupper($row['tittle']);?></span>
+                                                                <div class="hover-effect"></div>
+                                                                <div class="hover-icons">
+
+                                                                </div>
+                                                            </figcaption>
+                                                        </figure>
+                                                    </div>
+
+                                                </div>
+                                                <?php }; ?>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="videos" class="tab-pane fade"><br>
+                                        <div class="container">
+                                            <div class="row1">
+                                                <?php $res = mysqli_query($link,"SELECT * FROM promotions where pro_type = 'video'");
+                                                while($row = mysqli_fetch_array($res)){
+                                                    
+                                                   
+                                                    ?>
+
+                                                <div class="column">
+
+                                                    <div class="card1">
+                                                        <figure class="hover-effect-img move-down move-down-first">
+                                                            <a data-size="1920x1080"
+                                                                href="./promotionsImages/<?=$row['tittle']?>_<?=$row['images']?>">
+                                                                <img alt="<?=$row['tittle'];?>" class="img-responsive"
+                                                                    src="./promotionsImages/<?=$row['tittle']?>_<?=$row['images']?>"
+                                                                    height='200px' width='200px'>
+                                                            </a>
+                                                            <figcaption>
+                                                                <span
+                                                                    class="img-caption"><?=strtoupper($row['tittle']);?></span>
+                                                                <div class="hover-effect"></div>
+                                                                <div class="hover-icons">
+
+                                                                </div>
+                                                            </figcaption>
+                                                        </figure>
+                                                    </div>
+
+                                                </div>
+                                                <?php }; ?>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="promotions" class="tab-pane fade"><br>
+                                        <div class="container">
+                                            <div class="row1">
+                                                <?php $res = mysqli_query($link,"SELECT * FROM promotions where pro_type = 'promotions'");
+                                                    while($row = mysqli_fetch_array($res)){
+                                                        
+                                                    
+                                                        ?>
+
+                                                <div class="column">
+
+                                                    <div class="card1">
+                                                        <figure class="hover-effect-img move-down move-down-first">
+                                                            <a data-size="1920x1080"
+                                                                href="./promotionsImages/<?=$row['tittle']?>_<?=$row['images']?>">
+                                                                <img alt="<?=$row['tittle'];?>" class="img-responsive"
+                                                                    src="./promotionsImages/<?=$row['tittle']?>_<?=$row['images']?>"
+                                                                    height='200px' width='200px'>
+                                                            </a>
+                                                            <figcaption>
+                                                                <span
+                                                                    class="img-caption"><?=strtoupper($row['tittle']);?></span>
+                                                                <div class="hover-effect"></div>
+                                                                <div class="hover-icons">
+
+                                                                </div>
+                                                            </figcaption>
+                                                        </figure>
+                                                    </div>
+
+                                                </div>
+                                                <?php }; ?>
+                                            </div>
                                         </div>
                                     </div>
 
 
+                                </div>
 
 
-                                </div>
-                                <div id="Alser" class="tab-pane fade"><br>
-                                    <div class="container">
-                                        <div class="row1">
-                                        <?php $res = mysqli_query($link,"SELECT * FROM photos");
-                                                while($row = mysqli_fetch_array($res)){
-                                                    
-                                                   
-                                                    ?>
-                                               
-                                            <div class="column">
-                                           
-                                                <div class="card1">
-                                                    <figure class="hover-effect-img move-down move-down-first">
-                                                    <a data-size="1920x1080" href="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
-                                                    <img
-                                                            alt="<?=$row['tittle'];?>" class="img-responsive"
-                                                            src="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>" height='200px' width='200px'>
-                                                    </a>
-                                                        <figcaption>
-                                                            <span class="img-caption"><?=$row['tittle'];?></span>
-                                                            <div class="hover-effect"></div>
-                                                            <div class="hover-icons">
-                                                                
-                                                            </div>
-                                                        </figcaption>
-                                                    </figure>
-                                                </div>
-                                                
-                                            </div>
-                                            <?php }; ?>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="Edmond" class="tab-pane fade"><br>
-                                    <div class="container">
-                                        <div class="row1">
-                                        <?php $res = mysqli_query($link,"SELECT * FROM photos");
-                                                while($row = mysqli_fetch_array($res)){
-                                                    
-                                                   
-                                                    ?>
-                                               
-                                            <div class="column">
-                                           
-                                                <div class="card1">
-                                                    <figure class="hover-effect-img move-down move-down-first">
-                                                    <a data-size="1920x1080" href="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
-                                                    <img
-                                                            alt="<?=$row['tittle'];?>" class="img-responsive"
-                                                            src="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>" height='200px' width='200px'>
-                                                    </a>
-                                                        <figcaption>
-                                                            <span class="img-caption"><?=$row['tittle'];?></span>
-                                                            <div class="hover-effect"></div>
-                                                            <div class="hover-icons">
-                                                                
-                                                            </div>
-                                                        </figcaption>
-                                                    </figure>
-                                                </div>
-                                                
-                                            </div>
-                                            <?php }; ?>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="Edwards" class="tab-pane fade"><br>
-                                    <div class="container">
-                                        <div class="row1">
-                                        <?php $res = mysqli_query($link,"SELECT * FROM photos");
-                                                while($row = mysqli_fetch_array($res)){
-                                                    
-                                                   
-                                                    ?>
-                                               
-                                            <div class="column">
-                                           
-                                                <div class="card1">
-                                                    <figure class="hover-effect-img move-down move-down-first">
-                                                    <a data-size="1920x1080" href="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
-                                                    <img
-                                                            alt="<?=$row['tittle'];?>" class="img-responsive"
-                                                            src="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>" height='200px' width='200px'>
-                                                    </a>
-                                                        <figcaption>
-                                                            <span class="img-caption"><?=$row['tittle'];?></span>
-                                                            <div class="hover-effect"></div>
-                                                            <div class="hover-icons">
-                                                                
-                                                            </div>
-                                                        </figcaption>
-                                                    </figure>
-                                                </div>
-                                                
-                                            </div>
-                                            <?php }; ?>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="Suss" class="tab-pane fade"><br>
-                                    <div class="container">
-                                        <div class="row1">
-                                        <?php $res = mysqli_query($link,"SELECT * FROM photos");
-                                                while($row = mysqli_fetch_array($res)){
-                                                    
-                                                   
-                                                    ?>
-                                               
-                                            <div class="column">
-                                           
-                                                <div class="card1">
-                                                    <figure class="hover-effect-img move-down move-down-first">
-                                                    <a data-size="1920x1080" href="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
-                                                    <img
-                                                            alt="<?=$row['tittle'];?>" class="img-responsive"
-                                                            src="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>" height='200px' width='200px'>
-                                                    </a>
-                                                        <figcaption>
-                                                            <span class="img-caption"><?=$row['tittle'];?></span>
-                                                            <div class="hover-effect"></div>
-                                                            <div class="hover-icons">
-                                                                
-                                                            </div>
-                                                        </figcaption>
-                                                    </figure>
-                                                </div>
-                                                
-                                            </div>
-                                            <?php }; ?>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="Metkon" class="tab-pane fade"><br>
-                                    <div class="container">
-                                        <div class="row1">
-                                        <?php $res = mysqli_query($link,"SELECT * FROM photos");
-                                                while($row = mysqli_fetch_array($res)){
-                                                    
-                                                   
-                                                    ?>
-                                               
-                                            <div class="column">
-                                           
-                                                <div class="card1">
-                                                    <figure class="hover-effect-img move-down move-down-first">
-                                                    <a data-size="1920x1080" href="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
-                                                    <img
-                                                            alt="<?=$row['tittle'];?>" class="img-responsive"
-                                                            src="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>" height='200px' width='200px'>
-                                                    </a>
-                                                        <figcaption>
-                                                            <span class="img-caption"><?=$row['tittle'];?></span>
-                                                            <div class="hover-effect"></div>
-                                                            <div class="hover-icons">
-                                                                
-                                                            </div>
-                                                        </figcaption>
-                                                    </figure>
-                                                </div>
-                                                
-                                            </div>
-                                            <?php }; ?>
-                                        </div>
-                                    </div>
-                                </div>
-                                
+
+
+                                <!-- photoSwipe end -->
                             </div>
 
 
 
 
-                            <!-- photoSwipe end -->
+
                         </div>
-
-
-
-
-
+                        <!-- /.card-body -->
                     </div>
-                    <!-- /.card-body -->
-                </div>
-                <!-- /.card -->
+                    <!-- /.card -->
 
             </section>
 

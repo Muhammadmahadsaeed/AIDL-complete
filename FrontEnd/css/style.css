@@ -4276,6 +4276,16 @@ z-index: -1;
 #displaySubmenu li a{
   font-size: 1.1em;
 }
+#displaySubMobilemenu{
+  margin-top: 5%;
+  transition: 0.5s;
+  margin-left: 45%;
+  display: none;
+  transition-delay: 1s;
+ }
+#displaySubMobilemenu li a{
+  font-size: 1.1em;
+}
 
 
 
@@ -4565,7 +4575,30 @@ z-index: -1;
 	}
 }
 
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
 
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  color: black;
+  
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #4CAF50;
+  color: white;
+}
 
 
 

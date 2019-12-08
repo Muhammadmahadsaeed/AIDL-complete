@@ -28,14 +28,14 @@ $sql6="select * from add_product where cat_5=1";
     <!-- style start -->
     <link href="./css/plugins.css" media="all" rel="stylesheet" type="text/css">
     <link href="./css/style.css" media="all" rel="stylesheet" type="text/css">
-    
+
     <!-- style end -->
     <!-- google fonts start -->
     <link href="http://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900%7COswald:300,400,700"
         rel="stylesheet" type="text/css">
-        <!-- google fonts end -->
+    <!-- google fonts end -->
 
-        <link rel="stylesheet" href="./profile.css">
+    <link rel="stylesheet" href="./profile.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -114,7 +114,7 @@ $sql6="select * from add_product where cat_5=1";
 
                                 </li>
                                 <li class="menu">
-                                    <a class="menu-state page-open-clicker open-page-2 link" href="#">Promotions</a>
+                                    <a class="menu-state page-open-clicker open-page-11 link" href="#">Promotions</a>
                                 </li>
                                 <li class="menu">
                                     <a class="menu-state page-open-clicker open-page-8 link" href="#">Blogs</a>
@@ -143,10 +143,10 @@ $sql6="select * from add_product where cat_5=1";
 
 
                                 </li>
-                                <li class="menu" onmouseover="displaySubMenu()" onmouseout="nonSubMenu()">
+                                <li class="menu" onmouseover="displaySubMobileMenu()" onmouseout="nonSubMobileMenu()">
                                     <a class="menu-state page-open-clicker-mobile open-page-1 link" href="#">About
                                         Us</a>
-                                    <ul class="subMenu" id="displaySubmenu">
+                                    <ul class="subMenu" id="displaySubMobilemenu">
                                         <li class="menu">
                                             <a class="menu-state page-open-clicker-mobile open-page-5 link" href="#">Our
                                                 Team</a>
@@ -177,7 +177,7 @@ $sql6="select * from add_product where cat_5=1";
                                         Clients</a>
                                 </li>
                                 <li class="menu">
-                                    <a class="menu-state page-open-clicker-mobile open-page-2 link"
+                                    <a class="menu-state page-open-clicker-mobile open-page-11 link"
                                         href="#">Promotions</a>
                                 </li>
                                 <li class="menu">
@@ -194,7 +194,20 @@ $sql6="select * from add_product where cat_5=1";
     <!-- borders start -->
     <div class="fadeIn-element">
         <div class="borders-left"></div>
-        <div class="borders-right"></div>
+        <div class="borders-right">
+
+        
+        <div class="container sections" style="height:auto">
+
+                              
+            <div class="row">
+
+                <a href="#contactUs" style=" position: absolute;right: 0;margin-top:1%" class="btn btn-primary" data-toggle="modal">Contact Us</a>
+
+            </div>
+        </div>
+
+        </div>
     </div><!-- borders end -->
     <!-- sections start -->
     <div class="fireOT" id="fireOT-wrap">
@@ -211,10 +224,10 @@ $sql6="select * from add_product where cat_5=1";
                                             
                     ?>
                 <div class="copyright-home" style="width:95%">
-                    
-                    <marquee behavior="" direction="left"> 
-                    <h2 class="mar">
-                    <?php 
+
+                    <marquee behavior="" direction="left">
+                        <h2 class="mar">
+                            <?php 
                     while($row = mysqli_fetch_assoc($newsResult)){ 
                         if($row['flag'] == 'start'){
                             $myDate = date('F j, Y',strtotime($row["created_on"]));
@@ -222,9 +235,9 @@ $sql6="select * from add_product where cat_5=1";
                             echo '<small style="color:white">'.$new.'</small>'.$row["news"]; 
                      }}
                       ?>
-                     </h2>
+                        </h2>
                     </marquee>
-               
+
                 </div>
                 <?php 
                     
@@ -244,7 +257,7 @@ $sql6="select * from add_product where cat_5=1";
                         <div class="upper-content">
                             <!-- container start -->
                             <div class="container sections">
-                            
+
                                 <!-- row start -->
                                 <div class="row">
                                     <!-- intro start -->
@@ -266,9 +279,13 @@ $sql6="select * from add_product where cat_5=1";
                                         </div><!-- introduction end -->
                                     </div><!-- intro end -->
                                 </div>
-
+                            
                                 <!-- row end -->
                             </div><!-- container end -->
+
+
+
+
                         </div><!-- upper content end -->
                     </div><!-- center block end -->
                 </div><!-- center container end -->
@@ -282,12 +299,10 @@ $sql6="select * from add_product where cat_5=1";
 
                     <!-- center block start -->
                     <div class="center-block">
-                    <div>
-                        <a href="#contactUs" style="float:right;top:0" class="btn btn-primary" data-toggle="modal" >Contact Us</a>
-                        </div>
+                       
                         <!-- upper content start -->
                         <div class="upper-content">
-                        
+
 
                             <!-- quotes start -->
                             <div class="flexslider-quotes-wrap">
@@ -315,7 +330,8 @@ $sql6="select * from add_product where cat_5=1";
                             </div><!-- quotes end -->
                         </div><!-- upper content end -->
                     </div><!-- center block end -->
-                </div><!-- center container end -->
+                </div>
+                <!-- center container end -->
             </div><!-- upper page end -->
             <!-- about page start -->
             <div class="lower-page" id="page-1">
@@ -774,13 +790,12 @@ $sql6="select * from add_product where cat_5=1";
                                                         <img alt="Image description" class="img-responsive"
                                                             src="../pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
                                                     <figcaption>
-                                                        <span class="img-caption">Image description 1</span>
+                                                        <span
+                                                            class="img-caption"><?=strtoupper($row['tittle']);?></span>
                                                         <div class="hover-effect"></div>
                                                         <div class="hover-icons">
-                                                            <a class="ion-ios-plus-empty " href="#">
-                                                                <span
-                                                                    style="text-align:center"><?=$row['tittle'];?></span>
-                                                            </a>
+                                                            <a class="ion-ios-plus-empty " href="#"></a><br>
+                                                            <span><?=strtoupper($row['tittle']);?></span>
                                                         </div>
                                                     </figcaption>
                                                 </figure>
@@ -806,10 +821,8 @@ $sql6="select * from add_product where cat_5=1";
                                                         <span class="img-caption">Image description 1</span>
                                                         <div class="hover-effect"></div>
                                                         <div class="hover-icons">
-                                                            <a class="ion-ios-plus-empty " href="#">
-                                                                <span
-                                                                    style="text-align:center"><?=$row['tittle'];?></span>
-                                                            </a>
+                                                            <a class="ion-ios-plus-empty " href="#"></a><br>
+                                                            <span><?=strtoupper($row['tittle']);?></span>
                                                         </div>
                                                     </figcaption>
                                                 </figure>
@@ -820,7 +833,7 @@ $sql6="select * from add_product where cat_5=1";
                                         <div id="Edmond" class="tab-pane fade"><br>
                                             <div class="legendary-gallery">
                                                 <!-- gallery item 1 start -->
-                                                <?php $res = mysqli_query($link,"SELECT * FROM photos where tittle = 'edmond'");
+                                                <?php $res = mysqli_query($link,"SELECT * FROM photos where tittle = 'edmond_buhler'");
                                                     while($row = mysqli_fetch_array($res)){
                                                         
                                                     
@@ -832,13 +845,12 @@ $sql6="select * from add_product where cat_5=1";
                                                         <img alt="Image description" class="img-responsive"
                                                             src="../pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
                                                     <figcaption>
-                                                        <span class="img-caption">Image description 1</span>
+                                                        <span
+                                                            class="img-caption"><?=strtoupper($row['tittle']);?></span>
                                                         <div class="hover-effect"></div>
                                                         <div class="hover-icons">
-                                                            <a class="ion-ios-plus-empty " href="#">
-                                                                <span
-                                                                    style="text-align:center"><?=$row['tittle'];?></span>
-                                                            </a>
+                                                            <a class="ion-ios-plus-empty " href="#"></a><br>
+                                                            <span><?=strtoupper($row['tittle']);?></span>
                                                         </div>
                                                     </figcaption>
                                                 </figure>
@@ -865,10 +877,8 @@ $sql6="select * from add_product where cat_5=1";
                                                         <span class="img-caption">Image description 1</span>
                                                         <div class="hover-effect"></div>
                                                         <div class="hover-icons">
-                                                            <a class="ion-ios-plus-empty " href="#">
-                                                                <span
-                                                                    style="text-align:center"><?=$row['tittle'];?></span>
-                                                            </a>
+                                                            <a class="ion-ios-plus-empty " href="#"></a><br>
+                                                            <span><?=strtoupper($row['tittle']);?></span>
                                                         </div>
                                                     </figcaption>
                                                 </figure>
@@ -895,10 +905,8 @@ $sql6="select * from add_product where cat_5=1";
                                                         <span class="img-caption">Image description 1</span>
                                                         <div class="hover-effect"></div>
                                                         <div class="hover-icons">
-                                                            <a class="ion-ios-plus-empty " href="#">
-                                                                <span
-                                                                    style="text-align:center"><?=$row['tittle'];?></span>
-                                                            </a>
+                                                            <a class="ion-ios-plus-empty " href="#"></a><br>
+                                                            <span><?=strtoupper($row['tittle']);?></span>
                                                         </div>
                                                     </figcaption>
                                                 </figure>
@@ -925,10 +933,8 @@ $sql6="select * from add_product where cat_5=1";
                                                         <span class="img-caption">Image description 1</span>
                                                         <div class="hover-effect"></div>
                                                         <div class="hover-icons">
-                                                            <a class="ion-ios-plus-empty " href="#">
-                                                                <span
-                                                                    style="text-align:center"><?=$row['tittle'];?></span>
-                                                            </a>
+                                                            <a class="ion-ios-plus-empty " href="#"></a><br>
+                                                            <span><?=strtoupper($row['tittle']);?></span>
                                                         </div>
                                                     </figcaption>
                                                 </figure>
@@ -940,7 +946,7 @@ $sql6="select * from add_product where cat_5=1";
                                         <div id="Micos" class="tab-pane fade"><br>
                                             <div class="legendary-gallery">
                                                 <!-- gallery item 1 start -->
-                                                <?php $res = mysqli_query($link,"SELECT * FROM photos where tittle = 'micos'");
+                                                <?php $res = mysqli_query($link,"SELECT * FROM photos where tittle = 'micso_laser'");
                                                     while($row = mysqli_fetch_array($res)){
                                                         
                                                     
@@ -955,11 +961,9 @@ $sql6="select * from add_product where cat_5=1";
                                                         <span class="img-caption">Image description 1</span>
                                                         <div class="hover-effect"></div>
                                                         <div class="hover-icons">
-                                                            <a class="ion-ios-plus-empty " href="#">
-                                                                <span
-                                                                    style="text-align:center"><?=$row['tittle'];?></span>
-                                                                <a>
-                                                        </div>/
+                                                            <a class="ion-ios-plus-empty " href="#"></a><br>
+                                                            <span><?=strtoupper($row['tittle']);?></span>
+                                                        </div>
                                                     </figcaption>
                                                 </figure>
                                                 <?php }; ?>
@@ -985,10 +989,8 @@ $sql6="select * from add_product where cat_5=1";
                                                         <span class="img-caption">Image description 1</span>
                                                         <div class="hover-effect"></div>
                                                         <div class="hover-icons">
-                                                            <a class="ion-ios-plus-empty " href="#">
-                                                                <span
-                                                                    style="text-align:center"><?=$row['tittle'];?></span>
-                                                            </a>
+                                                            <a class="ion-ios-plus-empty " href="#"></a><br>
+                                                            <span><?=strtoupper($row['tittle']);?></span>
                                                         </div>
                                                     </figcaption>
                                                 </figure>
@@ -1015,10 +1017,8 @@ $sql6="select * from add_product where cat_5=1";
                                                         <span class="img-caption">Image description 1</span>
                                                         <div class="hover-effect"></div>
                                                         <div class="hover-icons">
-                                                            <a class="ion-ios-plus-empty " href="#">
-                                                                <span
-                                                                    style="text-align:center"><?=$row['tittle'];?></span>
-                                                            </a>
+                                                            <a class="ion-ios-plus-empty " href="#"></a><br>
+                                                            <span><?=strtoupper($row['tittle']);?></span>
                                                         </div>
                                                     </figcaption>
                                                 </figure>
@@ -1045,10 +1045,8 @@ $sql6="select * from add_product where cat_5=1";
                                                         <span class="img-caption">Image description 1</span>
                                                         <div class="hover-effect"></div>
                                                         <div class="hover-icons">
-                                                            <a class="ion-ios-plus-empty " href="#">
-                                                                <span
-                                                                    style="text-align:center"><?=$row['tittle'];?></span>
-                                                            </a>
+                                                            <a class="ion-ios-plus-empty " href="#"></a><br>
+                                                            <span><?=strtoupper($row['tittle']);?></span>
                                                         </div>
                                                     </figcaption>
                                                 </figure>
@@ -1075,10 +1073,8 @@ $sql6="select * from add_product where cat_5=1";
                                                         <span class="img-caption">Image description 1</span>
                                                         <div class="hover-effect"></div>
                                                         <div class="hover-icons">
-                                                            <a class="ion-ios-plus-empty " href="#">
-                                                                <span
-                                                                    style="text-align:center"><?=$row['tittle'];?></span>
-                                                            </a>
+                                                            <a class="ion-ios-plus-empty " href="#"></a><br>
+                                                            <span><?=strtoupper($row['tittle']);?></span>
                                                         </div>
                                                     </figcaption>
                                                 </figure>
@@ -1090,7 +1086,7 @@ $sql6="select * from add_product where cat_5=1";
                                         <div id="Shore" class="tab-pane fade"><br>
                                             <div class="legendary-gallery">
                                                 <!-- gallery item 1 start -->
-                                                <?php $res = mysqli_query($link,"SELECT * FROM photos where tittle = 'shore'");
+                                                <?php $res = mysqli_query($link,"SELECT * FROM photos where tittle = 'shore_western'");
                                                     while($row = mysqli_fetch_array($res)){
                                                         
                                                     
@@ -1105,10 +1101,8 @@ $sql6="select * from add_product where cat_5=1";
                                                         <span class="img-caption">Image description 1</span>
                                                         <div class="hover-effect"></div>
                                                         <div class="hover-icons">
-                                                            <a class="ion-ios-plus-empty " href="#">
-                                                                <span
-                                                                    style="text-align:center"><?=$row['tittle'];?></span>
-                                                            </a>
+                                                            <a class="ion-ios-plus-empty " href="#"></a><br>
+                                                            <span><?=strtoupper($row['tittle']);?></span>
                                                         </div>
                                                     </figcaption>
                                                 </figure>
@@ -1129,7 +1123,8 @@ $sql6="select * from add_product where cat_5=1";
                             <div class="divider divider-works"></div><!-- divider end -->
                         </div><!-- lower content end -->
                     </div><!-- center block end -->
-                </div><!-- center container end -->
+                </div>
+                <!-- center container end -->
                 <!-- page closer start -->
                 <div class="page-closer">
                     <div class="page-closer-frame">
@@ -1188,22 +1183,24 @@ $sql6="select * from add_product where cat_5=1";
                                 <div class="inner-divider"></div>
                                 <!-- divider end -->
                                 <!-- row start -->
-                               
+
                                 <div class="row1">
 
 
-                                <div class="column2">
+                                    <div class="column2">
                                         <div class="officeAddress">
 
                                             <h1 style="color: black;">Associated Instrument Distributors (Pvt) Ltd</h1>
                                             <!-- <p class="title">CEO & Founder, Example</p> -->
                                             <p><span><i class="fa fa-home fa-lg" aria-hidden="true"></i></span>
-                                            <a href=""> Room# 7, 8, 5th Floor, Rimpa Plaza, Office Tower M.A.Jinnah Road Karachi-74400 Pakistan.</a></p>
-                                           
-                                            <p><span><i class="fa fa-phone fa-lg" aria-hidden="true"></i></span> 92-21-32735734 - 32767475-7 - 32729361</p>
+                                                <a href=""> Room# 7, 8, 5th Floor, Rimpa Plaza, Office Tower M.A.Jinnah
+                                                    Road Karachi-74400 Pakistan.</a></p>
+
+                                            <p><span><i class="fa fa-phone fa-lg" aria-hidden="true"></i></span>
+                                                92-21-32735734 - 32767475-7 - 32729361</p>
                                             <p>Fax: 92-21-32736582</p>
-                                            <p><span><i class="fa fa-envelope-o fa-lg"  aria-hidden="true"></i></span>
-                                            <a href=""  style="padding-left:1%"> aidl@cyber.net.pk</a></p>
+                                            <p><span><i class="fa fa-envelope-o fa-lg" aria-hidden="true"></i></span>
+                                                <a href="" style="padding-left:1%"> aidl@cyber.net.pk</a></p>
                                             <p>URL: www.aidlpk.com</p>
                                         </div>
                                     </div>
@@ -1213,12 +1210,14 @@ $sql6="select * from add_product where cat_5=1";
                                             <h1 style="color: black;">Associated Instrument Distributors (Pvt) Ltd</h1>
                                             <!-- <p class="title">CEO & Founder, Example</p> -->
                                             <p><span><i class="fa fa-home fa-lg" aria-hidden="true"></i></span>
-                                            <a href=""> Room# 7, 8, 5th Floor, Rimpa Plaza, Office Tower M.A.Jinnah Road Karachi-74400 Pakistan.</a></p>
-                                           
-                                            <p><span><i class="fa fa-phone fa-lg" aria-hidden="true"></i></span> 92-21-32735734 - 32767475-7 - 32729361</p>
+                                                <a href=""> Room# 7, 8, 5th Floor, Rimpa Plaza, Office Tower M.A.Jinnah
+                                                    Road Karachi-74400 Pakistan.</a></p>
+
+                                            <p><span><i class="fa fa-phone fa-lg" aria-hidden="true"></i></span>
+                                                92-21-32735734 - 32767475-7 - 32729361</p>
                                             <p>Fax: 92-21-32736582</p>
-                                            <p><span><i class="fa fa-envelope-o fa-lg"  aria-hidden="true"></i></span>
-                                            <a href=""  style="padding-left:1%"> aidl@cyber.net.pk</a></p>
+                                            <p><span><i class="fa fa-envelope-o fa-lg" aria-hidden="true"></i></span>
+                                                <a href="" style="padding-left:1%"> aidl@cyber.net.pk</a></p>
                                             <p>URL: www.aidlpk.com</p>
                                         </div>
                                     </div>
@@ -1228,12 +1227,14 @@ $sql6="select * from add_product where cat_5=1";
                                             <h1 style="color: black;">Associated Instrument Distributors (Pvt) Ltd</h1>
                                             <!-- <p class="title">CEO & Founder, Example</p> -->
                                             <p><span><i class="fa fa-home fa-lg" aria-hidden="true"></i></span>
-                                            <a href=""> Room# 7, 8, 5th Floor, Rimpa Plaza, Office Tower M.A.Jinnah Road Karachi-74400 Pakistan.</a></p>
-                                           
-                                            <p><span><i class="fa fa-phone fa-lg" aria-hidden="true"></i></span> 92-21-32735734 - 32767475-7 - 32729361</p>
+                                                <a href=""> Room# 7, 8, 5th Floor, Rimpa Plaza, Office Tower M.A.Jinnah
+                                                    Road Karachi-74400 Pakistan.</a></p>
+
+                                            <p><span><i class="fa fa-phone fa-lg" aria-hidden="true"></i></span>
+                                                92-21-32735734 - 32767475-7 - 32729361</p>
                                             <p>Fax: 92-21-32736582</p>
-                                            <p><span><i class="fa fa-envelope-o fa-lg"  aria-hidden="true"></i></span>
-                                            <a href=""  style="padding-left:1%"> aidl@cyber.net.pk</a></p>
+                                            <p><span><i class="fa fa-envelope-o fa-lg" aria-hidden="true"></i></span>
+                                                <a href="" style="padding-left:1%"> aidl@cyber.net.pk</a></p>
                                             <p>URL: www.aidlpk.com</p>
                                         </div>
                                     </div>
@@ -1247,7 +1248,7 @@ $sql6="select * from add_product where cat_5=1";
                                         <div id="map"></div>
                                     </div>
                                 </div>
-                               
+
                                 <div class="divider"></div>
 
                                 <div class="row1">
@@ -1379,8 +1380,9 @@ $sql6="select * from add_product where cat_5=1";
                                                     
                                                     ?>
 
-                                                <a class="btn btn-primary" id="custId" data-toggle="modal" data-id="<?php echo $row['team_id'] ?>"
-                                                href="#myModal" >Read More</a>
+                                                <a class="btn btn-primary" id="custId" data-toggle="modal"
+                                                    data-id="<?php echo $row['team_id'] ?>" href="#myModal">Read
+                                                    More</a>
                                                 <?php } ?>
                                             </div>
                                             <ul class="social">
@@ -1463,7 +1465,7 @@ $sql6="select * from add_product where cat_5=1";
                                             </h2> -->
                                             <!-- section subtitle end -->
                                             <!-- extra line start -->
-                                            <!-- <div class="the-extra-line"></div> -->
+                                            <div class="the-extra-line"></div>
                                             <!-- extra line end -->
                                         </div><!-- section title wrapper end -->
                                     </div><!-- col end -->
@@ -1502,20 +1504,20 @@ $sql6="select * from add_product where cat_5=1";
                                                 ?>
                                                 <?php
                                                 while ($row = mysqli_fetch_array($result)) { ?>
-                                                    <div class="column" style=" margin-bottom: 2%;">
-                                                        <div class="card1">
-                                                            <img src="../pages/examples/images/<?= $row['p_img'] ?>"
-                                                                alt="John" style="width:100%">
-                                                            <h1 style="color:black"><?= strtoupper($row['p_name']) ?></h1>
-                                                            <p class="title">CEO & Founder, Example</p>
-                                                            <p>Harvard University</p>
+                                                <div class="column" style=" margin-bottom: 2%;">
+                                                    <div class="card1">
+                                                        <img src="../pages/examples/images/<?= $row['p_img'] ?>"
+                                                            alt="John" style="width:100%">
+                                                        <h1 style="color:black"><?= strtoupper($row['p_name']) ?></h1>
+                                                        <p class="title">CEO & Founder, Example</p>
+                                                        <p>Harvard University</p>
 
-                                                            <p><button
-                                                                    class="button1 page-open-clicker open-page-11 link">Contact</button>
-                                                            </p>
-                                                        </div>
+                                                        <p>
+                                                            <a href="#" class="button1">View Detail</a>
+                                                        </p>
                                                     </div>
-                                                    <?php
+                                                </div>
+                                                <?php
                                                     }
                                                     mysqli_free_result($result);
                                                 } else {
@@ -1535,20 +1537,20 @@ $sql6="select * from add_product where cat_5=1";
                                                 ?>
                                                 <?php
                                                 while ($row = mysqli_fetch_array($result)) { ?>
-                                                    <div class="column" style=" margin-bottom: 2%;">
-                                                        <div class="card1">
-                                                            <img src="../pages/examples/images/<?= $row['p_img'] ?>"
-                                                                alt="John" style="width:100%">
-                                                            <h1 style="color:black"><?= strtoupper($row['p_name']) ?></h1>
-                                                            <p class="title">CEO & Founder, Example</p>
-                                                            <p>Harvard University</p>
+                                                <div class="column" style=" margin-bottom: 2%;">
+                                                    <div class="card1">
+                                                        <img src="../pages/examples/images/<?= $row['p_img'] ?>"
+                                                            alt="John" style="width:100%">
+                                                        <h1 style="color:black"><?= strtoupper($row['p_name']) ?></h1>
+                                                        <p class="title">CEO & Founder, Example</p>
+                                                        <p>Harvard University</p>
 
-                                                            <p><button
-                                                                    class="button1 page-open-clicker open-page-11 link">Contact</button>
-                                                            </p>
-                                                        </div>
+                                                        <p><button
+                                                                class="button1 page-open-clicker open-page-11 link">Contact</button>
+                                                        </p>
                                                     </div>
-                                                    <?php
+                                                </div>
+                                                <?php
                                                     }
                                                     mysqli_free_result($result);
                                                 } else {
@@ -1568,20 +1570,20 @@ $sql6="select * from add_product where cat_5=1";
                                                 ?>
                                                 <?php
                                                 while ($row = mysqli_fetch_array($result)) { ?>
-                                                    <div class="column" style=" margin-bottom: 2%;">
-                                                        <div class="card1">
-                                                            <img src="../pages/examples/images/<?= $row['p_img'] ?>"
-                                                                alt="John" style="width:100%">
-                                                            <h1 style="color:black"><?= strtoupper($row['p_name']) ?></h1>
-                                                            <p class="title">CEO & Founder, Example</p>
-                                                            <p>Harvard University</p>
+                                                <div class="column" style=" margin-bottom: 2%;">
+                                                    <div class="card1">
+                                                        <img src="../pages/examples/images/<?= $row['p_img'] ?>"
+                                                            alt="John" style="width:100%">
+                                                        <h1 style="color:black"><?= strtoupper($row['p_name']) ?></h1>
+                                                        <p class="title">CEO & Founder, Example</p>
+                                                        <p>Harvard University</p>
 
-                                                            <p><button
-                                                                    class="button1 page-open-clicker open-page-11 link">Contact</button>
-                                                            </p>
-                                                        </div>
+                                                        <p><button
+                                                                class="button1 page-open-clicker open-page-11 link">Contact</button>
+                                                        </p>
                                                     </div>
-                                                    <?php
+                                                </div>
+                                                <?php
                                                     }
                                                     mysqli_free_result($result);
                                                 } else {
@@ -1601,20 +1603,20 @@ $sql6="select * from add_product where cat_5=1";
                                                 ?>
                                                 <?php
                                                 while ($row = mysqli_fetch_array($result)) { ?>
-                                                    <div class="column" style=" margin-bottom: 2%;">
-                                                        <div class="card1">
-                                                            <img src="../pages/examples/images/<?= $row['p_img'] ?>"
-                                                                alt="John" style="width:100%">
-                                                            <h1 style="color:black"><?= strtoupper($row['p_name']) ?></h1>
-                                                            <p class="title">CEO & Founder, Example</p>
-                                                            <p>Harvard University</p>
+                                                <div class="column" style=" margin-bottom: 2%;">
+                                                    <div class="card1">
+                                                        <img src="../pages/examples/images/<?= $row['p_img'] ?>"
+                                                            alt="John" style="width:100%">
+                                                        <h1 style="color:black"><?= strtoupper($row['p_name']) ?></h1>
+                                                        <p class="title">CEO & Founder, Example</p>
+                                                        <p>Harvard University</p>
 
-                                                            <p><button
-                                                                    class="button1 page-open-clicker open-page-11 link">Contact</button>
-                                                            </p>
-                                                        </div>
+                                                        <p><button
+                                                                class="button1 page-open-clicker open-page-11 link">Contact</button>
+                                                        </p>
                                                     </div>
-                                                    <?php
+                                                </div>
+                                                <?php
                                                     }
                                                     mysqli_free_result($result);
                                                 } else {
@@ -1634,20 +1636,20 @@ $sql6="select * from add_product where cat_5=1";
                                                 ?>
                                                 <?php
                                                 while ($row = mysqli_fetch_array($result)) { ?>
-                                                    <div class="column" style=" margin-bottom: 2%;">
-                                                        <div class="card1">
-                                                            <img src="../pages/examples/images/<?= $row['p_img'] ?>"
-                                                                alt="John" style="width:100%">
-                                                            <h1 style="color:black"><?= strtoupper($row['p_name']) ?></h1>
-                                                            <p class="title">CEO & Founder, Example</p>
-                                                            <p>Harvard University</p>
+                                                <div class="column" style=" margin-bottom: 2%;">
+                                                    <div class="card1">
+                                                        <img src="../pages/examples/images/<?= $row['p_img'] ?>"
+                                                            alt="John" style="width:100%">
+                                                        <h1 style="color:black"><?= strtoupper($row['p_name']) ?></h1>
+                                                        <p class="title">CEO & Founder, Example</p>
+                                                        <p>Harvard University</p>
 
-                                                            <p><button
-                                                                    class="button1 page-open-clicker open-page-11 link">Contact</button>
-                                                            </p>
-                                                        </div>
+                                                        <p><button
+                                                                class="button1 page-open-clicker open-page-11 link">Contact</button>
+                                                        </p>
                                                     </div>
-                                                    <?php
+                                                </div>
+                                                <?php
                                                     }
                                                     mysqli_free_result($result);
                                                 } else {
@@ -1660,27 +1662,27 @@ $sql6="select * from add_product where cat_5=1";
                                             </div>
                                         </div>
                                         <div id="nano" class="tab-pane fade"><br>
-                                        <div class="row1">
+                                            <div class="row1">
                                                 <?php 
                                                     if ($result = mysqli_query($link, $sql6)) {
                                                     if (mysqli_num_rows($result) > 0) {
                                                 ?>
                                                 <?php
                                                 while ($row = mysqli_fetch_array($result)) { ?>
-                                                    <div class="column" style=" margin-bottom: 2%;">
-                                                        <div class="card1">
-                                                            <img src="../pages/examples/images/<?= $row['p_img'] ?>"
-                                                                alt="John" style="width:100%">
-                                                            <h1 style="color:black"><?= strtoupper($row['p_name']) ?></h1>
-                                                            <p class="title">CEO & Founder, Example</p>
-                                                            <p>Harvard University</p>
+                                                <div class="column" style=" margin-bottom: 2%;">
+                                                    <div class="card1">
+                                                        <img src="../pages/examples/images/<?= $row['p_img'] ?>"
+                                                            alt="John" style="width:100%">
+                                                        <h1 style="color:black"><?= strtoupper($row['p_name']) ?></h1>
+                                                        <p class="title">CEO & Founder, Example</p>
+                                                        <p>Harvard University</p>
 
-                                                            <p><button
-                                                                    class="button1 page-open-clicker open-page-11 link">Contact</button>
-                                                            </p>
-                                                        </div>
+                                                        <p><button
+                                                                class="button1 page-open-clicker open-page-11 link">Contact</button>
+                                                        </p>
                                                     </div>
-                                                    <?php
+                                                </div>
+                                                <?php
                                                     }
                                                     mysqli_free_result($result);
                                                 } else {
@@ -1964,7 +1966,7 @@ $sql6="select * from add_product where cat_5=1";
 
 
 
-            <!-- Product Description page start -->
+            <!-- Promotions Description page start -->
             <div class="lower-page" id="page-11">
                 <!-- center container start -->
                 <div class="center-container">
@@ -1973,7 +1975,7 @@ $sql6="select * from add_product where cat_5=1";
                         <!-- lower content start -->
                         <div class="lower-content">
                             <!-- divider start -->
-                            <div class="divider"></div><!-- divider end -->
+                            <div class="divider divider-works"></div><!-- divider end -->
                             <!-- container start -->
                             <div class="container sections">
                                 <!-- row start -->
@@ -1984,87 +1986,208 @@ $sql6="select * from add_product where cat_5=1";
                                         <div class="section-title-wrapper">
                                             <!-- section title start -->
                                             <h1 class="home-page-title-all">
-                                                Full Product Description
+                                                Our Promotions
                                             </h1><!-- section title end -->
                                             <!-- divider start -->
-                                            <div class="inner-divider-half"></div><!-- divider end -->
+                                            <!-- <div class="inner-divider-half"></div> -->
+                                            <!-- divider end -->
                                             <!-- section subtitle start -->
-                                            <h2 class="section-heading section-heading-all">
-                                                This is Product Description
-                                            </h2>
+                                            <!-- <h2 class="section-heading section-heading-all">
+                                                Powerful Imagery
+                                            </h2> -->
                                             <!-- section subtitle end -->
                                             <!-- extra line start -->
                                             <div class="the-extra-line"></div><!-- extra line end -->
                                         </div><!-- section title wrapper end -->
+                                    </div><!-- col end -->
+                                </div><!-- row end -->
+                                <!-- divider start -->
+                                <div class="inner-divider"></div><!-- divider end -->
+                                <!-- row start -->
+                                <div class="row">
+                                    <!-- col start -->
+                                    <div class="col-lg-12">
+                                        <!-- section TXT start -->
+                                        <div class="section-intro">
+                                            <div class="row">
+                                                <ul class="nav nav-tabs" role="tablist">
+                                                    <li class="nav-item">
+                                                        <a class="nav-link active" data-toggle="tab"
+                                                            href="#allImages">ALL</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" data-toggle="tab" href="#images">IMAGES</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" data-toggle="tab" href="#wab">WABINERS
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" data-toggle="tab" href="#videos">VIDEOS</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" data-toggle="tab"
+                                                            href="#promotions">PROMOTIONS</a>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                        </div><!-- section TXT end -->
                                     </div><!-- col end -->
                                 </div>
                                 <!-- row end -->
                                 <!-- divider start -->
                                 <div class="inner-divider"></div><!-- divider end -->
                                 <!-- row start -->
-                                <div class="row1">
-                                    <div class="column">
-                                        <div class="card1">
-                                            <img src="data:image/jpeg;base64,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"
-                                                alt="John" style="width:100%">
-                                            <h1>John Doe</h1>
-                                            <p class="title">CEO & Founder, Example</p>
-                                            <p>Harvard University</p>
+                                <div class="row">
+                                    <!-- photoSwipe start -->
 
-                                            <p><button
-                                                    class="button1 page-open-clicker open-page-11 link">Contact</button>
-                                            </p>
+
+
+
+                                    <div class="tab-content">
+                                        <div id="allImages" class="tab-pane active">
+                                            <div class="legendary-gallery">
+                                                <!-- gallery item 1 start -->
+                                                <?php $res = mysqli_query($link,"SELECT * FROM promotions");
+                                                while($row = mysqli_fetch_array($res)){
+                                                    
+                                                   
+                                                    ?>
+                                                <figure
+                                                    class="col-sm-6 col-md-4 col-lg-4 hover-effect-img move-down move-down-first">
+                                                    <a data-size="1920x1080"
+                                                        href="../pages/examples/promotionsImages/<?=$row['tittle']?>_<?=$row['images']?>">
+                                                        <img alt="Image description" class="img-responsive"
+                                                            src="../pages/examples/promotionsImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
+                                                    <figcaption>
+                                                        <span
+                                                            class="img-caption"><?=strtoupper($row['tittle']);?></span>
+                                                        <div class="hover-effect"></div>
+                                                        <div class="hover-icons">
+                                                            <a class="ion-ios-plus-empty " href="#"></a><br>
+                                                            <span><?=strtoupper($row['tittle']);?></span>
+                                                        </div>
+                                                    </figcaption>
+                                                </figure>
+                                                <?php }; ?>
+                                                <!-- gallery item 4 end -->
+                                            </div>
+
                                         </div>
+                                        <div id="images" class="tab-pane fade"><br>
+                                            <div class="legendary-gallery">
+                                                <!-- gallery item 1 start -->
+                                                <?php 
+                                                    $fetchImages = mysqli_query($link,"SELECT * FROM promotions where pro_type = 'image'");
+                                                    while($row = mysqli_fetch_array($fetchImages)){
+                                                        
+                                                    
+                                                        ?>
+                                                <figure
+                                                    class="col-sm-6 col-md-4 col-lg-4 hover-effect-img move-down move-down-first">
+                                                    <a data-size="1920x1080"
+                                                        href="../pages/examples/promotionsImages/<?=$row['tittle']?>_<?=$row['images']?>">
+                                                        <img alt="Image description" class="img-responsive"
+                                                            src="../pages/examples/promotionsImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
+                                                    <figcaption>
+                                                        <span
+                                                            class="img-caption"><?=strtoupper($row['tittle']);?></span>
+                                                        <div class="hover-effect"></div>
+                                                        <div class="hover-icons">
+                                                            <a class="ion-ios-plus-empty " href="#"></a><br>
+                                                            <span><?=strtoupper($row['tittle']);?></span>
+                                                        </div>
+                                                    </figcaption>
+                                                </figure>
+                                                <?php }; ?>
+                                                <!-- gallery item 4 end -->
+                                            </div>
+                                        </div>
+                                        <div id="wab" class="tab-pane fade"><br>
+                                            <div class="legendary-gallery">
+                                                <!-- gallery item 1 start -->
+                                                <?php $res = mysqli_query($link,"SELECT * FROM promotions pro_type = 'image'");
+                                                        while($row = mysqli_fetch_array($res)){
+                                                            
+                                                        
+                                                            ?>
+                                                <figure
+                                                    class="col-sm-6 col-md-4 col-lg-4 hover-effect-img move-down move-down-first">
+                                                    <a data-size="1920x1080"
+                                                        href="../pages/examples/promotionsImages/<?=$row['tittle']?>_<?=$row['images']?>">
+                                                        <img alt="Image description" class="img-responsive"
+                                                            src="../pages/examples/promotionsImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
+                                                    <figcaption>
+                                                        <span
+                                                            class="img-caption"><?=strtoupper($row['tittle']);?></span>
+                                                        <div class="hover-effect"></div>
+                                                        <div class="hover-icons">
+                                                            <a class="ion-ios-plus-empty " href="#"></a><br>
+                                                            <span><?=strtoupper($row['tittle']);?></span>
+                                                        </div>
+                                                    </figcaption>
+                                                </figure>
+                                                <?php }; ?>
+                                                <!-- gallery item 4 end -->
+                                            </div>
+                                        </div>
+
+                                        <div id="videos" class="tab-pane fade"><br>
+                                            <div class="media stream ">
+                                                <a href="#" class="media-avatar medium pull-left" style="border: none;">
+                                                    <!-- <img src="images/user.png"> -->
+                                                </a>
+                                                <div class="media-body">
+                                                    <div class="stream-headline">
+                                                        <h5 class="stream-author">
+                                                            Lecture No: ${result.data().lec}
+                                                            <small>${moment(result.data().createdAt).fromNow()}</small>
+                                                        </h5>
+                                                        <div class="stream-text">
+                                                            ${result.data().des}
+                                                        </div>
+                                                        <div class="stream-attachment video">
+                                                            <div class="responsive-video">
+
+
+                                                                <iframe src="${result.data().video}" width="560"
+                                                                    height="315" frameborder="0" webkitallowfullscreen
+                                                                    mozallowfullscreen allowfullscreen></iframe>
+                                                                <p><a href="http://vimeo.com/20630217">Google Car</a>
+                                                                    from <a href="http://vimeo.com/user3524956">Henk
+                                                                        Rogers</a> on <a
+                                                                        href="https://vimeo.com">Vimeo</a>.</p>
+
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="promotions" class="tab-pane fade"><br>
+
+                                        </div>
+
                                     </div>
 
-                                    <div class="column">
-                                        <div class="card1">
-                                            <img src="./img/background/hero-bg-1.jpg" alt="John" style="width:100%">
-                                            <h1>John Doe</h1>
-                                            <p class="title">CEO & Founder, Example</p>
-                                            <p>Harvard University</p>
 
-                                            <p><button
-                                                    class="button1 page-open-clicker open-page-11 link">Contact</button>
-                                            </p>
-                                        </div>
-                                    </div>
 
-                                    <div class="column">
-                                        <div class="card1">
-                                            <img src="https://cdn.vox-cdn.com/thumbor/wI3iu8sNbFJSQB4yMLsoPMNzIHU=/0x0:3368x3368/1200x800/filters:focal(1188x715:1726x1253)/cdn.vox-cdn.com/uploads/chorus_image/image/62994726/AJ_Finn_author_photo_color_photo_courtesy_of_the_author.0.jpg"
-                                                alt="John" style="width:100%">
-                                            <h1>John Doe</h1>
-                                            <p class="title">CEO & Founder, Example</p>
-                                            <p>Harvard University</p>
 
-                                            <p><button
-                                                    class="button1 page-open-clicker open-page-11 link">Contact</button>
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="column">
-                                        <div class="card1">
-                                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn2H479DHWSkqk7oPZrXJ3yupcX9pmZDppSpmL2N1vHi5hvIzn-Q&s"
-                                                alt="John" style="width:100%">
-                                            <h1>John Doe</h1>
-                                            <p class="title">CEO & Founder, Example</p>
-                                            <p>Harvard University</p>
-
-                                            <p><button
-                                                    class="button1 page-open-clicker open-page-11 link">Contact</button>
-                                            </p>
-                                        </div>
-                                    </div>
+                                    <!-- photoSwipe end -->
                                 </div>
                                 <!-- row end -->
                             </div><!-- container end -->
                             <!-- divider start -->
-                            <div class="divider"></div><!-- divider end -->
+                            <div class="divider divider-works"></div><!-- divider end -->
                         </div><!-- lower content end -->
                     </div><!-- center block end -->
-                </div><!-- center container end -->
+                </div>
+                <!-- center block start -->
+                <!-- center block end -->
+
+                <!-- center container end -->
                 <!-- page closer start -->
                 <div class="page-closer">
                     <div class="page-closer-frame">
@@ -2126,54 +2249,63 @@ $sql6="select * from add_product where cat_5=1";
 
 
     <div class="modal fade" id="myModal" role="dialog">
-<<<<<<< HEAD
-    <div class="modal-dialog" style="width:40%;border-radius: 5px;" role="document">
-        <div class="modal-content">
-           
-            <div class="modal-body" style="background-color: rgba(0, 0, 0, 0.8);">
-                <div class="fetched-data"></div> 
-            </div>
-            
-=======
-        <div class="modal-dialog" role="document">
+        <div class="modal-dialog" style="width:40%;border-radius: 5px;" role="document">
             <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title" style="color:black">Bio Data</h4>
+
+                <div class="modal-body" style="background-color: rgba(0, 0, 0, 0.8);">
+                    <div class="fetched-data"></div>
                 </div>
-                <div class="modal-body">
-                    <div class="fetched-data"></div> 
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
+
             </div>
->>>>>>> a6bee18681120c753484ce1d6bf4903854a6c3fa
         </div>
-</div>
-<div class="modal fade" id="contactUs" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Modal Header</h4>
-        </div>
-        <div class="modal-body">
-          <p>Some text in the modal.</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-      
     </div>
-  </div>
-    <script src="js/plugins.js">
-    </script>
-    <script src="js/liex.js">
-    </script><!-- scripts end -->
+        <div class="modal fade" id="contactUs" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 style="color:black;text-align:center">Contact Us</h4>
+                    </div>
+                    <div class="modal-body">
+                    <table id="customers">
+						<tr>
+							<th style="width:25%">Company</th>
+							<th style="color: blue;">AIDL Pakistan</th>
+
+						</tr>
+						<tr>
+							<td>Contact No</td>
+							<td> +92-21-32735734 - 32767475-7 - 32729361</td>
+
+						</tr>
+						<tr>
+							<td>Email</td>
+							<td><a href="mailto:info@softwarechimps.com">info@softwarechimps.com</a> </td>
+
+						</tr>
+						<tr>
+							<td>Location</td>
+							<td>
+								Office number A-09 SB 34 Zohra Plaza Block 13-C Gulshan e Iqbal.
+								Karachi, Pakistan</td>
+
+						</tr>
+
+					</table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <script src="js/plugins.js">
+        </script>
+        <script src="js/liex.js">
+        </script><!-- scripts end -->
 
 
 </body>
@@ -2182,7 +2314,6 @@ $sql6="select * from add_product where cat_5=1";
 </script>
 <!-- Mirrored from www.11-76.com/themes/liex/index-KENBURNS-SLIDESHOW.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Nov 2019 13:54:44 GMT -->
 <script>
-
 var map;
 var geocoder;
 var marker;
@@ -2275,26 +2406,35 @@ function nonSubMenu() {
     document.getElementById('displaySubmenu').style.display = 'none'
     //    document.getElementById('displaySubmenu').style.marginLeft = '45%'
 }
+function displaySubMobileMenu() {
+    document.getElementById('displaySubMobilemenu').style.display = 'block'
+    document.getElementById('displaySubMobilemenu').style.margin = '5% 0% 0% 15%'
+    //    document.getElementById('displaySubmenu').style.transition = '1s'
+}
+
+
+function nonSubMobileMenu() {
+    document.getElementById('displaySubMobilemenu').style.display = 'none'
+    //    document.getElementById('displaySubmenu').style.marginLeft = '45%'
+}
 
 
 
-$(document).ready(function(){
-    $('#myModal').on('show.bs.modal', function (e) {
+$(document).ready(function() {
+    $('#myModal').on('show.bs.modal', function(e) {
         var rowid = $(e.relatedTarget).data('id');
         console.log(rowid)
         $.ajax({
-            type : 'post',
-            url : 'fetechTeamMemberRecord.php', //Here you will fetch records 
-            data :  'rowid='+ rowid, //Pass $id
-            success : function(data){
+            type: 'post',
+            url: 'fetechTeamMemberRecord.php', //Here you will fetch records 
+            data: 'rowid=' + rowid, //Pass $id
+            success: function(data) {
                 console.log(data)
-            $('.fetched-data').html(data); //Show fetched data from database
+                $('.fetched-data').html(data); //Show fetched data from database
             }
         });
-     });
+    });
 });
-
-
 </script>
 
 </html>

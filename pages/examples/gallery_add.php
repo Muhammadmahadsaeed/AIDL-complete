@@ -18,6 +18,11 @@
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
+    <script>
+      if(window.history.replaceState){
+        window.history.replaceState(null,null,window.location.href)
+      }
+    </script>
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -66,11 +71,24 @@
                             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>"
                                 id="upload_multiple_images" method="post" enctype="multipart/form-data">
                                 <div class="card-body">
-                                    <div class="form-group">
-                                        <label for="inputName">Image Category</label>
-                                        <input type="text" id="inputName" name="tittle" class="form-control">
-
+                                <div class="form-group">
+                                    <label for="inputName">Image Category</label><br>
+                                        <select name="tittle" class="form-control">
+                                           
+                                            <option value="alser">ALSER</option>
+                                            <option value="edmond_buhler">EDMOND BUHLER</option>
+                                            <option value="edwards">EDWARDS</option>
+                                            <option value="suss">SUSS</option>
+                                            <option value="metkon">METKON</option>
+                                            <option value="micso_laser">MISCO LASER</option>
+                                            <option value="neocera">NEOCERA</option>
+                                            <option value="pasco">PASCO</option>
+                                            <option value="rbrl">RBRL</option>
+                                            <option value="sentech">SENTECH</option>
+                                            <option value="shore_western">SHORE WESTERN</option>
+                                        </select>
                                     </div>
+                                   
                                     <div class="form-group">
                                         <label for="inputDescription">Choose Image</label>
                                         <label for="fileUpload"
@@ -151,13 +169,7 @@ if(isset($_POST['submit'])){
                 //throw $th;
                 echo $th;
               }
-             /* if(move_uploaded_file($_FILES["files"]["tmp_name"][$key], $targetFilePath)){
-                  // Image db insert sql
-                  
-              }else{
-                
-                  $errorUpload .= $_FILES['files']['name'][$key].', ';
-              }*/
+             
           }
           else{
               $errorUploadType = 'File types are not supported!';
