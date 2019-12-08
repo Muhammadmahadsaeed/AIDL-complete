@@ -1,11 +1,7 @@
-
 <?php
-
 //  $protocol = 'http'.(!empty($_SERVER['HTTPS']) ? 's' : '');
 $currURL = substr($_SERVER['PHP_SELF'], 0, strrpos($_SERVER['PHP_SELF'], '/'));
 $chkk="/AIDL/pages/examples" 
-
-
 ?>
 
 <aside class="main-sidebar sidebar-dark-primary elevation-4">

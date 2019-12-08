@@ -1,10 +1,10 @@
 <?php require_once('../config/db.php');
-$sql1="select * from add_product";
-$sql2="select * from add_product where cat_1=1";
-$sql3="select * from add_product where cat_2=1";
-$sql4="select * from add_product where cat_3=1";
-$sql5="select * from add_product where cat_4=1";
-$sql6="select * from add_product where cat_5=1";
+$allProducts="select * from add_product";
+$product1="select * from add_product where cat_1=1";
+$product2="select * from add_product where cat_2=1";
+$product3="select * from add_product where cat_3=1";
+$product4="select * from add_product where cat_4=1";
+$product5="select * from add_product where cat_5=1";
 
 
 ?>
@@ -1499,7 +1499,7 @@ $sql6="select * from add_product where cat_5=1";
                                         <div id="all" class="tab-pane active"><br>
                                             <div class="row1">
                                                 <?php 
-                                                    if ($result = mysqli_query($link, $sql1)) {
+                                                    if ($result = mysqli_query($link, $allProducts)) {
                                                     if (mysqli_num_rows($result) > 0) {
                                                 ?>
                                                 <?php
@@ -1509,11 +1509,10 @@ $sql6="select * from add_product where cat_5=1";
                                                         <img src="../pages/examples/images/<?= $row['p_img'] ?>"
                                                             alt="John" style="width:100%">
                                                         <h1 style="color:black"><?= strtoupper($row['p_name']) ?></h1>
-                                                        <p class="title">CEO & Founder, Example</p>
-                                                        <p>Harvard University</p>
+                                                       
 
                                                         <p>
-                                                            <a href="#" class="button1">View Detail</a>
+                                                            <a href="<?= $row['p_url'] ?>" class="button1">View Detail</a>
                                                         </p>
                                                     </div>
                                                 </div>
@@ -1532,7 +1531,7 @@ $sql6="select * from add_product where cat_5=1";
                                         <div id="phy" class="tab-pane fade"><br>
                                             <div class="row1">
                                                 <?php 
-                                                    if ($result = mysqli_query($link, $sql2)) {
+                                                    if ($result = mysqli_query($link, $product1)) {
                                                     if (mysqli_num_rows($result) > 0) {
                                                 ?>
                                                 <?php
@@ -1542,11 +1541,9 @@ $sql6="select * from add_product where cat_5=1";
                                                         <img src="../pages/examples/images/<?= $row['p_img'] ?>"
                                                             alt="John" style="width:100%">
                                                         <h1 style="color:black"><?= strtoupper($row['p_name']) ?></h1>
-                                                        <p class="title">CEO & Founder, Example</p>
-                                                        <p>Harvard University</p>
-
-                                                        <p><button
-                                                                class="button1 page-open-clicker open-page-11 link">Contact</button>
+                                                        
+                                                        <p>
+                                                            <a href="<?= $row['p_url'] ?>" class="button1">View Detail</a>
                                                         </p>
                                                     </div>
                                                 </div>
@@ -1565,7 +1562,7 @@ $sql6="select * from add_product where cat_5=1";
                                         <div id="eng" class="tab-pane fade"><br>
                                             <div class="row1">
                                                 <?php 
-                                                    if ($result = mysqli_query($link, $sql3)) {
+                                                    if ($result = mysqli_query($link, $product2)) {
                                                     if (mysqli_num_rows($result) > 0) {
                                                 ?>
                                                 <?php
@@ -1575,11 +1572,8 @@ $sql6="select * from add_product where cat_5=1";
                                                         <img src="../pages/examples/images/<?= $row['p_img'] ?>"
                                                             alt="John" style="width:100%">
                                                         <h1 style="color:black"><?= strtoupper($row['p_name']) ?></h1>
-                                                        <p class="title">CEO & Founder, Example</p>
-                                                        <p>Harvard University</p>
-
-                                                        <p><button
-                                                                class="button1 page-open-clicker open-page-11 link">Contact</button>
+                                                        <p>
+                                                            <a href="<?= $row['p_url'] ?>" class="button1">View Detail</a>
                                                         </p>
                                                     </div>
                                                 </div>
@@ -1598,7 +1592,7 @@ $sql6="select * from add_product where cat_5=1";
                                         <div id="earth" class="tab-pane fade"><br>
                                             <div class="row1">
                                                 <?php 
-                                                    if ($result = mysqli_query($link, $sql4)) {
+                                                    if ($result = mysqli_query($link, $product3)) {
                                                     if (mysqli_num_rows($result) > 0) {
                                                 ?>
                                                 <?php
@@ -1608,11 +1602,8 @@ $sql6="select * from add_product where cat_5=1";
                                                         <img src="../pages/examples/images/<?= $row['p_img'] ?>"
                                                             alt="John" style="width:100%">
                                                         <h1 style="color:black"><?= strtoupper($row['p_name']) ?></h1>
-                                                        <p class="title">CEO & Founder, Example</p>
-                                                        <p>Harvard University</p>
-
-                                                        <p><button
-                                                                class="button1 page-open-clicker open-page-11 link">Contact</button>
+                                                        <p>
+                                                            <a href="<?= $row['p_url'] ?>" class="button1">View Detail</a>
                                                         </p>
                                                     </div>
                                                 </div>
@@ -1631,7 +1622,7 @@ $sql6="select * from add_product where cat_5=1";
                                         <div id="teaching" class="tab-pane fade"><br>
                                             <div class="row1">
                                                 <?php 
-                                                    if ($result = mysqli_query($link, $sql5)) {
+                                                    if ($result = mysqli_query($link, $product4)) {
                                                     if (mysqli_num_rows($result) > 0) {
                                                 ?>
                                                 <?php
@@ -1641,11 +1632,8 @@ $sql6="select * from add_product where cat_5=1";
                                                         <img src="../pages/examples/images/<?= $row['p_img'] ?>"
                                                             alt="John" style="width:100%">
                                                         <h1 style="color:black"><?= strtoupper($row['p_name']) ?></h1>
-                                                        <p class="title">CEO & Founder, Example</p>
-                                                        <p>Harvard University</p>
-
-                                                        <p><button
-                                                                class="button1 page-open-clicker open-page-11 link">Contact</button>
+                                                        <p>
+                                                            <a href="<?= $row['p_url'] ?>" class="button1">View Detail</a>
                                                         </p>
                                                     </div>
                                                 </div>
@@ -1664,7 +1652,7 @@ $sql6="select * from add_product where cat_5=1";
                                         <div id="nano" class="tab-pane fade"><br>
                                             <div class="row1">
                                                 <?php 
-                                                    if ($result = mysqli_query($link, $sql6)) {
+                                                    if ($result = mysqli_query($link, $product5)) {
                                                     if (mysqli_num_rows($result) > 0) {
                                                 ?>
                                                 <?php
@@ -1674,11 +1662,8 @@ $sql6="select * from add_product where cat_5=1";
                                                         <img src="../pages/examples/images/<?= $row['p_img'] ?>"
                                                             alt="John" style="width:100%">
                                                         <h1 style="color:black"><?= strtoupper($row['p_name']) ?></h1>
-                                                        <p class="title">CEO & Founder, Example</p>
-                                                        <p>Harvard University</p>
-
-                                                        <p><button
-                                                                class="button1 page-open-clicker open-page-11 link">Contact</button>
+                                                        <p>
+                                                            <a href="<?= $row['p_url'] ?>" class="button1">View Detail</a>
                                                         </p>
                                                     </div>
                                                 </div>
@@ -2274,6 +2259,11 @@ $sql6="select * from add_product where cat_5=1";
 							<th style="width:25%">Company</th>
 							<th style="color: blue;">AIDL Pakistan</th>
 
+                        </tr>
+                        <tr>
+							<td>CEO</td>
+							<td>Sohail Tayyab</td>
+
 						</tr>
 						<tr>
 							<td>Contact No</td>
@@ -2282,14 +2272,13 @@ $sql6="select * from add_product where cat_5=1";
 						</tr>
 						<tr>
 							<td>Email</td>
-							<td><a href="mailto:info@softwarechimps.com">info@softwarechimps.com</a> </td>
+							<td><a href="mailto:sohail.aidl@gmail.com">sohail.aidl@gmail.com</a> </td>
 
 						</tr>
 						<tr>
 							<td>Location</td>
 							<td>
-								Office number A-09 SB 34 Zohra Plaza Block 13-C Gulshan e Iqbal.
-								Karachi, Pakistan</td>
+                            ROOM# 7, 8, 5TH FLOOR, RIMPA PLAZA, OFFICE TOWER, M.A.JINNAH ROAD KARACHI-74400</td>
 
 						</tr>
 

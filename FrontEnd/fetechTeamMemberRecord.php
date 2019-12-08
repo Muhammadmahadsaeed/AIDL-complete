@@ -1,6 +1,6 @@
 <?php
 //Include database connection
-require_once('../config/db.php');
+require_once('./Dashboard/config/db.php');
 
 if($_POST['rowid']) {
     $id = $_POST['rowid']; //escape string
