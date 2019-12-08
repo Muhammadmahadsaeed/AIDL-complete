@@ -1,4 +1,125 @@
-<?php require_once('../../config/db.php') ?>
+<?php require_once('../../config/db.php') ;
+error_reporting(0);
+$name_err=$des_err=$img_err=$cat_err="";
+$img = "";
+if (isset($_POST['submit'])) { 
+  $p_name = $_POST["name"];
+  $p_des = $_POST["email"];
+  $image = $_FILES['image']['name'];
+  $c1 = $_POST["py"];
+  $c2 = $_POST["ecmmm"];
+  $c3 = $_POST["es"];
+  $c4 = $_POST["ta"];
+  $c5 = $_POST["nt"];
+  
+    if(empty($c1)&&empty($c2)&&empty($c3)&&empty($c4)&&empty($c5))
+    {
+      $cat_err="Please select atleast one category";
+    }
+    else{
+    if(!empty($c1))
+    {
+      $c1=1;
+    }
+    else
+    {
+      $c1=0;
+    }
+    if(!empty($c2))
+    {
+      $c2=1;
+    }
+    else
+    {
+      $c2=0;
+    }
+    if(!empty($c3))
+    {
+      $c3=1;
+    }
+    else
+    {
+      $c3=0;
+    }
+    if(!empty($c4))
+    {
+      $c4=1;
+    }
+    else
+    {
+      $c4=0;
+    }
+    if(!empty($c5))
+    {
+      $c5=1;
+    }
+    else
+    {
+      $c5=0;
+    }
+  }
+    
+    if(empty($p_name)){
+        $name_err = "Please enter product name";
+    } elseif(!preg_match("/^[a-zA-Z ]*$/",$p_name)){
+        $name_err = "Please enter a valid product name";
+    } else{
+       $p_name=$p_name;
+    }
+  
+    if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
+      $nameErr = "Only letters and white space allowed";
+    }
+    if(empty($p_des)){
+        $des_err = "Please enter product description";     
+    }else if (!preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i",$p_des)) {
+      $des_err = "Invalid URL";
+    }
+    
+    else{
+        $p_des = $p_des;
+    }
+    if(empty($image)){
+      $img_err = "Please insert image";     
+  } else{
+      $image = $image;
+  }
+ 
+    
+    // Check input errors before inserting in database
+    if(empty($name_err) && empty($des_err) && empty($img_err)){
+        // Prepare an insert statement
+        $target = "images/" . basename($image);
+        move_uploaded_file($_FILES['image']['tmp_name'], $target);
+        $sql = "INSERT INTO add_product (p_name,p_url,cat_1,cat_2,cat_3,cat_4,cat_5,p_img) VALUES ('$p_name','$p_des','$c1','$c2','$c3','$c4','$c5','$image')";
+   
+            
+            $result = mysqli_query($link, $sql);
+  if($result){
+    $successMsg = 'New record added successfully';
+    header('Location: ./projects.php');
+    exit();
+  }else{
+    $errorMsg = 'Error '.mysqli_error($link);
+  }
+            // Attempt to execute the prepared statement
+            
+        }
+         
+  
+       
+    }
+    
+    // Close connection
+    mysqli_close($link);
+
+
+
+ 
+  
+
+
+?>
 <!DOCTYPE html>
 <html>
 
@@ -69,14 +190,16 @@
                   <div class="form-group">
                     <label for="inputName">Product Name</label>
                     <input type="text" name="name" id="inputName" class="form-control">
+                    <span class="help-block" style="color: red;"><?php echo $name_err;?></span>
                   </div>
                   <div class="form-group">
                     <label for="inputDescription">Product Webiste URL</label>
-                    <input id="inputDescription" name="email" class="form-control" ></textarea>
+                    <input id="inputDescription" name="email" class="form-control" >
+                    <span class="help-block" style="color: red;"><?php echo $des_err;?></span>
                   </div>
                   <div class="form-group">
                     <label for="sel1">Product Category</label><br>
-                    
+                    <span class="help-block" style="color: red;"><?php echo $cat_err;?></span><br>
                     <input type="checkbox" name="py" value="py"><label>PHYSICS</label><br>
                     <input type="checkbox" name="ecmmm" value="ecmmm"><label>Engineering Civil Mech.Materials. Metallurgy</label><br>
                     <input type="checkbox" name="es" value="es"><label>Earth Sciences</label><br>
@@ -108,6 +231,8 @@
                       Browse for file ...
                        <input type="file" name="image" id="inputEstimatedBudget">
                     </label>
+                    <span class="help-block" style="color: red;"><?php echo $img_err;?></span>
+                    
                     <!-- <input type="file" name="image" id="inputEstimatedBudget" class="form-control"> -->
                   </div>
 
@@ -121,7 +246,7 @@
           <div class="row">
             <div class="col-12">
 
-              <input type="submit" name="submit" value="Create new Project" class="btn btn-success float-right">
+              <input type="submit" name="submit" value="Add Product" class="btn btn-success float-right">
             </div>
           </div>
         </form>
@@ -152,6 +277,7 @@
 
 </html>
 
+<<<<<<< HEAD
 
 <?php
 $img = "";
@@ -285,3 +411,5 @@ if (isset($_POST['submit'])) { // Fetching variables of the form which travels i
 
 
 ?>
+=======
+>>>>>>> 79446a99ddcfbef3c0d9834e8efa6f1eca96ebbf

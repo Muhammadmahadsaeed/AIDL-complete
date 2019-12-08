@@ -2,7 +2,7 @@
 
 require_once('../../config/db.php');
 $upload_dir = 'images/';
-
+error_reporting(0);
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
     $sql = "select * from add_product where p_id=" . $id;
@@ -13,9 +13,8 @@ if (isset($_GET['id'])) {
         $errorMsg = 'Could not Find Any Record';
     }
 }
-
-if (isset($_POST['submit'])) {
-    $p_name = $_POST["name"];
+if (isset($_POST['submit'])) { 
+  $p_name = $_POST["name"];
   $p_des = $_POST["email"];
   $image = $_FILES['image']['name'];
   $c1 = $_POST["py"];
@@ -23,8 +22,12 @@ if (isset($_POST['submit'])) {
   $c3 = $_POST["es"];
   $c4 = $_POST["ta"];
   $c5 = $_POST["nt"];
-
-    
+  
+    if(empty($c1)&&empty($c2)&&empty($c3)&&empty($c4)&&empty($c5))
+    {
+      $cat_err="Please select atleast one category";
+    }
+    else{
     if(!empty($c1))
     {
       $c1=1;
@@ -65,27 +68,64 @@ if (isset($_POST['submit'])) {
     {
       $c5=0;
     }
-    $target = "images/" . basename($image);
+  }
     
-    if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
-        $msg = "Image uploaded successfully";
-      } else {
-        $msg = "Failed to upload image";
-      }
-
-    if (!isset($errorMsg)) {
-        $sql = "update add_product set p_name = '" . $p_name . "', p_url = '" . $p_des . "',cat_1 = '" . $c1 . "',cat_2 = '" . $c2 . "',cat_3 = '" . $c3 . "',cat_4 = '" . $c4 . "',cat_5 = '" . $c5 . "',p_img = '" . $image . "' where p_id=" . $id;
-        $result = mysqli_query($link, $sql);
-        if ($result) {
-            $successMsg = 'New record updated successfully';
-            header('Location:projects.php');
-        } else {
-            $errorMsg = 'Error ' . mysqli_error($link);
-        }
+    if(empty($p_name)){
+        $name_err = "Please enter product name";
+    } elseif(!preg_match("/^[a-zA-Z ]*$/",$p_name)){
+        $name_err = "Please enter a valid product name";
+    } else{
+       $p_name=$p_name;
     }
+  
+    if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
+      $nameErr = "Only letters and white space allowed";
+    }
+    if(empty($p_des)){
+        $des_err = "Please enter product description";     
+    }else if (!preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i",$p_des)) {
+      $des_err = "Invalid URL";
+    }
+    
+    else{
+        $p_des = $p_des;
+    }
+    if((empty($image)) && (empty($row["p_img"]))){
+      $img_err = "Please insert image";     
+  } else if((empty($image)) && (!empty($row["p_img"]))){
+      $image = $row["p_img"];
+  }
+  else
+  {
+    $image = $image;
+
+  }
+  if(empty($name_err) && empty($des_err) && empty($img_err)){
+    // Prepare an insert statement
+    $target = "images/" . basename($image);
+    move_uploaded_file($_FILES['image']['tmp_name'], $target);
+    $sql = "update add_product set p_name = '" . $p_name . "', p_url = '" . $p_des . "',cat_1 = '" . $c1 . "',cat_2 = '" . $c2 . "',cat_3 = '" . $c3 . "',cat_4 = '" . $c4 . "',cat_5 = '" . $c5 . "',p_img = '" . $image . "' where p_id=" . $id;
+        
+        
+        $result = mysqli_query($link, $sql);
+if($result){
+$successMsg = 'New record added successfully';
+header('Location: ./projects.php');
+exit();
+}else{
+$errorMsg = 'Error '.mysqli_error($link);
+}
+        // Attempt to execute the prepared statement
+        
+    }
+     
+
+   
 }
 
-
+// Close connection
+mysqli_close($link);
+   
 
 
 ?>
@@ -159,13 +199,18 @@ if (isset($_POST['submit'])) {
                   <div class="form-group">
                     <label for="inputName">Product Name</label>
                     <input type="text" name="name" id="inputName" class="form-control" value="<?= $row['p_name']; ?>">
+                    <span class="help-block" style="color: red;"><?php echo $name_err;?></span>
                   </div>
                   <div class="form-group">
                     <label for="inputDescription">Product Webiste URL</label>
                     <input id="inputDescription" name="email" class="form-control" value="<?= $row['p_url']; ?>">
+                    <span class="help-block" style="color: red;"><?php echo $des_err;?></span>
+              
                   </div>
                   <div class="form-group">
                     <label for="sel1">Product Category</label><br>
+                    <span class="help-block" style="color: red;"><?php echo $cat_err;?></span><br>
+                   
                     <?php
                     if($row['cat_1'])
                     {?>
@@ -194,7 +239,7 @@ if (isset($_POST['submit'])) {
                    
                    if($row['cat_4'])
                     {?>
-                        <input type="checkbox" name="ta" value="ta" checked="checked"><label>Teaching Aids</label><br>>  
+                        <input type="checkbox" name="ta" value="ta" checked="checked"><label>Teaching Aids</label><br>
                    <?php }
                    else{
                     ?>
@@ -242,6 +287,8 @@ if (isset($_POST['submit'])) {
                       Browse for file ...
                        <input type="file" name="image" id="inputEstimatedBudget">
                     </label>
+                    <span class="help-block" style="color: red;"><?php echo $img_err;?></span><br>
+                   
                     <!-- <input type="file" name="image" id="inputEstimatedBudget" class="form-control"> -->
                   </div>
 
@@ -255,7 +302,7 @@ if (isset($_POST['submit'])) {
           <div class="row">
             <div class="col-12">
 
-              <input type="submit" name="submit" value="Create new Project" class="btn btn-success float-right">
+              <input type="submit" name="submit" value="Update product" class="btn btn-success float-right">
             </div>
           </div>
         </form>
