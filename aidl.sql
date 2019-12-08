@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 08, 2019 at 07:38 PM
+-- Generation Time: Dec 09, 2019 at 12:05 AM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.0.23
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `aidl`
+-- Database: `aidlpkco_newdb`
 --
 
 -- --------------------------------------------------------
@@ -257,7 +257,10 @@ INSERT INTO `promotions` (`pro_id`, `pro_type`, `video_url`, `tittle`, `images`,
 (28, 'image', NULL, 'aidl pakistan', 'pro-43.jpg', '2019-12-08 17:11:51'),
 (29, 'image', NULL, 'aidl pakistan', 'pro-44.jpg', '2019-12-08 17:12:07'),
 (30, 'image', NULL, 'aidl pakistan', 'pro-45.jpg', '2019-12-08 17:12:18'),
-(31, 'image', NULL, 'aidl pakistan', 'pro-46.jpg', '2019-12-08 17:12:45');
+(31, 'image', NULL, 'aidl pakistan', 'pro-46.jpg', '2019-12-08 17:12:45'),
+(32, 'wabiners', NULL, 'sentech news', 'sentech.png', '2019-12-09 01:24:12'),
+(33, 'promotions', NULL, 'metkon', 'pro-01.jpg', '2019-12-09 01:25:56'),
+(34, 'promotions', NULL, 'metkon', 'pro-01.jpg', '2019-12-09 01:32:08');
 
 -- --------------------------------------------------------
 
@@ -274,6 +277,23 @@ CREATE TABLE `team_members` (
   `team_image` varchar(255) NOT NULL,
   `create_on` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `team_members`
+--
+
+INSERT INTO `team_members` (`team_id`, `team_name`, `team_post`, `team_email`, `team_num`, `team_image`, `create_on`) VALUES
+(1, 'sohail tayyab', 'ceo', 'sohail.aidl@gmail.com', '051-2348220', 'download.png', '2019-12-09 00:52:23'),
+(2, 'Asim Adnan Rana', 'Director', 'asim.aidl@gmail.com', '051-2348220', 'download.png', '2019-12-09 01:17:46'),
+(3, 'Ghulam Rabbani', 'Director', 'rabbanigorayya@yahoo.com', '021-32729361', 'download.png', '2019-12-09 01:18:34'),
+(4, 'Syed Muhammad Ali Zaidi', 'System Engineer', 'aidl@cyber.net.pk', '021-32767475-7', 'download.png', '2019-12-09 01:20:24'),
+(5, 'asqar mehdi', 'sales and service engineer', 'asqar.aidl@gmail.com', '021-32767475-7', 'download.png', '2019-12-09 01:21:33'),
+(6, 'Nasim Javed', 'R.M. Islamabad', 'aidl@cyber.net.pk', '051-2348220', 'download.png', '2019-12-09 03:17:38'),
+(7, 'Shahab Tayyab', 'Manager', 'aidl@cyber.net.pk', '021-32735734', 'download.png', '2019-12-09 03:18:18'),
+(8, 'Syed Muhammad Ali Zaidi', 'System Engineer', 'aidl@cyber.net.pk', '021-32767475-7', 'download.png', '2019-12-09 03:19:01'),
+(9, 'Uzair Vohra', 'Marketing Executive', 'aidl@cyber.net.pk', '021-32767475-7', 'download.png', '2019-12-09 03:19:48'),
+(10, 'Waqas Ali', 'Marketing & Service Engineer', 'aidl.isb@ptcl.net', '051-2348244', 'download.png', '2019-12-09 03:20:44'),
+(11, 'Khurram Shahzad (AIDL Lahore)', 'Marketing Executive', 'aidl@cyber.net.pk', '03343442585', 'download.png', '2019-12-09 03:21:25');
 
 --
 -- Indexes for dumped tables
@@ -359,13 +379,13 @@ ALTER TABLE `photos`
 -- AUTO_INCREMENT for table `promotions`
 --
 ALTER TABLE `promotions`
-  MODIFY `pro_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `pro_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT for table `team_members`
 --
 ALTER TABLE `team_members`
-  MODIFY `team_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `team_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
