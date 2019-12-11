@@ -1,0 +1,13 @@
+
+.file-upload input[type='file'] {
+    display: none;
+  }
+
+  input[type=checkbox]{
+    margin-bottom:10px;
+    margin-right: 10px;
+    }
+
+    .heading{
+      font-size: 17px;
+      }

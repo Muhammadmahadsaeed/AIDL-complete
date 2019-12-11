@@ -1846,6 +1846,7 @@ top: 8px;
 }
 
 .page-closer-btn {
+  position: fixed;
 width: 25px;
 height: 25px;
 margin: 9px auto 0 auto;
@@ -4291,6 +4292,7 @@ z-index: -1;
 
  
 .our-team {
+  font-family: 'Bebas Neue';
   padding: 30px 0 40px;
   margin-bottom: 30px;
   background-color: #f7f5ec;
