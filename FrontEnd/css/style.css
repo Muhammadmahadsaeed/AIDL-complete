@@ -1680,7 +1680,7 @@ z-index: 1005;
 
 @media only screen and (max-width: 880px) {
   #page-0 {
-    overflow: auto;
+    /* overflow: auto; */
 	width: 100%;
   }
 }
@@ -1741,7 +1741,7 @@ filter: alpha(opacity=0);
 #page-8,
 #page-11 {
 position: absolute;
-overflow: auto;
+/* overflow: auto; */
 top: 0;
 right: -200%;
 width: 50%;
@@ -1846,7 +1846,7 @@ top: 8px;
 }
 
 .page-closer-btn {
-  position: fixed;
+  position: relative;
 width: 25px;
 height: 25px;
 margin: 9px auto 0 auto;

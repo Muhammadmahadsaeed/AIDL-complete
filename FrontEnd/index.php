@@ -196,16 +196,18 @@ $product5="select * from add_product where cat_5=1";
         <div class="borders-left"></div>
         <div class="borders-right">
 
-        
-        <div class="container sections" style="height:auto">
 
-                              
-            <div class="row">
+            <div class="container sections" style="height:auto">
 
-                <a href="#contactUs" style=" position: absolute;right: 0;margin-top:1%;background-color:red;color:white" class="btn" data-toggle="modal">Contact Us</a>
 
+                <div class="row">
+
+                    <a href="#contactUs"
+                        style=" position: absolute;right: 0;margin-top:1%;background-color:red;color:white" class="btn"
+                        data-toggle="modal">Contact Us</a>
+
+                </div>
             </div>
-        </div>
 
         </div>
     </div><!-- borders end -->
@@ -279,7 +281,7 @@ $product5="select * from add_product where cat_5=1";
                                         </div><!-- introduction end -->
                                     </div><!-- intro end -->
                                 </div>
-                            
+
                                 <!-- row end -->
                             </div><!-- container end -->
 
@@ -299,7 +301,7 @@ $product5="select * from add_product where cat_5=1";
 
                     <!-- center block start -->
                     <div class="center-block">
-                       
+
                         <!-- upper content start -->
                         <div class="upper-content">
 
@@ -309,21 +311,24 @@ $product5="select * from add_product where cat_5=1";
                                 <div class="flexslider-quotes">
                                     <ul class="slides fadeIn-element">
                                         <li class="quote-text"><br>
-                                        WELCOME TO  <span
-                                                class="quote-signature">WE DELIVER TECHNOLOGICALLY ADVANCED SOLUTIONS AND INSTRUMENT BRANDS
+                                            WELCOME TO <span class="quote-signature">WE DELIVER TECHNOLOGICALLY ADVANCED
+                                                SOLUTIONS AND INSTRUMENT BRANDS
                                             </span>
                                         </li>
                                         <li class="quote-text"><br>
-                                              ASSOCIATED INSTRUMENT DISTRIBUTORS (PVT) LIMITED  <span class="quote-signature">
-                                             WE DELIVER TECHNOLOGICALLY ADVANCED SOLUTIONS AND INSTRUMENT BRANDS</span>
+                                            ASSOCIATED INSTRUMENT DISTRIBUTORS (PVT) LIMITED <span
+                                                class="quote-signature">
+                                                WE DELIVER TECHNOLOGICALLY ADVANCED SOLUTIONS AND INSTRUMENT
+                                                BRANDS</span>
                                         </li>
                                         <li class="quote-text"><br>
-                                        WELCOME TO  <span
-                                                class="quote-signature"> WE DELIVER TECHNOLOGICALLY ADVANCED SOLUTIONS AND INSTRUMENT BRANDS</span>
+                                            WELCOME TO <span class="quote-signature"> WE DELIVER TECHNOLOGICALLY
+                                                ADVANCED SOLUTIONS AND INSTRUMENT BRANDS</span>
                                         </li>
                                         <li class="quote-text"><br>
-                                         ASSOCIATED INSTRUMENT DISTRIBUTORS (PVT) LIMITED  <span
-                                                class="quote-signature"> WE DELIVER TECHNOLOGICALLY ADVANCED SOLUTIONS AND INSTRUMENT BRANDS</span>
+                                            ASSOCIATED INSTRUMENT DISTRIBUTORS (PVT) LIMITED <span
+                                                class="quote-signature"> WE DELIVER TECHNOLOGICALLY ADVANCED SOLUTIONS
+                                                AND INSTRUMENT BRANDS</span>
                                         </li>
                                     </ul>
                                 </div>
@@ -433,7 +438,7 @@ $product5="select * from add_product where cat_5=1";
                                         </div><!-- section TXT end -->
                                     </div><!-- col end -->
                                     <!-- col start -->
-                                    
+
                                     <!-- col end -->
                                 </div><!-- row end -->
                             </div><!-- container end -->
@@ -655,444 +660,441 @@ $product5="select * from add_product where cat_5=1";
                             <div class="divider divider-works"></div><!-- divider end -->
                             <!-- container start -->
                             <div class="container sections">
-                                <!-- row start -->
-                                <div class="row">
-                                    <!-- col start -->
-                                    <div class="col-lg-12">
-                                        <!-- section title wrapper start -->
-                                        <div class="section-title-wrapper">
-                                            <!-- section title start -->
-                                            <h1 class="home-page-title-all">
-                                                Gallery
-                                            </h1><!-- section title end -->
-                                            <!-- divider start -->
-                                            <!-- <div class="inner-divider-half"></div> -->
-                                            <!-- divider end -->
-                                            <!-- section subtitle start -->
-                                            <!-- <h2 class="section-heading section-heading-all">
-                                                Powerful Imagery
-                                            </h2> -->
-                                            <!-- section subtitle end -->
-                                            <!-- extra line start -->
-                                            <div class="the-extra-line"></div><!-- extra line end -->
-                                        </div><!-- section title wrapper end -->
-                                    </div><!-- col end -->
-                                </div><!-- row end -->
-                                <!-- divider start -->
-                                <div class="inner-divider"></div><!-- divider end -->
-                                <!-- row start -->
-                                <div class="row">
-                                    <!-- col start -->
-                                    <div class="col-lg-12">
-                                        <!-- section TXT start -->
-                                        <div class="section-intro">
-                                            <div class="row">
-                                                <ul class="nav nav-tabs" role="tablist">
-                                                    <li class="nav-item">
-                                                        <a class="nav-link active" data-toggle="tab"
-                                                            href="#allimg">ALL</a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a class="nav-link" data-toggle="tab" href="#Alser">Alser</a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a class="nav-link" data-toggle="tab" href="#Edmond">Edmond
-                                                            Buhler</a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a class="nav-link" data-toggle="tab"
-                                                            href="#Edwards">Edwards</a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a class="nav-link" data-toggle="tab" href="#Suss">Suss</a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a class="nav-link" data-toggle="tab" href="#Metkon">Metkon</a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a class="nav-link" data-toggle="tab" href="#Micos">Micos
-                                                            Laser</a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a class="nav-link" data-toggle="tab"
-                                                            href="#Neocera">Neocera</a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a class="nav-link" data-toggle="tab" href="#Pasco">Pasco</a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a class="nav-link" data-toggle="tab" href="#RBRL">RBRL</a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a class="nav-link" data-toggle="tab"
-                                                            href="#Sentech">Sentech</a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a class="nav-link" data-toggle="tab" href="#Shore">Shore
-                                                            Western</a>
-                                                    </li>
-                                                </ul>
 
-
-                                            </div>
-                                        </div><!-- section TXT end -->
-                                    </div><!-- col end -->
-                                </div>
-                                <!-- row end -->
-                                <!-- divider start -->
-                                <div class="inner-divider"></div><!-- divider end -->
-                                <!-- row start -->
-                                <div class="row">
-                                    <!-- photoSwipe start -->
-
-
-
-
-                                    <div class="tab-content">
-                                        <div id="allimg" class="tab-pane active"><br>
-                                            <div class="legendary-gallery">
-                                                <!-- gallery item 1 start -->
-                                                <?php $res = mysqli_query($link,"SELECT * FROM photos");
-                                                while($row = mysqli_fetch_array($res)){
-                                                    
-                                                   
-                                                    ?>
-                                                <figure
-                                                    class="col-sm-6 col-md-4 col-lg-4 hover-effect-img move-down move-down-first">
-                                                    <a data-size="1920x1080"
-                                                        href="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
-                                                        <img alt="Image description" class="img-responsive"
-                                                            src="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
-                                                    <figcaption>
-                                                        <span
-                                                            class="img-caption"><?=strtoupper($row['tittle']);?></span>
-                                                        <div class="hover-effect"></div>
-                                                        <div class="hover-icons">
-                                                            <a class="ion-ios-plus-empty " href="#"></a><br>
-                                                            <span><?=strtoupper($row['tittle']);?></span>
-                                                        </div>
-                                                    </figcaption>
-                                                </figure>
-                                                <?php }; ?>
-                                                <!-- gallery item 4 end -->
-                                            </div>
-                                        </div>
-                                        <div id="Alser" class="tab-pane fade"><br>
-                                            <div class="legendary-gallery">
-                                                <!-- gallery item 1 start -->
-                                                <?php $res = mysqli_query($link,"SELECT * FROM photos where tittle = 'alser'");
-                                                    while($row = mysqli_fetch_array($res)){
-                                                        
-                                                    
-                                                        ?>
-                                                <figure
-                                                    class="col-sm-6 col-md-4 col-lg-4 hover-effect-img move-down move-down-first">
-                                                    <a data-size="1920x1080"
-                                                        href="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
-                                                        <img alt="Image description" class="img-responsive"
-                                                            src="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
-                                                    <figcaption>
-                                                        <span class="img-caption">Image description 1</span>
-                                                        <div class="hover-effect"></div>
-                                                        <div class="hover-icons">
-                                                            <a class="ion-ios-plus-empty " href="#"></a><br>
-                                                            <span><?=strtoupper($row['tittle']);?></span>
-                                                        </div>
-                                                    </figcaption>
-                                                </figure>
-                                                <?php }; ?>
-                                                <!-- gallery item 4 end -->
-                                            </div>
-                                        </div>
-                                        <div id="Edmond" class="tab-pane fade"><br>
-                                            <div class="legendary-gallery">
-                                                <!-- gallery item 1 start -->
-                                                <?php $res = mysqli_query($link,"SELECT * FROM photos where tittle = 'edmond_buhler'");
-                                                    while($row = mysqli_fetch_array($res)){
-                                                        
-                                                    
-                                                        ?>
-                                                <figure
-                                                    class="col-sm-6 col-md-4 col-lg-4 hover-effect-img move-down move-down-first">
-                                                    <a data-size="1920x1080"
-                                                        href="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
-                                                        <img alt="Image description" class="img-responsive"
-                                                            src="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
-                                                    <figcaption>
-                                                        <span
-                                                            class="img-caption"><?=strtoupper($row['tittle']);?></span>
-                                                        <div class="hover-effect"></div>
-                                                        <div class="hover-icons">
-                                                            <a class="ion-ios-plus-empty " href="#"></a><br>
-                                                            <span><?=strtoupper($row['tittle']);?></span>
-                                                        </div>
-                                                    </figcaption>
-                                                </figure>
-                                                <?php }; ?>
-                                                <!-- gallery item 4 end -->
-                                            </div>
-                                        </div>
-
-                                        <div id="Edwards" class="tab-pane fade"><br>
-                                            <div class="legendary-gallery">
-                                                <!-- gallery item 1 start -->
-                                                <?php $res = mysqli_query($link,"SELECT * FROM photos where tittle = 'edwards'");
-                                                    while($row = mysqli_fetch_array($res)){
-                                                        
-                                                    
-                                                        ?>
-                                                <figure
-                                                    class="col-sm-6 col-md-4 col-lg-4 hover-effect-img move-down move-down-first">
-                                                    <a data-size="1920x1080"
-                                                        href="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
-                                                        <img alt="Image description" class="img-responsive"
-                                                            src="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
-                                                    <figcaption>
-                                                        <span class="img-caption">Image description 1</span>
-                                                        <div class="hover-effect"></div>
-                                                        <div class="hover-icons">
-                                                            <a class="ion-ios-plus-empty " href="#"></a><br>
-                                                            <span><?=strtoupper($row['tittle']);?></span>
-                                                        </div>
-                                                    </figcaption>
-                                                </figure>
-                                                <?php }; ?>
-                                                <!-- gallery item 4 end -->
-                                            </div>
-                                        </div>
-
-                                        <div id="Suss" class="tab-pane fade"><br>
-                                            <div class="legendary-gallery">
-                                                <!-- gallery item 1 start -->
-                                                <?php $res = mysqli_query($link,"SELECT * FROM photos where tittle = 'suss'");
-                                                    while($row = mysqli_fetch_array($res)){
-                                                        
-                                                    
-                                                        ?>
-                                                <figure
-                                                    class="col-sm-6 col-md-4 col-lg-4 hover-effect-img move-down move-down-first">
-                                                    <a data-size="1920x1080"
-                                                        href="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
-                                                        <img alt="Image description" class="img-responsive"
-                                                            src="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
-                                                    <figcaption>
-                                                        <span class="img-caption">Image description 1</span>
-                                                        <div class="hover-effect"></div>
-                                                        <div class="hover-icons">
-                                                            <a class="ion-ios-plus-empty " href="#"></a><br>
-                                                            <span><?=strtoupper($row['tittle']);?></span>
-                                                        </div>
-                                                    </figcaption>
-                                                </figure>
-                                                <?php }; ?>
-                                                <!-- gallery item 4 end -->
-                                            </div>
-
-                                        </div>
-                                        <div id="Metkon" class="tab-pane fade"><br>
-                                            <div class="legendary-gallery">
-                                                <!-- gallery item 1 start -->
-                                                <?php $res = mysqli_query($link,"SELECT * FROM photos where tittle = 'metkon'");
-                                                    while($row = mysqli_fetch_array($res)){
-                                                        
-                                                    
-                                                        ?>
-                                                <figure
-                                                    class="col-sm-6 col-md-4 col-lg-4 hover-effect-img move-down move-down-first">
-                                                    <a data-size="1920x1080"
-                                                        href="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
-                                                        <img alt="Image description" class="img-responsive"
-                                                            src="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
-                                                    <figcaption>
-                                                        <span class="img-caption">Image description 1</span>
-                                                        <div class="hover-effect"></div>
-                                                        <div class="hover-icons">
-                                                            <a class="ion-ios-plus-empty " href="#"></a><br>
-                                                            <span><?=strtoupper($row['tittle']);?></span>
-                                                        </div>
-                                                    </figcaption>
-                                                </figure>
-                                                <?php }; ?>
-                                                <!-- gallery item 4 end -->
-                                            </div>
-
-                                        </div>
-                                        <div id="Micos" class="tab-pane fade"><br>
-                                            <div class="legendary-gallery">
-                                                <!-- gallery item 1 start -->
-                                                <?php $res = mysqli_query($link,"SELECT * FROM photos where tittle = 'micso_laser'");
-                                                    while($row = mysqli_fetch_array($res)){
-                                                        
-                                                    
-                                                        ?>
-                                                <figure
-                                                    class="col-sm-6 col-md-4 col-lg-4 hover-effect-img move-down move-down-first">
-                                                    <a data-size="1920x1080"
-                                                        href="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
-                                                        <img alt="Image description" class="img-responsive"
-                                                            src="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
-                                                    <figcaption>
-                                                        <span class="img-caption">Image description 1</span>
-                                                        <div class="hover-effect"></div>
-                                                        <div class="hover-icons">
-                                                            <a class="ion-ios-plus-empty " href="#"></a><br>
-                                                            <span><?=strtoupper($row['tittle']);?></span>
-                                                        </div>
-                                                    </figcaption>
-                                                </figure>
-                                                <?php }; ?>
-                                                <!-- gallery item 4 end -->
-                                            </div>
-                                        </div>
-
-                                        <div id="Neocera" class="tab-pane fade"><br>
-                                            <div class="legendary-gallery">
-                                                <!-- gallery item 1 start -->
-                                                <?php $res = mysqli_query($link,"SELECT * FROM photos where tittle = 'neocera'");
-                                                    while($row = mysqli_fetch_array($res)){
-                                                        
-                                                    
-                                                        ?>
-                                                <figure
-                                                    class="col-sm-6 col-md-4 col-lg-4 hover-effect-img move-down move-down-first">
-                                                    <a data-size="1920x1080"
-                                                        href="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
-                                                        <img alt="Image description" class="img-responsive"
-                                                            src="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
-                                                    <figcaption>
-                                                        <span class="img-caption">Image description 1</span>
-                                                        <div class="hover-effect"></div>
-                                                        <div class="hover-icons">
-                                                            <a class="ion-ios-plus-empty " href="#"></a><br>
-                                                            <span><?=strtoupper($row['tittle']);?></span>
-                                                        </div>
-                                                    </figcaption>
-                                                </figure>
-                                                <?php }; ?>
-                                                <!-- gallery item 4 end -->
-                                            </div>
-
-                                        </div>
-                                        <div id="Pasco" class="tab-pane fade"><br>
-                                            <div class="legendary-gallery">
-                                                <!-- gallery item 1 start -->
-                                                <?php $res = mysqli_query($link,"SELECT * FROM photos where tittle = 'pasco'");
-                                                    while($row = mysqli_fetch_array($res)){
-                                                        
-                                                    
-                                                        ?>
-                                                <figure
-                                                    class="col-sm-6 col-md-4 col-lg-4 hover-effect-img move-down move-down-first">
-                                                    <a data-size="1920x1080"
-                                                        href="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
-                                                        <img alt="Image description" class="img-responsive"
-                                                            src="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
-                                                    <figcaption>
-                                                        <span class="img-caption">Image description 1</span>
-                                                        <div class="hover-effect"></div>
-                                                        <div class="hover-icons">
-                                                            <a class="ion-ios-plus-empty " href="#"></a><br>
-                                                            <span><?=strtoupper($row['tittle']);?></span>
-                                                        </div>
-                                                    </figcaption>
-                                                </figure>
-                                                <?php }; ?>
-                                                <!-- gallery item 4 end -->
-                                            </div>
-
-                                        </div>
-                                        <div id="RBRL" class="tab-pane fade"><br>
-                                            <div class="legendary-gallery">
-                                                <!-- gallery item 1 start -->
-                                                <?php $res = mysqli_query($link,"SELECT * FROM photos where tittle = 'rbrl'");
-                                                    while($row = mysqli_fetch_array($res)){
-                                                        
-                                                    
-                                                        ?>
-                                                <figure
-                                                    class="col-sm-6 col-md-4 col-lg-4 hover-effect-img move-down move-down-first">
-                                                    <a data-size="1920x1080"
-                                                        href="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
-                                                        <img alt="Image description" class="img-responsive"
-                                                            src="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
-                                                    <figcaption>
-                                                        <span class="img-caption">Image description 1</span>
-                                                        <div class="hover-effect"></div>
-                                                        <div class="hover-icons">
-                                                            <a class="ion-ios-plus-empty " href="#"></a><br>
-                                                            <span><?=strtoupper($row['tittle']);?></span>
-                                                        </div>
-                                                    </figcaption>
-                                                </figure>
-                                                <?php }; ?>
-                                                <!-- gallery item 4 end -->
-                                            </div>
-
-                                        </div>
-                                        <div id="Sentech" class="tab-pane fade"><br>
-                                            <div class="legendary-gallery">
-                                                <!-- gallery item 1 start -->
-                                                <?php $res = mysqli_query($link,"SELECT * FROM photos where tittle = 'sentech'");
-                                                    while($row = mysqli_fetch_array($res)){
-                                                        
-                                                    
-                                                        ?>
-                                                <figure
-                                                    class="col-sm-6 col-md-4 col-lg-4 hover-effect-img move-down move-down-first">
-                                                    <a data-size="1920x1080"
-                                                        href="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
-                                                        <img alt="Image description" class="img-responsive"
-                                                            src="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
-                                                    <figcaption>
-                                                        <span class="img-caption">Image description 1</span>
-                                                        <div class="hover-effect"></div>
-                                                        <div class="hover-icons">
-                                                            <a class="ion-ios-plus-empty " href="#"></a><br>
-                                                            <span><?=strtoupper($row['tittle']);?></span>
-                                                        </div>
-                                                    </figcaption>
-                                                </figure>
-                                                <?php }; ?>
-                                                <!-- gallery item 4 end -->
-                                            </div>
-
-                                        </div>
-                                        <div id="Shore" class="tab-pane fade"><br>
-                                            <div class="legendary-gallery">
-                                                <!-- gallery item 1 start -->
-                                                <?php $res = mysqli_query($link,"SELECT * FROM photos where tittle = 'shore_western'");
-                                                    while($row = mysqli_fetch_array($res)){
-                                                        
-                                                    
-                                                        ?>
-                                                <figure
-                                                    class="col-sm-6 col-md-4 col-lg-4 hover-effect-img move-down move-down-first">
-                                                    <a data-size="1920x1080"
-                                                        href="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
-                                                        <img alt="Image description" class="img-responsive"
-                                                            src="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
-                                                    <figcaption>
-                                                        <span class="img-caption">Image description 1</span>
-                                                        <div class="hover-effect"></div>
-                                                        <div class="hover-icons">
-                                                            <a class="ion-ios-plus-empty " href="#"></a><br>
-                                                            <span><?=strtoupper($row['tittle']);?></span>
-                                                        </div>
-                                                    </figcaption>
-                                                </figure>
-                                                <?php }; ?>
-                                                <!-- gallery item 4 end -->
-                                            </div>
-                                        </div>
+                                <div class="navbar1234">
+                                    <div class="section-title-wrapper">
+                                        <!-- section title start -->
+                                        <h1 class="home-page-title-all" style="display:inline-block">
+                                            Gallery
+                                        </h1>
+                                        <div class="the-extra-line"></div><!-- extra line end -->
                                     </div>
+                                    <!-- row start -->
+                                    <div class="row" >
+                                        <!-- col start -->
+                                        <div class="col-lg-12">
+                                            <!-- section TXT start -->
+                                            <div class="section-intro">
+                                                <div class="row">
+                                                    <ul class="nav nav-tabs"  role="tablist">
+                                                        <li class="nav-item">
+                                                            <a class="nav-link active" data-toggle="tab"
+                                                                href="#allimg">ALL</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" data-toggle="tab"
+                                                                href="#Alser">Alser</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" data-toggle="tab" href="#Edmond">Edmond
+                                                                Buhler</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" data-toggle="tab"
+                                                                href="#Edwards">Edwards</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" data-toggle="tab" href="#Suss">Suss</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" data-toggle="tab"
+                                                                href="#Metkon">Metkon</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" data-toggle="tab" href="#Micos">Micos
+                                                                Laser</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" data-toggle="tab"
+                                                                href="#Neocera">Neocera</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" data-toggle="tab"
+                                                                href="#Pasco">Pasco</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" data-toggle="tab" href="#RBRL">RBRL</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" data-toggle="tab"
+                                                                href="#Sentech">Sentech</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" data-toggle="tab" href="#Shore">Shore
+                                                                Western</a>
+                                                        </li>
+                                                    </ul>
+
+
+                                                </div>
+                                            </div><!-- section TXT end -->
+                                        </div><!-- col end -->
+                                    </div>
+                                    <!-- row end -->
+                                </div>
+                                <!-- section title wrapper start -->
+
+                                <!-- section title wrapper end -->
+
+
+                                <div class="inner-divider"></div>
+                                <div class="inner-divider"></div>
+                                <!-- divider end -->
+                                <!-- row start -->
+                                <div class="scroll123" id="style-3">
+                                    <div class="row">
+                                        <!-- photoSwipe start -->
+
+                                        
+
+
+                                        <div class="tab-content">
+                                            <div id="allimg" class="tab-pane active"><br>
+                                                <div class="legendary-gallery">
+                                                    <!-- gallery item 1 start -->
+                                                    <?php $res = mysqli_query($link,"SELECT * FROM photos");
+                                                    while($row = mysqli_fetch_array($res)){
+                                                        
+                                                    
+                                                        ?>
+                                                    <figure
+                                                        class="col-sm-6 col-md-4 col-lg-4 hover-effect-img move-down move-down-first">
+                                                        <a data-size="1920x1080"
+                                                            href="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
+                                                            <img alt="Image description" class="img-responsive"
+                                                                src="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
+                                                        <figcaption>
+                                                            <span
+                                                                class="img-caption"><?=strtoupper($row['tittle']);?></span>
+                                                            <div class="hover-effect"></div>
+                                                            <div class="hover-icons">
+                                                                <a class="ion-ios-plus-empty " href="#"></a><br>
+                                                                <span><?=strtoupper($row['tittle']);?></span>
+                                                            </div>
+                                                        </figcaption>
+                                                    </figure>
+                                                    <?php }; ?>
+                                                    <!-- gallery item 4 end -->
+                                                </div>
+                                            </div>
+                                            <div id="Alser" class="tab-pane fade"><br>
+                                                <div class="legendary-gallery">
+                                                    <!-- gallery item 1 start -->
+                                                    <?php $res = mysqli_query($link,"SELECT * FROM photos where tittle = 'alser'");
+                                                        while($row = mysqli_fetch_array($res)){
+                                                            
+                                                        
+                                                            ?>
+                                                    <figure
+                                                        class="col-sm-6 col-md-4 col-lg-4 hover-effect-img move-down move-down-first">
+                                                        <a data-size="1920x1080"
+                                                            href="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
+                                                            <img alt="Image description" class="img-responsive"
+                                                                src="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
+                                                        <figcaption>
+                                                            <span class="img-caption">Image description 1</span>
+                                                            <div class="hover-effect"></div>
+                                                            <div class="hover-icons">
+                                                                <a class="ion-ios-plus-empty " href="#"></a><br>
+                                                                <span><?=strtoupper($row['tittle']);?></span>
+                                                            </div>
+                                                        </figcaption>
+                                                    </figure>
+                                                    <?php }; ?>
+                                                    <!-- gallery item 4 end -->
+                                                </div>
+                                            </div>
+                                            <div id="Edmond" class="tab-pane fade"><br>
+                                                <div class="legendary-gallery">
+                                                    <!-- gallery item 1 start -->
+                                                    <?php $res = mysqli_query($link,"SELECT * FROM photos where tittle = 'edmond_buhler'");
+                                                        while($row = mysqli_fetch_array($res)){
+                                                            
+                                                        
+                                                            ?>
+                                                    <figure
+                                                        class="col-sm-6 col-md-4 col-lg-4 hover-effect-img move-down move-down-first">
+                                                        <a data-size="1920x1080"
+                                                            href="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
+                                                            <img alt="Image description" class="img-responsive"
+                                                                src="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
+                                                        <figcaption>
+                                                            <span
+                                                                class="img-caption"><?=strtoupper($row['tittle']);?></span>
+                                                            <div class="hover-effect"></div>
+                                                            <div class="hover-icons">
+                                                                <a class="ion-ios-plus-empty " href="#"></a><br>
+                                                                <span><?=strtoupper($row['tittle']);?></span>
+                                                            </div>
+                                                        </figcaption>
+                                                    </figure>
+                                                    <?php }; ?>
+                                                    <!-- gallery item 4 end -->
+                                                </div>
+                                            </div>
+
+                                            <div id="Edwards" class="tab-pane fade"><br>
+                                                <div class="legendary-gallery">
+                                                    <!-- gallery item 1 start -->
+                                                    <?php $res = mysqli_query($link,"SELECT * FROM photos where tittle = 'edwards'");
+                                                        while($row = mysqli_fetch_array($res)){
+                                                            
+                                                        
+                                                            ?>
+                                                    <figure
+                                                        class="col-sm-6 col-md-4 col-lg-4 hover-effect-img move-down move-down-first">
+                                                        <a data-size="1920x1080"
+                                                            href="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
+                                                            <img alt="Image description" class="img-responsive"
+                                                                src="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
+                                                        <figcaption>
+                                                            <span class="img-caption">Image description 1</span>
+                                                            <div class="hover-effect"></div>
+                                                            <div class="hover-icons">
+                                                                <a class="ion-ios-plus-empty " href="#"></a><br>
+                                                                <span><?=strtoupper($row['tittle']);?></span>
+                                                            </div>
+                                                        </figcaption>
+                                                    </figure>
+                                                    <?php }; ?>
+                                                    <!-- gallery item 4 end -->
+                                                </div>
+                                            </div>
+
+                                            <div id="Suss" class="tab-pane fade"><br>
+                                                <div class="legendary-gallery">
+                                                    <!-- gallery item 1 start -->
+                                                    <?php $res = mysqli_query($link,"SELECT * FROM photos where tittle = 'suss'");
+                                                        while($row = mysqli_fetch_array($res)){
+                                                            
+                                                        
+                                                            ?>
+                                                    <figure
+                                                        class="col-sm-6 col-md-4 col-lg-4 hover-effect-img move-down move-down-first">
+                                                        <a data-size="1920x1080"
+                                                            href="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
+                                                            <img alt="Image description" class="img-responsive"
+                                                                src="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
+                                                        <figcaption>
+                                                            <span class="img-caption">Image description 1</span>
+                                                            <div class="hover-effect"></div>
+                                                            <div class="hover-icons">
+                                                                <a class="ion-ios-plus-empty " href="#"></a><br>
+                                                                <span><?=strtoupper($row['tittle']);?></span>
+                                                            </div>
+                                                        </figcaption>
+                                                    </figure>
+                                                    <?php }; ?>
+                                                    <!-- gallery item 4 end -->
+                                                </div>
+
+                                            </div>
+                                            <div id="Metkon" class="tab-pane fade"><br>
+                                                <div class="legendary-gallery">
+                                                    <!-- gallery item 1 start -->
+                                                    <?php $res = mysqli_query($link,"SELECT * FROM photos where tittle = 'metkon'");
+                                                        while($row = mysqli_fetch_array($res)){
+                                                            
+                                                        
+                                                            ?>
+                                                    <figure
+                                                        class="col-sm-6 col-md-4 col-lg-4 hover-effect-img move-down move-down-first">
+                                                        <a data-size="1920x1080"
+                                                            href="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
+                                                            <img alt="Image description" class="img-responsive"
+                                                                src="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
+                                                        <figcaption>
+                                                            <span class="img-caption">Image description 1</span>
+                                                            <div class="hover-effect"></div>
+                                                            <div class="hover-icons">
+                                                                <a class="ion-ios-plus-empty " href="#"></a><br>
+                                                                <span><?=strtoupper($row['tittle']);?></span>
+                                                            </div>
+                                                        </figcaption>
+                                                    </figure>
+                                                    <?php }; ?>
+                                                    <!-- gallery item 4 end -->
+                                                </div>
+
+                                            </div>
+                                            <div id="Micos" class="tab-pane fade"><br>
+                                                <div class="legendary-gallery">
+                                                    <!-- gallery item 1 start -->
+                                                    <?php $res = mysqli_query($link,"SELECT * FROM photos where tittle = 'micso_laser'");
+                                                        while($row = mysqli_fetch_array($res)){
+                                                            
+                                                        
+                                                            ?>
+                                                    <figure
+                                                        class="col-sm-6 col-md-4 col-lg-4 hover-effect-img move-down move-down-first">
+                                                        <a data-size="1920x1080"
+                                                            href="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
+                                                            <img alt="Image description" class="img-responsive"
+                                                                src="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
+                                                        <figcaption>
+                                                            <span class="img-caption">Image description 1</span>
+                                                            <div class="hover-effect"></div>
+                                                            <div class="hover-icons">
+                                                                <a class="ion-ios-plus-empty " href="#"></a><br>
+                                                                <span><?=strtoupper($row['tittle']);?></span>
+                                                            </div>
+                                                        </figcaption>
+                                                    </figure>
+                                                    <?php }; ?>
+                                                    <!-- gallery item 4 end -->
+                                                </div>
+                                            </div>
+
+                                            <div id="Neocera" class="tab-pane fade"><br>
+                                                <div class="legendary-gallery">
+                                                    <!-- gallery item 1 start -->
+                                                    <?php $res = mysqli_query($link,"SELECT * FROM photos where tittle = 'neocera'");
+                                                        while($row = mysqli_fetch_array($res)){
+                                                            
+                                                        
+                                                            ?>
+                                                    <figure
+                                                        class="col-sm-6 col-md-4 col-lg-4 hover-effect-img move-down move-down-first">
+                                                        <a data-size="1920x1080"
+                                                            href="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
+                                                            <img alt="Image description" class="img-responsive"
+                                                                src="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
+                                                        <figcaption>
+                                                            <span class="img-caption">Image description 1</span>
+                                                            <div class="hover-effect"></div>
+                                                            <div class="hover-icons">
+                                                                <a class="ion-ios-plus-empty " href="#"></a><br>
+                                                                <span><?=strtoupper($row['tittle']);?></span>
+                                                            </div>
+                                                        </figcaption>
+                                                    </figure>
+                                                    <?php }; ?>
+                                                    <!-- gallery item 4 end -->
+                                                </div>
+
+                                            </div>
+                                            <div id="Pasco" class="tab-pane fade"><br>
+                                                <div class="legendary-gallery">
+                                                    <!-- gallery item 1 start -->
+                                                    <?php $res = mysqli_query($link,"SELECT * FROM photos where tittle = 'pasco'");
+                                                        while($row = mysqli_fetch_array($res)){
+                                                            
+                                                        
+                                                            ?>
+                                                    <figure
+                                                        class="col-sm-6 col-md-4 col-lg-4 hover-effect-img move-down move-down-first">
+                                                        <a data-size="1920x1080"
+                                                            href="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
+                                                            <img alt="Image description" class="img-responsive"
+                                                                src="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
+                                                        <figcaption>
+                                                            <span class="img-caption">Image description 1</span>
+                                                            <div class="hover-effect"></div>
+                                                            <div class="hover-icons">
+                                                                <a class="ion-ios-plus-empty " href="#"></a><br>
+                                                                <span><?=strtoupper($row['tittle']);?></span>
+                                                            </div>
+                                                        </figcaption>
+                                                    </figure>
+                                                    <?php }; ?>
+                                                    <!-- gallery item 4 end -->
+                                                </div>
+
+                                            </div>
+                                            <div id="RBRL" class="tab-pane fade"><br>
+                                                <div class="legendary-gallery">
+                                                    <!-- gallery item 1 start -->
+                                                    <?php $res = mysqli_query($link,"SELECT * FROM photos where tittle = 'rbrl'");
+                                                        while($row = mysqli_fetch_array($res)){
+                                                            
+                                                        
+                                                            ?>
+                                                    <figure
+                                                        class="col-sm-6 col-md-4 col-lg-4 hover-effect-img move-down move-down-first">
+                                                        <a data-size="1920x1080"
+                                                            href="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
+                                                            <img alt="Image description" class="img-responsive"
+                                                                src="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
+                                                        <figcaption>
+                                                            <span class="img-caption">Image description 1</span>
+                                                            <div class="hover-effect"></div>
+                                                            <div class="hover-icons">
+                                                                <a class="ion-ios-plus-empty " href="#"></a><br>
+                                                                <span><?=strtoupper($row['tittle']);?></span>
+                                                            </div>
+                                                        </figcaption>
+                                                    </figure>
+                                                    <?php }; ?>
+                                                    <!-- gallery item 4 end -->
+                                                </div>
+
+                                            </div>
+                                            <div id="Sentech" class="tab-pane fade"><br>
+                                                <div class="legendary-gallery">
+                                                    <!-- gallery item 1 start -->
+                                                    <?php $res = mysqli_query($link,"SELECT * FROM photos where tittle = 'sentech'");
+                                                        while($row = mysqli_fetch_array($res)){
+                                                            
+                                                        
+                                                            ?>
+                                                    <figure
+                                                        class="col-sm-6 col-md-4 col-lg-4 hover-effect-img move-down move-down-first">
+                                                        <a data-size="1920x1080"
+                                                            href="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
+                                                            <img alt="Image description" class="img-responsive"
+                                                                src="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
+                                                        <figcaption>
+                                                            <span class="img-caption">Image description 1</span>
+                                                            <div class="hover-effect"></div>
+                                                            <div class="hover-icons">
+                                                                <a class="ion-ios-plus-empty " href="#"></a><br>
+                                                                <span><?=strtoupper($row['tittle']);?></span>
+                                                            </div>
+                                                        </figcaption>
+                                                    </figure>
+                                                    <?php }; ?>
+                                                    <!-- gallery item 4 end -->
+                                                </div>
+
+                                            </div>
+                                            <div id="Shore" class="tab-pane fade"><br>
+                                                <div class="legendary-gallery">
+                                                    <!-- gallery item 1 start -->
+                                                    <?php $res = mysqli_query($link,"SELECT * FROM photos where tittle = 'shore_western'");
+                                                        while($row = mysqli_fetch_array($res)){
+                                                            
+                                                        
+                                                            ?>
+                                                    <figure
+                                                        class="col-sm-6 col-md-4 col-lg-4 hover-effect-img move-down move-down-first">
+                                                        <a data-size="1920x1080"
+                                                            href="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
+                                                            <img alt="Image description" class="img-responsive"
+                                                                src="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
+                                                        <figcaption>
+                                                            <span class="img-caption">Image description 1</span>
+                                                            <div class="hover-effect"></div>
+                                                            <div class="hover-icons">
+                                                                <a class="ion-ios-plus-empty " href="#"></a><br>
+                                                                <span><?=strtoupper($row['tittle']);?></span>
+                                                            </div>
+                                                        </figcaption>
+                                                    </figure>
+                                                    <?php }; ?>
+                                                    <!-- gallery item 4 end -->
+                                                </div>
+                                            </div>
+                                        </div>
 
 
 
 
-                                    <!-- photoSwipe end -->
+                                        <!-- photoSwipe end -->
+                                    </div>
                                 </div>
                                 <!-- row end -->
-                            </div><!-- container end -->
+                            </div>
+                            <!-- container end -->
                             <!-- divider start -->
                             <div class="divider divider-works"></div><!-- divider end -->
                         </div><!-- lower content end -->
@@ -1175,45 +1177,48 @@ $product5="select * from add_product where cat_5=1";
                                             <p>SERVICE CALLS: 0092-21-32767475 - 7</p>
                                             <p>Fax: 0092-21-32736582</p>
                                             <p><span><i class="fa fa-envelope-o fa-lg" aria-hidden="true"></i></span>
-                                                <a href="mailto:aidl@cyber.net.pk" style="padding-left:1%"> aidl@cyber.net.pk</a></p>
-                                            
+                                                <a href="mailto:aidl@cyber.net.pk" style="padding-left:1%">
+                                                    aidl@cyber.net.pk</a></p>
+
                                         </div>
                                     </div>
                                     <div class="column2">
                                         <div class="officeAddress">
 
-                                        <h1 style="color: black;">Associated Instrument Distributors (Pvt) Ltd</h1>
+                                            <h1 style="color: black;">Associated Instrument Distributors (Pvt) Ltd</h1>
                                             <!-- <p class="title">CEO & Founder, Example</p> -->
                                             <h6 style="color:white">REGIONAL OFFICE:</h6>
                                             <p><span><i class="fa fa-home fa-lg" aria-hidden="true"></i></span>
                                                 <a href="#">303 ROYAL CENTER BLUE AREA FAZAL-UL-HAQ ROAD,
-                                                <br>ISLAMABAD. -44000</a></p>
+                                                    <br>ISLAMABAD. -44000</a></p>
 
                                             <p><span><i class="fa fa-phone fa-lg" aria-hidden="true"></i></span>
-                                               92-51-2348220, 2348244</p>
-                                            
+                                                92-51-2348220, 2348244</p>
+
                                             <p>Fax:92-51-2348254</p>
                                             <p><span><i class="fa fa-envelope-o fa-lg" aria-hidden="true"></i></span>
-                                                <a href="mailto: aidl.isb@ptcl.net" style="padding-left:1%"> aidl.isb@ptcl.net</a></p>
-                                           
+                                                <a href="mailto: aidl.isb@ptcl.net" style="padding-left:1%">
+                                                    aidl.isb@ptcl.net</a></p>
+
                                         </div>
                                     </div>
                                     <div class="column2">
                                         <div class="officeAddress">
-<br>
-                                        <h6 style="color:white">LAHORE OFFICE:</h6>
+                                            <br>
+                                            <h6 style="color:white">LAHORE OFFICE:</h6>
                                             <p><span><i class="fa fa-home fa-lg" aria-hidden="true"></i></span>
-                                                <a href="#">APP 04, 1ST FLOOR SKS APARTMENT, 
-                                                1 FAIZ ROAD, OLD MUSLIM TOWN, LAHORE - 54000
+                                                <a href="#">APP 04, 1ST FLOOR SKS APARTMENT,
+                                                    1 FAIZ ROAD, OLD MUSLIM TOWN, LAHORE - 54000
                                                 </a></p>
 
                                             <p></p>
-                                            
+
                                             <p>TEL/Fax: 042-35441117</p>
                                             <p><span><i class="fa fa-phone fa-lg" aria-hidden="true"></i></span>
-                                               03343442585 / 03351316535</p>
+                                                03343442585 / 03351316535</p>
                                             <p><span><i class="fa fa-envelope-o fa-lg" aria-hidden="true"></i></span>
-                                                <a href="mailto: aidl.lahore@gmail.com" style="padding-left:1%"> aidl.lahore@gmail.com</a></p>
+                                                <a href="mailto: aidl.lahore@gmail.com" style="padding-left:1%">
+                                                    aidl.lahore@gmail.com</a></p>
                                         </div>
                                     </div>
 
@@ -1345,8 +1350,7 @@ $product5="select * from add_product where cat_5=1";
                                     <div class="column">
                                         <div class="our-team">
                                             <div class="picture">
-                                                <img class="img-fluid"
-                                                    src="./teamImages/<?=$row['team_image'] ?>">
+                                                <img class="img-fluid" src="./teamImages/<?=$row['team_image'] ?>">
                                             </div>
                                             <div class="team-content" style="height: 125px;">
                                                 <h3 class="name"><?php echo strtoupper($row['team_name']) ?></h3>
@@ -1358,8 +1362,9 @@ $product5="select * from add_product where cat_5=1";
                                                     
                                                     ?>
 
-                                                <a class="btn" style="background-color:red;color:white" id="custId" data-toggle="modal"
-                                                    data-id="<?php echo $row['team_id'] ?>" href="#myModal">Read
+                                                <a class="btn" style="background-color:red;color:white" id="custId"
+                                                    data-toggle="modal" data-id="<?php echo $row['team_id'] ?>"
+                                                    href="#myModal">Read
                                                     More</a>
                                                 <?php } ?>
                                             </div>
@@ -1484,13 +1489,15 @@ $product5="select * from add_product where cat_5=1";
                                                 while ($row = mysqli_fetch_array($result)) { ?>
                                                 <div class="column" style=" margin-bottom: 2%;">
                                                     <div class="card1">
-                                                        <img src="./images/<?= $row['p_img'] ?>"
-                                                            alt="John" style="width:100%">
+                                                        <img src="./images/<?= $row['p_img'] ?>" alt="John"
+                                                            style="width:100%">
                                                         <h1 style="color:black"><?= strtoupper($row['p_name']) ?></h1>
-                                                       
+
 
                                                         <p>
-                                                            <a href="<?= $row['p_url'] ?>" class="button1">View Detail</a>
+                                                            <a href="<?= $row['p_url'] ?>" class="btn"
+                                                                onclick="window.open(this.href); return false;">View
+                                                                Detail</a>
                                                         </p>
                                                     </div>
                                                 </div>
@@ -1516,12 +1523,14 @@ $product5="select * from add_product where cat_5=1";
                                                 while ($row = mysqli_fetch_array($result)) { ?>
                                                 <div class="column" style=" margin-bottom: 2%;">
                                                     <div class="card1">
-                                                        <img src="./images/<?= $row['p_img'] ?>"
-                                                            alt="John" style="width:100%">
+                                                        <img src="./images/<?= $row['p_img'] ?>" alt="John"
+                                                            style="width:100%">
                                                         <h1 style="color:black"><?= strtoupper($row['p_name']) ?></h1>
-                                                        
+
                                                         <p>
-                                                            <a href="<?= $row['p_url'] ?>" class="button1">View Detail</a>
+                                                            <a href="<?= $row['p_url'] ?>"
+                                                                onclick="window.open(this.href); return false;">View
+                                                                Detail</a>
                                                         </p>
                                                     </div>
                                                 </div>
@@ -1547,11 +1556,13 @@ $product5="select * from add_product where cat_5=1";
                                                 while ($row = mysqli_fetch_array($result)) { ?>
                                                 <div class="column" style=" margin-bottom: 2%;">
                                                     <div class="card1">
-                                                        <img src="./images/<?= $row['p_img'] ?>"
-                                                            alt="John" style="width:100%">
+                                                        <img src="./images/<?= $row['p_img'] ?>" alt="John"
+                                                            style="width:100%">
                                                         <h1 style="color:black"><?= strtoupper($row['p_name']) ?></h1>
                                                         <p>
-                                                            <a href="<?= $row['p_url'] ?>" class="button1">View Detail</a>
+                                                            <a href="<?= $row['p_url'] ?>"
+                                                                onclick="window.open(this.href); return false;">View
+                                                                Detail</a>
                                                         </p>
                                                     </div>
                                                 </div>
@@ -1577,11 +1588,13 @@ $product5="select * from add_product where cat_5=1";
                                                 while ($row = mysqli_fetch_array($result)) { ?>
                                                 <div class="column" style=" margin-bottom: 2%;">
                                                     <div class="card1">
-                                                        <img src="./images/<?= $row['p_img'] ?>"
-                                                            alt="John" style="width:100%">
+                                                        <img src="./images/<?= $row['p_img'] ?>" alt="John"
+                                                            style="width:100%">
                                                         <h1 style="color:black"><?= strtoupper($row['p_name']) ?></h1>
                                                         <p>
-                                                            <a href="<?= $row['p_url'] ?>" class="button1">View Detail</a>
+                                                            <a href="<?= $row['p_url'] ?>"
+                                                                onclick="window.open(this.href); return false;">View
+                                                                Detail</a>
                                                         </p>
                                                     </div>
                                                 </div>
@@ -1607,11 +1620,13 @@ $product5="select * from add_product where cat_5=1";
                                                 while ($row = mysqli_fetch_array($result)) { ?>
                                                 <div class="column" style=" margin-bottom: 2%;">
                                                     <div class="card1">
-                                                        <img src="./images/<?= $row['p_img'] ?>"
-                                                            alt="John" style="width:100%">
+                                                        <img src="./images/<?= $row['p_img'] ?>" alt="John"
+                                                            style="width:100%">
                                                         <h1 style="color:black"><?= strtoupper($row['p_name']) ?></h1>
                                                         <p>
-                                                            <a href="<?= $row['p_url'] ?>" class="button1">View Detail</a>
+                                                            <a href="<?= $row['p_url'] ?>"
+                                                                onclick="window.open(this.href); return false;">View
+                                                                Detail</a>
                                                         </p>
                                                     </div>
                                                 </div>
@@ -1637,11 +1652,13 @@ $product5="select * from add_product where cat_5=1";
                                                 while ($row = mysqli_fetch_array($result)) { ?>
                                                 <div class="column" style=" margin-bottom: 2%;">
                                                     <div class="card1">
-                                                        <img src="./images/<?= $row['p_img'] ?>"
-                                                            alt="John" style="width:100%">
+                                                        <img src="./images/<?= $row['p_img'] ?>" alt="John"
+                                                            style="width:100%">
                                                         <h1 style="color:black"><?= strtoupper($row['p_name']) ?></h1>
                                                         <p>
-                                                            <a href="<?= $row['p_url'] ?>" class="button1">View Detail</a>
+                                                            <a href="<?= $row['p_url'] ?>"
+                                                                onclick="window.open(this.href); return false;">View
+                                                                Detail</a>
                                                         </p>
                                                     </div>
                                                 </div>
@@ -1703,40 +1720,48 @@ $product5="select * from add_product where cat_5=1";
                                     <!-- col start -->
                                     <div class="col-lg-12">
                                         <!-- section title wrapper start -->
-                                        <div class="section-title-wrapper">
-                                            <!-- section title start -->
-                                            <h1 class="home-page-title-all">
-                                                Our Clents
-                                            </h1><!-- section title end -->
-                                            <!-- divider start -->
-                                            <div class="inner-divider-half"></div><!-- divider end -->
-                                            <!-- section subtitle start -->
-                                            <h2 class="section-heading section-heading-all">
-                                                This is clients
-                                            </h2><!-- section subtitle end -->
-                                            <!-- extra line start -->
-                                            <div class="the-extra-line"></div><!-- extra line end -->
-                                        </div><!-- section title wrapper end -->
+                                        <div class="navbar1234">
+                                            <a href="#home">Home</a>
+                                            <a href="#news">News</a>
+                                            <a href="#contact">Contact</a>
+                                        </div>
+                                        <div class="main1234">
+                                            <div class="section-title-wrapper">
+                                                <!-- section title start -->
+                                                <h1 class="home-page-title-all">
+                                                    Our Clents
+                                                </h1><!-- section title end -->
+                                                <!-- divider start -->
+                                                <div class="inner-divider-half"></div><!-- divider end -->
+                                                <!-- section subtitle start -->
+                                                <h2 class="section-heading section-heading-all">
+                                                    This is clients
+                                                </h2><!-- section subtitle end -->
+                                                <!-- extra line start -->
+                                                <div class="the-extra-line"></div><!-- extra line end -->
+                                            </div>
+                                        </div>
+                                        <!-- section title wrapper end -->
                                     </div><!-- col end -->
                                 </div><!-- row end -->
                                 <!-- divider start -->
                                 <div class="inner-divider"></div><!-- divider end -->
                                 <!-- row start -->
                                 <div class="row1">
-                                <?php $sql = "SELECT cname FROM add_client WHERE cname LIKE 's%'"; 
+                                    <?php $sql = "SELECT cname FROM add_client WHERE cname LIKE 's%'"; 
                                 
                                 $result = mysqli_query($link, $sql);
 
                                 if (mysqli_num_rows($result) > 0) {
                                 ?>
-                                <div class="list-type1">
-                                    <ol>
-                                        <?php while($row = mysqli_fetch_assoc($result)) { ?>
-                                        <li><a href="#"><?=$row['cname'];?></a></li>
-                                        <?php }?>
-                                    </ol>
-                                </div>
-                                <?php }
+                                    <div class="list-type1">
+                                        <ol>
+                                            <?php while($row = mysqli_fetch_assoc($result)) { ?>
+                                            <li><a href="#"><?=$row['cname'];?></a></li>
+                                            <?php }?>
+                                        </ol>
+                                    </div>
+                                    <?php }
                                 else{
                                     echo '
                                     <div style="height:500px">
@@ -2072,7 +2097,7 @@ $product5="select * from add_product where cat_5=1";
                                                     <div class="stream-headline">
                                                         <h5 class="stream-author">
                                                             Lecture No: ${result.data().lec}
-                                                            
+
                                                         </h5>
                                                         <div class="stream-text">
                                                             ${result.data().des}
@@ -2084,7 +2109,7 @@ $product5="select * from add_product where cat_5=1";
                                                                 <iframe src="${result.data().video}" width="560"
                                                                     height="315" frameborder="0" webkitallowfullscreen
                                                                     mozallowfullscreen allowfullscreen></iframe>
-                                                              
+
 
 
                                                             </div>
@@ -2095,33 +2120,33 @@ $product5="select * from add_product where cat_5=1";
                                         </div>
                                         <div id="promotions" class="tab-pane fade"><br>
                                             <div class="legendary-gallery">
-                                                    <!-- gallery item 1 start -->
-                                                    <?php 
+                                                <!-- gallery item 1 start -->
+                                                <?php 
                                                         $fetchVideos = mysqli_query($link,"SELECT * FROM promotions where pro_type = 'promotions'");
                                                         while($row = mysqli_fetch_array($fetchVideos)){
                                                             
                                                         
                                                             ?>
-                                                    <figure
-                                                        class="col-sm-6 col-md-4 col-lg-4 hover-effect-img move-down move-down-first">
-                                                        <a data-size="1920x1080"
-                                                            href="./promotionsImages/<?=$row['tittle']?>_<?=$row['images']?>">
-                                                            <img alt="Image description" class="img-responsive"
-                                                                src="./promotionsImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
-                                                        <figcaption>
-                                                            <span
-                                                                class="img-caption"><?=strtoupper($row['tittle']);?></span>
-                                                            <div class="hover-effect"></div>
-                                                            <div class="hover-icons">
-                                                                <a class="ion-ios-plus-empty " href="#"></a><br>
-                                                                <span><?=strtoupper($row['tittle']);?></span>
-                                                            </div>
-                                                        </figcaption>
-                                                    </figure>
-                                                    <?php }; ?>
-                                                    <!-- gallery item 4 end -->
-                                                </div>
+                                                <figure
+                                                    class="col-sm-6 col-md-4 col-lg-4 hover-effect-img move-down move-down-first">
+                                                    <a data-size="1920x1080"
+                                                        href="./promotionsImages/<?=$row['tittle']?>_<?=$row['images']?>">
+                                                        <img alt="Image description" class="img-responsive"
+                                                            src="./promotionsImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
+                                                    <figcaption>
+                                                        <span
+                                                            class="img-caption"><?=strtoupper($row['tittle']);?></span>
+                                                        <div class="hover-effect"></div>
+                                                        <div class="hover-icons">
+                                                            <a class="ion-ios-plus-empty " href="#"></a><br>
+                                                            <span><?=strtoupper($row['tittle']);?></span>
+                                                        </div>
+                                                    </figcaption>
+                                                </figure>
+                                                <?php }; ?>
+                                                <!-- gallery item 4 end -->
                                             </div>
+                                        </div>
 
                                     </div>
 
@@ -2212,57 +2237,57 @@ $product5="select * from add_product where cat_5=1";
             </div>
         </div>
     </div>
-        <div class="modal fade" id="contactUs" role="dialog">
-            <div class="modal-dialog">
+    <div class="modal fade" id="contactUs" role="dialog">
+        <div class="modal-dialog">
 
-                <!-- Modal content-->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 style="color:black;text-align:center">Contact Us</h4>
-                    </div>
-                    <div class="modal-body">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 style="color:black;text-align:center">Contact Us</h4>
+                </div>
+                <div class="modal-body">
                     <table id="customers">
-						<tr>
-							<th style="width:25%">Company</th>
-							<th style="color: blue;">AIDL Pakistan</th>
+                        <tr>
+                            <th style="width:25%">Company</th>
+                            <th style="color: blue;">AIDL Pakistan</th>
 
                         </tr>
                         <tr>
-							<td>CEO</td>
-							<td>Sohail Tayyab</td>
+                            <td>CEO</td>
+                            <td>Sohail Tayyab</td>
 
-						</tr>
-						<tr>
-							<td>Contact No</td>
-							<td> +92-21-32735734 - 32767475-7 - 32729361</td>
+                        </tr>
+                        <tr>
+                            <td>Contact No</td>
+                            <td> +92-21-32735734 - 32767475-7 - 32729361</td>
 
-						</tr>
-						<tr>
-							<td>Email</td>
-							<td><a href="mailto:sohail.aidl@gmail.com">sohail.aidl@gmail.com</a> </td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td><a href="mailto:sohail.aidl@gmail.com">sohail.aidl@gmail.com</a> </td>
 
-						</tr>
-						<tr>
-							<td>Location</td>
-							<td>
-                            ROOM# 7, 8, 5TH FLOOR, RIMPA PLAZA, OFFICE TOWER, M.A.JINNAH ROAD KARACHI-74400</td>
+                        </tr>
+                        <tr>
+                            <td>Location</td>
+                            <td>
+                                ROOM# 7, 8, 5TH FLOOR, RIMPA PLAZA, OFFICE TOWER, M.A.JINNAH ROAD KARACHI-74400</td>
 
-						</tr>
+                        </tr>
 
-					</table>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </div>
+                    </table>
                 </div>
-
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
             </div>
+
         </div>
-        <script src="js/plugins.js">
-        </script>
-        <script src="js/liex.js">
-        </script><!-- scripts end -->
+    </div>
+    <script src="js/plugins.js">
+    </script>
+    <script src="js/liex.js">
+    </script><!-- scripts end -->
 
 
 </body>
@@ -2363,6 +2388,7 @@ function nonSubMenu() {
     document.getElementById('displaySubmenu').style.display = 'none'
     //    document.getElementById('displaySubmenu').style.marginLeft = '45%'
 }
+
 function displaySubMobileMenu() {
     document.getElementById('displaySubMobilemenu').style.display = 'block'
     document.getElementById('displaySubMobilemenu').style.margin = '5% 0% 0% 15%'
