@@ -220,15 +220,33 @@ $chkk="/AIDL/Dashboard/Dashboard/pages/examples"
             </ul>
           </li>
           <li class="nav-item has-treeview">
-            <a href=<?php echo ($currURL==$chkk?"blogg.php":$chkk."/blogg.php") ?> class="nav-link">
-              <i class="nav-icon far fa-circle"></i>
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-book"></i>
               <p>
-              Blog
-                
+                Blogs
+                <i class="fas fa-angle-left right"></i>
               </p>
             </a>
-           
+            <ul class="nav nav-treeview">
+             
+              
+              <li class="nav-item">
+                <a href=<?php echo ($currURL==$chkk?"viewBlog.php":$chkk."/viewBlog.php") ?> class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>All Blogs</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href=<?php echo ($currURL==$chkk?"blogg.php":$chkk."/blogg.php") ?> class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Add Blog</p>
+                </a>
+              </li>
+             
+             
+            </ul>
           </li>
+         
          
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">

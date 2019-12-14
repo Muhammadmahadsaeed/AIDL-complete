@@ -11,3 +11,13 @@
     .heading{
       font-size: 17px;
       }
+
+
+
+
+.viewBlogContainer{
+  padding-right: 55px;
+  padding-left: 55px;
+  margin-right: auto;
+  margin-left: auto;
+}

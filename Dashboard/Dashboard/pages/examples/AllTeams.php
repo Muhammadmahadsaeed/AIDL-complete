@@ -1,15 +1,16 @@
 <?php
-           require_once('../../config/db.php');
-$upload_dir = 'images/';
+require_once('../../config/db.php');
+$upload_dir = './teamImages/';
 if(isset($_GET['delete'])){
   $id = $_GET['delete'];
-  $sql = "select * from team_memebers where team_id = ".$id;
-  $result = mysqli_query($link, $sql);
-  if(mysqli_num_rows($result) > 0){
-    $row = mysqli_fetch_assoc($result);
-    $image = $row['cimage'];
+  $del = "select * from team_members where team_id = ".$id;
+  $delTeam = mysqli_query($link, $del);
+  if(mysqli_num_rows($delTeam) > 0){
+    $row = mysqli_fetch_assoc($delTeam);
+    $image = $row['team_image'];
+    
     unlink($upload_dir.$image);
-    $sql = "delete from team_memebers where team_id=".$id;
+    $sql = "delete from team_members where team_id=".$id;
     if(mysqli_query($link, $sql)){
       header('location:AllTeams.php');
     }
@@ -19,10 +20,10 @@ if(isset($_GET['delete'])){
 <!DOCTYPE html>
 <html>
 
-<head>
-    <meta charset="utf-8">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>AdminLTE 3 | Projects</title>
+    <title>AIDL</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -53,12 +54,12 @@ if(isset($_GET['delete'])){
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1>Clients</h1>
+                            <h1>All Teams</h1>
                         </div>
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item active">Clients</li>
+                                <li class="breadcrumb-item active">Teams</li>
                             </ol>
                         </div>
                     </div>
@@ -76,7 +77,7 @@ if(isset($_GET['delete'])){
 
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">PHOTOS</h3>
+                        <h3 class="card-title">All Teams Members</h3>
 
                         <div class="card-tools">
                             <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip"
@@ -121,7 +122,7 @@ if(isset($_GET['delete'])){
                                         <div class="col-sm-6 border-right">
                                             <div class="description-block">
                                                 <span class="description-text"><a
-                                                        href="clients_update.php?id=<?php echo $row['team_id'] ?>"
+                                                        href="AllTeams_update.php?id=<?php echo $row['team_id'] ?>"
                                                         class="btn btn-success"><i class="fa fa-edit">
                                                             Update</i></a></span>
                                             </div>
@@ -131,7 +132,7 @@ if(isset($_GET['delete'])){
                                         <div class="col-sm-6">
                                             <div class="description-block">
                                                 <span class="description-text"> <a
-                                                        href="clients.php?delete=<?php echo $row['team_id'] ?>"
+                                                        href="AllTeams.php?delete=<?php echo $row['team_id'] ?>"
                                                         class="btn btn-danger"
                                                         onclick="return confirm('Are you sure to delete this record?')"><i
                                                             class="fa fa-trash-alt"> Delete</i></a>

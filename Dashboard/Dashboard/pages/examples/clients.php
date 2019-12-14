@@ -69,57 +69,99 @@ if(isset($_GET['delete'])){
       <section class="content">
 
         <!-- Default box -->
-        <div class="container">
-          <div class="row">
-          <?php
-           require_once('../../config/db.php');
-           $sql = "select * from add_client";
-                            $result = mysqli_query($link, $sql);
-                    				if(mysqli_num_rows($result)){
-                    					while($row = mysqli_fetch_assoc($result)){
-                          ?>
-            <div class="col-md-4">
-              <!-- Widget: user widget style 1 -->
-              <div class="card card-widget widget-user">
-                <!-- Add the bg color to the header using any of the bg-* classes -->
-                <div class="widget-user-header bg-info">
-                  <h3 class="widget-user-username"><?php echo $row['cname'] ?></h3>
-                  <h5 class="widget-user-desc"><?php echo $row['cdesc'] ?></h5>
-                </div>
-                <div class="widget-user-image">
-                 
-                  <img class="img-circle elevation-2" style="height: 90px;" src="<?php echo $upload_dir . $row['cimage'] ?>" alt="User Avatar">
-                </div>
-                <div class="card-footer">
-                  <div class="row">
-                    <div class="col-sm-6 border-right">
-                      <div class="description-block">
-                        <span class="description-text"><a href="clients_update.php?id=<?php echo $row['cid'] ?>" class="btn btn-success"><i class="fa fa-edit"> Update</i></a></span>
-                      </div>
-                      <!-- /.description-block -->
-                    </div>
-                    <!-- /.col -->
-                    <div class="col-sm-6">
-                      <div class="description-block">
-                        <span class="description-text"> <a href="clients.php?delete=<?php echo $row['cid'] ?>" class="btn btn-danger" onclick="return confirm('Are you sure to delete this record?')"><i class="fa fa-trash-alt"> Delete</i></a>
-                            </span>
-                      </div>
-                      <!-- /.description-block -->
-                    </div>
-                    <!-- /.col -->
-                  
-                    <!-- /.col -->
-                  </div>
-                  <!-- /.row -->
-                </div>
-              </div>
-              <!-- /.widget-user -->
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Blogs</h3>
+
+            <div class="card-tools">
+              <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
+                <i class="fas fa-minus"></i></button>
+
             </div>
-            <?php
-                              }
-                            }
-                          ?>
           </div>
+
+          <div class="card-body ">
+
+
+
+
+
+           
+            <div class="tab-content">
+              <div id="all" class="tab-pane active"><br>
+                <table class="table table-striped projects">
+                  <thead>
+                    <tr>
+                      
+                      <th style="width: 20%">
+                        Client Name
+                      </th>
+                     
+                      <th style="width: 20%" class="project-actions text-center">
+                      Action
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <?php
+                    $sql = "select * from  add_client";
+                    if ($result = mysqli_query($link, $sql)) {
+                      if (mysqli_num_rows($result) > 0) {
+                        ?>
+
+
+                        <?php while ($row = mysqli_fetch_array($result)) { ?>
+                          <tr>
+                            
+                            <td>
+                              <a>
+                                <?= $row['cname'] ?>
+                              </a>
+                              <br />
+                              <small>
+                              <?= $row['create_on'] ?>
+                              </small>
+                            </td>
+                           
+
+                            <td class="project-actions text-center">
+                              <a class="btn btn-primary btn-sm" href="./viewBlogDetail.php?id=<?php echo $row['blog_id'] ?>">
+                                <i class="fas fa-folder">
+                                </i>
+                                View
+                              </a>
+                              <a class="btn btn-info btn-sm" href="project_update.php?id=<?php echo $row['p_id'] ?>">
+                                <i class="fas fa-pencil-alt">
+                                </i>
+                                Edit
+                              </a>
+                             <a href="projects.php?delete=<?php echo $row['p_id'] ?>" class="btn btn-danger" onclick="return confirm('Are you sure to delete this record?')"><i class="fas fa-trash"></i>Delete</a>
+                            </td>
+                          </tr>
+                    <?php
+                        }
+                        mysqli_free_result($result);
+                      } else {
+                        echo "No records matching your query were found.";
+                      }
+                    } else {
+                      echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+                    }
+                    ?>
+                  </tbody>
+
+                </table>
+              </div>
+              
+            </div>
+
+
+
+
+
+
+          </div>
+          <!-- /.card-body -->
         </div>
         <!-- /.card -->
 

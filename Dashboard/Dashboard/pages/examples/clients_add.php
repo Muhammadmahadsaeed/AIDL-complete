@@ -1,11 +1,11 @@
 <?php
-  include('cadd.php')
+   require_once('../../config/db.php');
 ?>
 <!DOCTYPE html>
 <html>
 
-<head>
-    <meta charset="utf-8">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>AIDL</title>
     <!-- Tell the browser to be responsive to screen width -->
@@ -21,6 +21,11 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 
     <link rel="stylesheet" href="./style.css">
+    <script>
+      if(window.history.replaceState){
+        window.history.replaceState(null,null,window.location.href)
+      }
+    </script>
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -45,7 +50,7 @@
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item active">Client Add</li>
+                                <li class="breadcrumb-item active">Add Client</li>
                             </ol>
                         </div>
                     </div>
@@ -54,14 +59,14 @@
 
             <!-- Main content -->
             <section class="content">
-                <form class="" action="cadd.php" method="post" enctype="multipart/form-data">
+              
 
-                    <div class="row">
+                    <div class="row justify-content-center">
 
                         <div class="col-md-6">
                             <div class="card card-primary">
                                 <div class="card-header">
-                                    <h3 class="card-title">General</h3>
+                                    <h3 class="card-title">Clients</h3>
 
                                     <div class="card-tools">
                                         <button type="button" class="btn btn-tool" data-card-widget="collapse"
@@ -69,63 +74,31 @@
                                             <i class="fas fa-minus"></i></button>
                                     </div>
                                 </div>
-                                <form class="" action="cadd.php" method="post" enctype="multipart/form-data">
+                                <form class="" action="" method="post" >
 
                                     <div class="card-body">
                                         <div class="form-group">
                                             <label for="inputName">Client Name</label>
                                             <input type="text" id="inputName" name="name" class="form-control">
                                         </div>
+                                       
+
                                         <div class="form-group">
-                                            <label for="inputDescription">Client Description</label>
-                                            <textarea id="inputDescription" name="desc" class="form-control"
-                                                rows="4"></textarea>
+                                            <input type="submit" name="Submit" value="Create new Client" class="btn btn-success float-right">
                                         </div>
 
-
                                     </div>
+                                </form>
                                     <!-- /.card-body -->
                             </div>
                             <!-- /.card -->
                         </div>
-                        <div class="col-md-6">
-                            <div class="card card-secondary">
-                                <div class="card-header">
-                                    <h3 class="card-title">Client Image</h3>
-
-                                    <div class="card-tools">
-                                        <button type="button" class="btn btn-tool" data-card-widget="collapse"
-                                            data-toggle="tooltip" title="Collapse">
-                                            <i class="fas fa-minus"></i></button>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <div class="form-group">
-                                        <label for="inputEstimatedBudget"
-                                            class="file-upload btn btn-primary btn-block rounded-pill shadow"><i
-                                                class="fa fa-upload mr-2"></i>Browse for file ...
-                                            <input type="file" id="inputEstimatedBudget" name="image">
-                                        </label>
-                                        <!-- <label for="inputEstimatedBudget">Client Image</label>
-                                        <input type="file" id="inputEstimatedBudget" name="image" class="form-control"> -->
-                                    </div>
-
-                                </div>
-                                <!-- /.card-body -->
-                            </div>
-                            <!-- /.card -->
-                        </div>
+                      
 
 
                     </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <a href="#" class="btn btn-secondary">Cancel</a>
-                            <input type="submit" name="Submit" value="Create new Client"
-                                class="btn btn-success float-right">
-                        </div>
-                    </div>
-                </form>
+                   
+                
             </section>
             <!-- /.content -->
         </div>
@@ -149,6 +122,27 @@
     <script src="../../dist/js/adminlte.min.js"></script>
     <!-- AdminLTE for demo purposes -->
     <script src="../../dist/js/demo.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 
 </html>
+
+
+
+
+<?php
+
+ if (isset($_POST['Submit'])) {
+    $name = $_POST['name'];
+    
+        
+    	$sql = "insert into add_client(cname) values('".$name."')";
+    	$result = mysqli_query($link, $sql);
+			if($result){
+				echo '<script>swal("Good job!", "You clicked the button!", "success");</script>';
+				
+			}else{
+				echo '<script>swal("Good job!", "You clicked the button!", "erorr");</script>';
+			}
+}
+?>

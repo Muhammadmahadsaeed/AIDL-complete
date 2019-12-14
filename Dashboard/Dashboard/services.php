@@ -1,12 +1,4 @@
-<?php require_once('../../config/db.php');
 
-
-$sql = "SELECT * FROM add_service";
-
-
-
-
-?>
 <!DOCTYPE html>
 <html>
 

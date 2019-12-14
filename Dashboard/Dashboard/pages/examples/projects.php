@@ -316,12 +316,8 @@ if(isset($_GET['delete'])){
                             <td><img src="images/<?= $row['p_img'] ?>" width='100px' height='100px'></td>
 
                             <td class="project-actions text-right">
-                              <a class="btn btn-primary btn-sm" href="./project_detail.html">
-                                <i class="fas fa-folder">
-                                </i>
-                                View
-                              </a>
-                              <a class="btn btn-info btn-sm" href="project_update.php?id=<?php echo $row['p_id'] ?>">
+                             
+                              <a class="btn btn-info btn-sm" href="./project_update.php?id=<?php echo $row['p_id'] ?>">
                                 <i class="fas fa-pencil-alt">
                                 </i>
                                 Edit
