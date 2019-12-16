@@ -151,7 +151,7 @@ if(isset($_POST['submit'])){
       foreach($_FILES['files']['name'] as $key=>$val){
           // File upload path
           
-          $fileName = basename($_FILES['files']['name'][$key]);
+          $fileName = $_FILES['files']['name'][$key];
           $targetFilePath = $targetDir .$_POST['tittle'].'_'.$fileName;
           
           // Check whether file type is valid
@@ -160,9 +160,11 @@ if(isset($_POST['submit'])){
               // Upload file to server
               
               try {
-                move_uploaded_file($_FILES["files"]["tmp_name"][$key], $targetFilePath);
-                $insertValuesSQL .= "('".strtolower($_POST['tittle'])."','".$fileName."'),";
+                // move_uploaded_file($_FILES["files"]["tmp_name"][$key], $targetFilePath);
+                compressImage($fileName,$targetFilePath,60);   
                 
+               
+               
                 
                 //code...
               } catch (\Throwable $th) {
@@ -175,30 +177,50 @@ if(isset($_POST['submit'])){
               $errorUploadType = 'File types are not supported!';
           }
       }
-      
-      if(!empty($insertValuesSQL)){
-          $insertValuesSQL = trim($insertValuesSQL,',');
-          // Insert image file name into database
-          $insert = $link->query("INSERT INTO photos (tittle,images) VALUES $insertValuesSQL");
-          if($insert){
-            
-              
-          }else{
-            echo $link->error;
-              $statusMsg = "Sorry, there was an error uploading your file.";
-          }
-      }
-      else {
-        $statusMsg = "Something went wrong!";
-      }
+     
+         
+    
 
   }
   else{
       $statusMsg = 'Please select a file to upload.';
   }
+
+}
+function compressedImage($source, $path, $quality) {
+
+    $info = getimagesize($source);
+
+    if ($info['mime'] == 'image/jpeg') 
+        $image = imagecreatefromjpeg($source);
+
+    elseif ($info['mime'] == 'image/gif') 
+        $image = imagecreatefromgif($source);
+
+    elseif ($info['mime'] == 'image/png') 
+        $image = imagecreatefrompng($source);
+
+    imagejpeg($image, $path, $quality);
+
 }
 
 
 
-
 ?>
+
+
+<!-- if(!empty($insertValuesSQL)){
+        $insertValuesSQL = trim($insertValuesSQL,',');
+        // Insert image file name into database
+        $insert = $link->query("INSERT INTO photos (tittle,images) VALUES $insertValuesSQL");
+        if($insert){
+          
+            
+        }else{
+          echo $link->error;
+            $statusMsg = "Sorry, there was an error uploading your file.";
+        }
+    }
+    else {
+      $statusMsg = "Something went wrong!";
+    } -->

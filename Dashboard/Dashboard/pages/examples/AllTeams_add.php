@@ -152,19 +152,64 @@ if(isset($_POST['submit'])){
     $Mempost = $_POST['Mempost'];
     $email = $_POST['email'];
     $num = $_POST['num'];
-    $image = $_FILES['image']['name'];
+    // $image = $_FILES['image']['name'];
 
-    $target = "./teamImages/" . basename($image);
+    // $target = "./teamImages/" . basename($image);
+    $filename = $_FILES['image']['name'];
+         
+    // Valid extension
+    $valid_ext = array('png','jpeg','jpg');
 
-    $sql = "INSERT INTO team_members (team_name,team_post,team_email,team_num,team_image) VALUES ('$name','$Mempost','$email','$num','$image')";
-    // execute query
-    mysqli_query($link, $sql);
-  
-    if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
-      $msg = "Image uploaded successfully";
-    } else {
-      $msg = "Failed to upload image";
-    }
+         
+    $photoExt1 = @end(explode('.', $filename)); // explode the image name to get the extension
+    $phototest1 = strtolower($photoExt1);
+         
+    $new_profle_pic = time().'.'.$phototest1;
+         
+    // Location
+    $location = "teamImages/".$new_profle_pic;
+
+    // file extension
+    $file_extension = pathinfo($location, PATHINFO_EXTENSION);
+    $file_extension = strtolower($file_extension);
+
+    // Check extension
+    if(in_array($file_extension,$valid_ext)){  
+
+         // Compress Image
+         compressedImage($_FILES['image']['tmp_name'],$location,60);
+             
+         //Here i am enter the insert code in the step ........
+         $sql = "INSERT INTO team_members (team_name,team_post,team_email,team_num,team_image) VALUES ('$name','$Mempost','$email','$num','$new_profle_pic')";
+         // execute query
+         mysqli_query($link, $sql);
+       
+        
+     }
+     else
+     {
+             echo "File format is not correct.";
+     }
+ 
+
+ // Compress image
+
+}
+function compressedImage($source, $path, $quality) {
+
+    $info = getimagesize($source);
+    echo $info;
+    if ($info['mime'] == 'image/jpeg') 
+        $image = imagecreatefromjpeg($source);
+
+    elseif ($info['mime'] == 'image/gif') 
+        $image = imagecreatefromgif($source);
+
+    elseif ($info['mime'] == 'image/png') 
+        $image = imagecreatefrompng($source);
+
+    imagejpeg($image, $path, $quality);
+
 }
 
 
