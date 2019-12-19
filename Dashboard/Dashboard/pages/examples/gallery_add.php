@@ -90,7 +90,7 @@
                                     </div>
                                    
                                     <div class="form-group">
-                                        <label for="inputDescription">Choose Image</label>
+                                        <label for="inputDescription">Choose Multiple Image</label>
                                         <label for="fileUpload"
                                             class="file-upload btn btn-primary btn-block rounded-pill shadow"><i
                                                 class="fa fa-upload mr-2"></i>Browse for file ...
@@ -188,19 +188,19 @@ if(isset($_POST['submit'])){
 
 }
 function compressedImage($source, $path, $quality) {
+echo $source;
+    // $info = getimagesize($source);
 
-    $info = getimagesize($source);
+    // if ($info['mime'] == 'image/jpeg') 
+    //     $image = imagecreatefromjpeg($source);
 
-    if ($info['mime'] == 'image/jpeg') 
-        $image = imagecreatefromjpeg($source);
+    // elseif ($info['mime'] == 'image/gif') 
+    //     $image = imagecreatefromgif($source);
 
-    elseif ($info['mime'] == 'image/gif') 
-        $image = imagecreatefromgif($source);
+    // elseif ($info['mime'] == 'image/png') 
+    //     $image = imagecreatefrompng($source);
 
-    elseif ($info['mime'] == 'image/png') 
-        $image = imagecreatefrompng($source);
-
-    imagejpeg($image, $path, $quality);
+    // imagejpeg($image, $path, $quality);
 
 }
 

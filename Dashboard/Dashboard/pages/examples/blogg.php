@@ -65,9 +65,18 @@
                             </div>
 
                             <div class="card-body">
-                                <form action="" method="post">
+                                <form action="" method="post" enctype="multipart/form-data">
                                     <div class="form-group">
                                         <input type="text" id="inputName" name="sname" class="form-control" value="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputDescription">Choose Image</label>
+                                        <label for="fileUpload"
+                                            class="file-upload btn btn-primary btn-block rounded-pill shadow"><i
+                                                class="fa fa-upload mr-2"></i>Browse for file ...
+                                            <input id="fileUpload" type="file" multiple="multiple" name="files[]">
+                                        </label>
+
                                     </div>
                                     <div class="form-group">
                                         <label for="inputDescription">Blog Description</label>
@@ -140,15 +149,104 @@ if(isset($_POST['submit'])) {
 
   $query = "INSERT INTO blog (blog_name,blog) VALUES('".$name."','".$content."')";
   
-  if(mysqli_query($link, $query))
-  {
-      echo "inserted";
+  if(mysqli_query($link, $query)){
+    $targetDir = "./BlogImages/";
+    $insertValuesSQL = '';
+    $allowTypes = array('jpg','png','jpeg','gif');
+    if(!empty(array_filter($_FILES['files']['name']))){
+      
+        foreach($_FILES['files']['name'] as $key=>$val){
+            // File upload path
+            
+            $fileName = $_FILES['files']['name'][$key];
+            $targetFilePath = $targetDir .$_POST['sname'].'_'.$fileName;
+            
+            // Check whether file type is valid
+            $fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
+            if(in_array($fileType, $allowTypes)){
+                // Upload file to server
+                
+                try {
+                    move_uploaded_file($_FILES["files"]["tmp_name"][$key], $targetFilePath);
+                    $insertValuesSQL .= "('".strtolower($_POST['sname'])."','".$fileName."'),";
+                //   compressImage($fileName,$targetFilePath,60);   
+                  
+                 
+                 
+                  
+                  //code...
+                } catch (\Throwable $th) {
+                  //throw $th;
+                  echo $th;
+                }
+               
+            }
+            else{
+                $errorUploadType = 'File types are not supported!';
+            }
+        }
+        if(!empty($insertValuesSQL)){
+            $insertValuesSQL = trim($insertValuesSQL,',');
+            // Insert image file name into database
+            $insert = $link->query("INSERT INTO blog_images (blog_name,blog_image) VALUES $insertValuesSQL");
+            if($insert){
+              
+                
+            }else{
+              echo $link->error;
+                $statusMsg = "Sorry, there was an error uploading your file.";
+            }
+        }
+        else {
+          $statusMsg = "Something went wrong!";
+        }
+           
+      
+  
+    }
+    else{
+        $statusMsg = 'Please select a file to upload.';
+    }
   }
-  else
-  {
+  else{
       mysqli_error();
   }
   
+
+
+
+
+
+
+
+
+    // File upload configuration
+    
 }
+  
+  function compressedImage($source, $path, $quality) {
+  echo $source;
+      // $info = getimagesize($source);
+  
+      // if ($info['mime'] == 'image/jpeg') 
+      //     $image = imagecreatefromjpeg($source);
+  
+      // elseif ($info['mime'] == 'image/gif') 
+      //     $image = imagecreatefromgif($source);
+  
+      // elseif ($info['mime'] == 'image/png') 
+      //     $image = imagecreatefrompng($source);
+  
+      // imagejpeg($image, $path, $quality);
+  
+  }
+  
+
+
+
+
+
+
+
 
 ?>
