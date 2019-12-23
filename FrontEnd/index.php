@@ -1723,7 +1723,7 @@ $product5="select * from add_product where cat_5=1";
                                                         <ol>
                                                             <?php while($row = mysqli_fetch_assoc($result)) {?>
                                                             <li><a href="#"><?=$row['cname']?></a></li>
-                                                            <?php }?>
+                                                            <?php }?> 
                                                         </ol>
                                                         <?php }?>
                                                     </div>
