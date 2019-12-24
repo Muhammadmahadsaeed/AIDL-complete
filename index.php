@@ -11,20 +11,19 @@ $product5="select * from add_product where cat_5=1";
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from www.11-76.com/themes/liex/index-KENBURNS-SLIDESHOW.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Nov 2019 13:53:07 GMT -->
 
-<head>
-    <meta charset="utf-8">
+
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
     <title>
         AIDL
     </title>
     <meta content="" name="description">
     <meta content="" name="author">
     <meta content="" name="keywords">
-    <meta
-        content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    <meta content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
         name="viewport">
-    <!-- Liex v1.0 || ex nihilo || April 2019 -->
+   
     <!-- style start -->
     <link href="./css/plugins.css" media="all" rel="stylesheet" type="text/css">
     <link href="./css/style.css" media="all" rel="stylesheet" type="text/css">
@@ -88,8 +87,7 @@ $product5="select * from add_product where cat_5=1";
                                     <a class="menu-state page-open-clicker open-page-1 link" href="#">About Us</a>
                                     <ul class="subMenu" id="displaySubmenu">
                                         <li class="menu">
-                                            <a class="menu-state page-open-clicker open-page-5 link" href="#">Our
-                                                Team</a>
+                                            <a class="menu-state page-open-clicker open-page-5 link" href="#">Our Team</a>
 
                                         </li>
 
@@ -115,10 +113,10 @@ $product5="select * from add_product where cat_5=1";
                                 <li class="menu">
                                     <a class="menu-state page-open-clicker open-page-11 link" href="#">Promotions</a>
                                 </li>
-                                <!-- <li class="menu">
+                                 <li class="menu">
                                     <a class="menu-state page-open-clicker open-page-8 link" href="#">Blogs</a>
 
-                                </li> -->
+                                </li> 
                             </ul>
                         </nav>
                     </div>
@@ -142,18 +140,16 @@ $product5="select * from add_product where cat_5=1";
 
 
                                 </li>
-                                <li class="menu" onmouseover="displaySubMobileMenu()" onmouseout="nonSubMobileMenu()">
+                                <li class="menu">
                                     <a class="menu-state page-open-clicker-mobile open-page-1 link" href="#">About
                                         Us</a>
-                                    <ul class="subMenu" id="displaySubMobilemenu">
-                                        <li class="menu">
+                                   
+                                </li>
+                                 <li class="menu">
                                             <a class="menu-state page-open-clicker-mobile open-page-5 link" href="#">Our
                                                 Team</a>
 
                                         </li>
-
-                                    </ul>
-                                </li>
                                 <li class="menu">
                                     <a class="menu-state page-open-clicker-mobile open-page-6 link" href="#">Product</a>
 
@@ -179,9 +175,9 @@ $product5="select * from add_product where cat_5=1";
                                     <a class="menu-state page-open-clicker-mobile open-page-11 link"
                                         href="#">Promotions</a>
                                 </li>
-                                <!-- <li class="menu">
+                                 <li class="menu">
                                     <a class="menu-state page-open-clicker-mobile open-page-8 link" href="#">Blogs</a>
-                                </li> -->
+                                </li> 
 
                             </ul>
                         </nav>
@@ -201,9 +197,8 @@ $product5="select * from add_product where cat_5=1";
 
                 <div class="row">
 
-                    <a href="#contactUs"
-                        style=" position: absolute;right: 0;margin-top:1%;background-color:red;color:white" class="btn"
-                        data-toggle="modal">Contact Us</a>
+                   <a href="#contactUs" style=" position: absolute;right: 0;margin-top:1%;background-color:red;color:white;    height: 35px;
+                    margin-right: -4%;" class="btn" data-toggle="modal">Contact Us</a>
 
                 </div>
             </div>
@@ -460,7 +455,7 @@ $product5="select * from add_product where cat_5=1";
                     <!-- center block start -->
                     <div class="center-block">
                         <!-- lower content start -->
-                        <div class="lower-content">
+                       <div class="lower-content">
                             <!-- divider start -->
                             <div class="inner-divider"></div>
                             <!-- container start -->
@@ -508,9 +503,9 @@ $product5="select * from add_product where cat_5=1";
                                                             <figure
                                                                 class="col-sm-6 col-md-3 col-lg-3 hover-effect-img move-down move-down-first">
                                                                 <a data-size="1000x1000"
-                                                                    href="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
+                                                                    href="./admin/Dashboard/pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
                                                                     <img alt="Image description" class="img-responsive"
-                                                                        src="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
+                                                                        src="./admin/Dashboard/pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
                                                                 <figcaption>
                                                                     <span
                                                                         class="img-caption"><?=strtoupper($row['tittle']);?></span>
@@ -536,9 +531,9 @@ $product5="select * from add_product where cat_5=1";
                                                             <figure
                                                                 class="col-sm-6 col-md-3 col-lg-3 hover-effect-img move-down move-down-first">
                                                                 <a data-size="1000x1000"
-                                                                    href="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
+                                                                    href="./admin/Dashboard/pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
                                                                     <img alt="Image description" class="img-responsive"
-                                                                        src="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
+                                                                        src="./admin/Dashboard/pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
                                                                 <figcaption>
                                                                     <span class="img-caption"><?=$row['tittle']?></span>
                                                                     <div class="hover-effect"></div>
@@ -563,9 +558,9 @@ $product5="select * from add_product where cat_5=1";
                                                             <figure
                                                                 class="col-sm-6 col-md-3 col-lg-3 hover-effect-img move-down move-down-first">
                                                                 <a data-size="1000x1000"
-                                                                    href="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
+                                                                    href="./admin/Dashboard/pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
                                                                     <img alt="Image description" class="img-responsive"
-                                                                        src="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
+                                                                        src="./admin/Dashboard/pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
                                                                 <figcaption>
                                                                     <span
                                                                         class="img-caption"><?=strtoupper($row['tittle']);?></span>
@@ -591,9 +586,9 @@ $product5="select * from add_product where cat_5=1";
                                                             <figure
                                                                 class="col-sm-6 col-md-3 col-lg-3 hover-effect-img move-down move-down-first">
                                                                 <a data-size="1000x1000"
-                                                                    href="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
+                                                                    href="./admin/Dashboard/pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
                                                                     <img alt="Image description" class="img-responsive"
-                                                                        src="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
+                                                                        src="./admin/Dashboard/pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
                                                                 <figcaption>
                                                                     <span class="img-caption"><?=$row['tittle']?></span>
                                                                     <div class="hover-effect"></div>
@@ -618,9 +613,9 @@ $product5="select * from add_product where cat_5=1";
                                                             <figure
                                                                 class="col-sm-6 col-md-3 col-lg-3 hover-effect-img move-down move-down-first">
                                                                 <a data-size="1000x1000"
-                                                                    href="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
+                                                                    href="./admin/Dashboard/pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
                                                                     <img alt="Image description" class="img-responsive"
-                                                                        src="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
+                                                                        src="./admin/Dashboard/pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
                                                                 <figcaption>
                                                                     <span class="img-caption"><?=$row['tittle']?></span>
                                                                     <div class="hover-effect"></div>
@@ -645,9 +640,9 @@ $product5="select * from add_product where cat_5=1";
                                                             <figure
                                                                 class="col-sm-6 col-md-3 col-lg-3 hover-effect-img move-down move-down-first">
                                                                 <a data-size="1000x1000"
-                                                                    href="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
+                                                                    href="./admin/Dashboard/pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
                                                                     <img alt="Image description" class="img-responsive"
-                                                                        src="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
+                                                                        src="./admin/Dashboard/pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
                                                                 <figcaption>
                                                                     <span class="img-caption"><?=$row['tittle']?></span>
                                                                     <div class="hover-effect"></div>
@@ -672,9 +667,9 @@ $product5="select * from add_product where cat_5=1";
                                                             <figure
                                                                 class="col-sm-6 col-md-3 col-lg-3 hover-effect-img move-down move-down-first">
                                                                 <a data-size="1000x1000"
-                                                                    href="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
+                                                                    href="./admin/Dashboard/pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
                                                                     <img alt="Image description" class="img-responsive"
-                                                                        src="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
+                                                                        src="./admin/Dashboard/pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
                                                                 <figcaption>
                                                                     <span class="img-caption"><?=$row['tittle']?></span>
                                                                     <div class="hover-effect"></div>
@@ -699,9 +694,9 @@ $product5="select * from add_product where cat_5=1";
                                                             <figure
                                                                 class="col-sm-6 col-md-3 col-lg-3 hover-effect-img move-down move-down-first">
                                                                 <a data-size="1000x1000"
-                                                                    href="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
+                                                                    href="./admin/Dashboard/pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
                                                                     <img alt="Image description" class="img-responsive"
-                                                                        src="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
+                                                                        src="./admin/Dashboard/pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
                                                                 <figcaption>
                                                                     <span class="img-caption"><?=$row['tittle']?></span>
                                                                     <div class="hover-effect"></div>
@@ -726,9 +721,9 @@ $product5="select * from add_product where cat_5=1";
                                                             <figure
                                                                 class="col-sm-6 col-md-3 col-lg-3 hover-effect-img move-down move-down-first">
                                                                 <a data-size="1000x1000"
-                                                                    href="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
+                                                                    href="./admin/Dashboard/pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
                                                                     <img alt="Image description" class="img-responsive"
-                                                                        src="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
+                                                                        src="./admin/Dashboard/pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
                                                                 <figcaption>
                                                                     <span class="img-caption"><?=$row['tittle']?></span>
                                                                     <div class="hover-effect"></div>
@@ -753,9 +748,9 @@ $product5="select * from add_product where cat_5=1";
                                                             <figure
                                                                 class="col-sm-6 col-md-3 col-lg-3 hover-effect-img move-down move-down-first">
                                                                 <a data-size="1000x1000"
-                                                                    href="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
+                                                                    href="./admin/Dashboard/pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
                                                                     <img alt="Image description" class="img-responsive"
-                                                                        src="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
+                                                                        src="./admin/Dashboard/pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
                                                                 <figcaption>
                                                                     <span class="img-caption"><?=$row['tittle']?></span>
                                                                     <div class="hover-effect"></div>
@@ -780,9 +775,9 @@ $product5="select * from add_product where cat_5=1";
                                                             <figure
                                                                 class="col-sm-6 col-md-3 col-lg-3 hover-effect-img move-down move-down-first">
                                                                 <a data-size="1000x1000"
-                                                                    href="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
+                                                                    href="./admin/Dashboard/pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
                                                                     <img alt="Image description" class="img-responsive"
-                                                                        src="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
+                                                                        src="./admin/Dashboard/pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
                                                                 <figcaption>
                                                                     <span class="img-caption"><?=$row['tittle']?></span>
                                                                     <div class="hover-effect"></div>
@@ -807,9 +802,9 @@ $product5="select * from add_product where cat_5=1";
                                                             <figure
                                                                 class="col-sm-6 col-md-3 col-lg-3 hover-effect-img move-down move-down-first">
                                                                 <a data-size="1000x1000"
-                                                                    href="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
+                                                                    href="./admin/Dashboard/pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
                                                                     <img alt="Image description" class="img-responsive"
-                                                                        src="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
+                                                                        src="./admin/Dashboard/pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
                                                                 <figcaption>
                                                                     <span class="img-caption"><?=$row['tittle']?></span>
                                                                     <div class="hover-effect"></div>
@@ -1066,21 +1061,33 @@ $product5="select * from add_product where cat_5=1";
                         <!-- lower content start -->
                         <div class="lower-content">
                             <!-- divider start -->
-                            <div class="divider"></div><!-- divider end -->
+                           <div class="inner-divider"></div>
                             <!-- container start -->
                             <div class="container sections">
-                                <div class="navbar1234">
+                                
                                     <div class="section-title-wrapper">
                                         <!-- section title start -->
                                         <h1 class="home-page-title-all">
                                             Our Team
                                         </h1>
                                     </div>
-                                </div>
-                                <div class="inner-divider"></div>
-                                <div class="inner-divider"></div>
-                                <div class="scroll123" id="style-3">
-                                    <div class="row1">
+                               <br>
+                          <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="panel with-nav-tabs panel-warning">
+                                            <div class="panel-heading">
+                                                <ul class="nav nav-tabs">
+                                                    <li class="active"><a href="#tab1warning" data-toggle="tab">Meet Our Team Members</a>
+                                                    </li>
+                                                   
+
+
+                                                </ul>
+                                            </div>
+                                            <div class="panel-body scroll123" id="style-3">
+                                                <div class="tab-content">
+                                                    <div class="tab-pane fade in active" id="tab1warning">
+                                                       <div class="row1">
                                         <?php
                        
                                  $sql = "select * from team_members";
@@ -1111,16 +1118,7 @@ $product5="select * from add_product where cat_5=1";
                                                         More</a>
                                                     <?php } ?>
                                                 </div>
-                                                <ul class="social">
-                                                    <!-- <li><a href="https://codepen.io/collection/XdWJOQ/"
-                                                        class="fa fa-facebook" aria-hidden="true"></a></li>
-                                                <li><a href="https://codepen.io/collection/XdWJOQ/"
-                                                        class="fa fa-twitter" aria-hidden="true"></a></li>
-                                                <li><a href="https://codepen.io/collection/XdWJOQ/"
-                                                        class="fa fa-google-plus" aria-hidden="true"></a></li>
-                                                <li><a href="https://codepen.io/collection/XdWJOQ/"
-                                                        class="fa fa-linkedin" aria-hidden="true"></a></li> -->
-                                                </ul>
+                                               
                                             </div>
 
                                         </div>
@@ -1133,8 +1131,16 @@ $product5="select * from add_product where cat_5=1";
 
 
                                     </div>
-                                    <div class="divider divider-works"></div>
+                                                    </div>
+                                                    
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
+                              
 
 
 
@@ -1178,7 +1184,7 @@ $product5="select * from add_product where cat_5=1";
                     <!-- center block start -->
                     <div class="center-block">
                         <!-- lower content start -->
-                        <div class="lower-content">
+                         <div class="lower-content">
                             <!-- divider start -->
                             <div class="inner-divider"></div>
                             <!-- divider end -->
@@ -1187,7 +1193,7 @@ $product5="select * from add_product where cat_5=1";
                                 <div class="section-title-wrapper">
                                     <!-- section title start -->
                                     <h1 class="home-page-title-all" style="display:inline-block">
-                                        Our Product
+                                       Our Product
                                     </h1>
 
                                 </div>
@@ -1468,7 +1474,7 @@ $product5="select * from add_product where cat_5=1";
                     <!-- center block start -->
                     <div class="center-block">
                         <!-- lower content start -->
-                        <div class="lower-content">
+                         <div class="lower-content">
                             <!-- divider start -->
                             <div class="inner-divider"></div>
                             <!-- container start -->
@@ -1977,90 +1983,42 @@ $product5="select * from add_product where cat_5=1";
                         <!-- lower content start -->
                         <div class="lower-content">
                             <!-- divider start -->
-                            <div class="divider"></div><!-- divider end -->
+                            <div class="inner-divider"></div>
                             <!-- container start -->
                             <div class="container sections">
-                                <!-- row start -->
-                                <div class="row">
-                                    <!-- col start -->
-                                    <div class="col-lg-12">
-                                        <!-- section title wrapper start -->
-                                        <div class="section-title-wrapper">
+                                <div class="section-title-wrapper">
                                             <!-- section title start -->
                                             <h1 class="home-page-title-all">
                                                 Our Blogs
-                                            </h1><!-- section title end -->
-                                            <!-- divider start -->
-                                            <div class="inner-divider-half"></div><!-- divider end -->
-                                            <!-- section subtitle start -->
-                                            <h2 class="section-heading section-heading-all">
-                                                This is Blogs
-                                            </h2><!-- section subtitle end -->
-                                            <!-- extra line start -->
-                                            <div class="the-extra-line"></div><!-- extra line end -->
-                                        </div><!-- section title wrapper end -->
-                                    </div><!-- col end -->
-                                </div><!-- row end -->
+                                            </h1>
+                                            <!-- section title end -->
+                                         
+                                        </div>
+                                      
+                               
                                 <!-- divider start -->
-                                <div class="inner-divider"></div><!-- divider end -->
-                                <!-- row start -->
-                                <div class="row1">
-                                    <div class="column">
-                                        <div class="card1">
-                                            <img src="data:image/jpeg;base64,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"
-                                                alt="John" style="width:100%">
-                                            <h1>John Doe</h1>
-                                            <p class="title">CEO & Founder, Example</p>
-                                            <p>Harvard University</p>
-
-                                            <p><button
-                                                    class="button1 page-open-clicker open-page-11 link">Contact</button>
-                                            </p>
+                                <div class="inner-divider"></div>
+                                <!-- divider end -->
+                                <div class="scroll123" id="style-3">
+                                    <?php $selectBlog = mysqli_query($link,"select * from blog");
+                                        if (mysqli_num_rows($selectBlog) > 0) {
+                                    ?>
+                                    <!-- row start -->
+                                    <div class="row1">
+                                       <?php
+                                        while ($row = mysqli_fetch_array($selectBlog)) { ?>
+                                        <div class="columns">
+                                          <ul class="price">
+                                            <li class="header"><?= strtoupper($row['blog_name']) ?></li>
+                                           
+                                            <li class="red"><a href="./admin/Dashboard/pages/examples/viewBlogDetail.php?<?= $row['blog_id'] ?>" class="button">Read More ...</a></li>
+                                          </ul>
                                         </div>
+                                      <?php } ?>
                                     </div>
-
-                                    <div class="column">
-                                        <div class="card1">
-                                            <img src="./img/background/hero-bg-1.jpg" alt="John" style="width:100%">
-                                            <h1>John Doe</h1>
-                                            <p class="title">CEO & Founder, Example</p>
-                                            <p>Harvard University</p>
-
-                                            <p><button
-                                                    class="button1 page-open-clicker open-page-11 link">Contact</button>
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="column">
-                                        <div class="card1">
-                                            <img src="https://cdn.vox-cdn.com/thumbor/wI3iu8sNbFJSQB4yMLsoPMNzIHU=/0x0:3368x3368/1200x800/filters:focal(1188x715:1726x1253)/cdn.vox-cdn.com/uploads/chorus_image/image/62994726/AJ_Finn_author_photo_color_photo_courtesy_of_the_author.0.jpg"
-                                                alt="John" style="width:100%">
-                                            <h1>John Doe</h1>
-                                            <p class="title">CEO & Founder, Example</p>
-                                            <p>Harvard University</p>
-
-                                            <p><button
-                                                    class="button1 page-open-clicker open-page-11 link">Contact</button>
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="column">
-                                        <div class="card1">
-                                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn2H479DHWSkqk7oPZrXJ3yupcX9pmZDppSpmL2N1vHi5hvIzn-Q&s"
-                                                alt="John" style="width:100%">
-                                            <h1>John Doe</h1>
-                                            <p class="title">CEO & Founder, Example</p>
-                                            <p>Harvard University</p>
-
-                                            <p><button
-                                                    class="button1 page-open-clicker open-page-11 link">Contact</button>
-                                            </p>
-                                        </div>
-                                    </div>
+                                    <!-- row end -->
+                                    <?php } ?>
                                 </div>
-                                <!-- row end -->
                             </div><!-- container end -->
                             <!-- divider start -->
                             <div class="divider"></div><!-- divider end -->
@@ -2103,7 +2061,7 @@ $product5="select * from add_product where cat_5=1";
                     <!-- center block start -->
                     <div class="center-block">
                         <!-- lower content start -->
-                        <div class="lower-content">
+                         <div class="lower-content">
                             <!-- divider start -->
                             <div class="inner-divider"></div>
                             <!-- container start -->
@@ -2145,9 +2103,9 @@ $product5="select * from add_product where cat_5=1";
                                                             <figure
                                                                 class="col-sm-6 col-md-3 col-lg-3 hover-effect-img move-down move-down-first">
                                                                 <a data-size="1920x1080"
-                                                                    href="./admin/Dashboard/pages/examples/promotionsImages/<?=$row['tittle']?>_<?=$row['images']?>">
+                                                                    href="./admin/Dashboard/pages/examples/promotionsImages/<?=$row['images']?>">
                                                                     <img alt="Image description" class="img-responsive"
-                                                                        src="./admin/Dashboard/pages/examples/promotionsImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
+                                                                        src="./admin/Dashboard/pages/examples/promotionsImages/<?=$row['images']?>"></a>
                                                                 <figcaption>
                                                                     <span
                                                                         class="img-caption"><?=strtoupper($row['tittle']);?></span>
@@ -2174,9 +2132,9 @@ $product5="select * from add_product where cat_5=1";
                                                             <figure
                                                                 class="col-sm-6 col-md-3 col-lg-3 hover-effect-img move-down move-down-first">
                                                                 <a data-size="1920x1080"
-                                                                    href="./admin/Dashboard/pages/examples/promotionsImages/<?=$row['tittle']?>_<?=$row['images']?>">
+                                                                    href="./admin/Dashboard/pages/examples/promotionsImages/<?=$row['images']?>">
                                                                     <img alt="Image description" class="img-responsive"
-                                                                        src="./admin/Dashboard/pages/examples/promotionsImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
+                                                                        src="./admin/Dashboard/pages/examples/promotionsImages/<?=$row['images']?>"></a>
                                                                 <figcaption>
                                                                     <span
                                                                         class="img-caption"><?=strtoupper($row['tittle']);?></span>
@@ -2266,9 +2224,9 @@ $product5="select * from add_product where cat_5=1";
                                                             <figure
                                                                 class="col-sm-6 col-md-3 col-lg-3 hover-effect-img move-down move-down-first">
                                                                 <a data-size="1920x1080"
-                                                                    href="./admin/Dashboard/pages/examples/promotionsImages/<?=$row['tittle']?>_<?=$row['images']?>">
+                                                                    href="./admin/Dashboard/pages/examples/promotionsImages/<?=$row['images']?>">
                                                                     <img alt="Image description" class="img-responsive"
-                                                                        src="./admin/Dashboard/pages/examples/promotionsImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
+                                                                        src="./admin/Dashboard/pages/examples/promotionsImages/<?=$row['images']?>"></a>
                                                                 <figcaption>
                                                                     <span
                                                                         class="img-caption"><?=strtoupper($row['tittle']);?></span>
@@ -2430,15 +2388,15 @@ $product5="select * from add_product where cat_5=1";
     </div>
     <script src="js/plugins.js">
     </script>
-    <script src="js/liex.js">
+    <script src="js/aidl.js">
     </script><!-- scripts end -->
 
 
 </body>
 <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNibPJgALZ7EFCwZgPjW105jhUyABADgY&callback=initMap">
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNibPJgALZ7EFCwZgPjW105jhUyABADgY&callback=initMap">
 </script>
-<!-- Mirrored from www.11-76.com/themes/liex/index-KENBURNS-SLIDESHOW.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Nov 2019 13:54:44 GMT -->
+
 <script>
 var map;
 var geocoder;
@@ -2474,14 +2432,13 @@ function initMap() {
 function setMarker(people) {
     geocoder = new google.maps.Geocoder();
     infowindow = new google.maps.InfoWindow();
-    if ((people["LatitudeLongitude"] == null) || (people["LatitudeLongitude"] == 'null') || (people[
-            "LatitudeLongitude"] == '')) {
+    if ((people["LatitudeLongitude"] == null) || (people["LatitudeLongitude"] == 'null') || (people["LatitudeLongitude"] == '')) {
         geocoder.geocode({
             'address': people["Address"]
-        }, function(results, status) {
+        },
+        function(results, status) {
             if (status == google.maps.GeocoderStatus.OK) {
-                latlng = new google.maps.LatLng(results[0].geometry.location.lat(), results[0].geometry.location
-                    .lng());
+                latlng = new google.maps.LatLng(results[0].geometry.location.lat(), results[0].geometry.location.lng());
                 marker = new google.maps.Marker({
                     position: latlng,
                     map: map,
@@ -2489,8 +2446,6 @@ function setMarker(people) {
                     html: people["DisplayText"],
                     icon: "images/marker/" + people["MarkerId"] + ".png"
                 });
-                //marker.setPosition(latlng);
-                //map.setCenter(latlng);
                 google.maps.event.addListener(marker, 'click', function(event) {
                     infowindow.setContent(this.html);
                     infowindow.setPosition(event.latLng);
@@ -2508,12 +2463,11 @@ function setMarker(people) {
         marker = new google.maps.Marker({
             position: latlng,
             map: map,
-            draggable: false, // cant drag it
-            html: people["DisplayText"] // Content display on marker click
-            //icon: "images/marker.png"       // Give ur own image
+            draggable: false, 
+            html: people["DisplayText"]
+             
         });
-        //marker.setPosition(latlng);
-        //map.setCenter(latlng);
+       
         google.maps.event.addListener(marker, 'click', function(event) {
             infowindow.setContent(this.html);
             infowindow.setPosition(event.latLng);
@@ -2525,26 +2479,16 @@ function setMarker(people) {
 function displaySubMenu() {
     document.getElementById('displaySubmenu').style.display = 'block'
     document.getElementById('displaySubmenu').style.margin = '5% 0% 0% 15%'
-    //    document.getElementById('displaySubmenu').style.transition = '1s'
+   
 }
 
 
 function nonSubMenu() {
     document.getElementById('displaySubmenu').style.display = 'none'
-    //    document.getElementById('displaySubmenu').style.marginLeft = '45%'
-}
-
-function displaySubMobileMenu() {
-    document.getElementById('displaySubMobilemenu').style.display = 'block'
-    document.getElementById('displaySubMobilemenu').style.margin = '5% 0% 0% 15%'
-    //    document.getElementById('displaySubmenu').style.transition = '1s'
+   
 }
 
 
-function nonSubMobileMenu() {
-    document.getElementById('displaySubMobilemenu').style.display = 'none'
-    //    document.getElementById('displaySubmenu').style.marginLeft = '45%'
-}
 
 
 
