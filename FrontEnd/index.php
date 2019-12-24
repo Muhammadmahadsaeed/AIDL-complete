@@ -1605,6 +1605,7 @@ $product5="select * from add_product where cat_5=1";
                                                     if (mysqli_num_rows($result)  > 0) {
                                                     
                                                     ?>
+<<<<<<< HEAD
                                                             <h1>G</h1>
                                                             <ol>
                                                                 <?php while($row = mysqli_fetch_assoc($result)) {?>
@@ -1614,6 +1615,17 @@ $product5="select * from add_product where cat_5=1";
                                                             <?php }?>
                                                         </div>
                                                         <div class="list-type1">
+=======
+                                                        <h1>G</h1>
+                                                        <ol>
+                                                            <?php while($row = mysqli_fetch_assoc($result)) {?>
+                                                            <li><a href="#"><?=$row['cname']?></a></li>
+                                                            <?php }?> 
+                                                        </ol>
+                                                        <?php }?>
+                                                    </div>
+                                                    <div class="list-type1">
+>>>>>>> 4ed2e153ee41c769b2c63224efbd52e72b7dcbd6
 
                                                             <?php $sql = "SELECT cname FROM add_client WHERE cname LIKE 'h%'";
                                                     $result = mysqli_query($link,$sql);
