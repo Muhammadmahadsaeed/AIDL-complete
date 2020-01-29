@@ -97,11 +97,6 @@
    overflow: auto;
    overflow-x:hidden;
    background-color: black;
-<<<<<<< HEAD:AIDL backup/profile.css
-=======
-    
-   
->>>>>>> 6024e582b5bf0b28af1d24b55401006813379ec4:FrontEnd/profile.css
 } 
 #style-3::-webkit-scrollbar-track
 {
@@ -148,24 +143,6 @@ button.close1 {
   
 }
 
-<<<<<<< HEAD:AIDL backup/profile.css
-=======
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> 6024e582b5bf0b28af1d24b55401006813379ec4:FrontEnd/profile.css
 /********************************************************************/
 /*** PANEL WARNING ***/
 .with-nav-tabs.panel-warning .nav-tabs > li > a,
@@ -191,7 +168,6 @@ button.close1 {
 	border-bottom-color: transparent;
 }
 
-<<<<<<< HEAD:AIDL backup/profile.css
 
 
 
@@ -217,7 +193,7 @@ button.close1 {
 .price .header {
   background-color: #111;
   color: white;
-  font-size: 15px;
+  font-size: 25px;
 }
 
 .price li {
@@ -238,5 +214,3 @@ button.close1 {
     width: 100%;
   }
 }
-=======
->>>>>>> 6024e582b5bf0b28af1d24b55401006813379ec4:FrontEnd/profile.css

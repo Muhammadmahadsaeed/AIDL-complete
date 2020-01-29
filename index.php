@@ -16,13 +16,14 @@ $product5="select * from add_product where cat_5=1";
 <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     
     <title>
-        AIDL - Associated Instruments Distributors (Pvt) Limited
+        AIDL
     </title>
     <meta content="" name="description">
     <meta content="" name="author">
     <meta content="" name="keywords">
-    <meta content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
-   <link rel="icon" href="./admin/images/icons/favicon.ico" type="image/ico" sizes="16x16">
+    <meta content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        name="viewport">
+   
     <!-- style start -->
     <link href="./css/plugins.css" media="all" rel="stylesheet" type="text/css">
     <link href="./css/style.css" media="all" rel="stylesheet" type="text/css">
@@ -116,7 +117,6 @@ $product5="select * from add_product where cat_5=1";
                                     <a class="menu-state page-open-clicker open-page-8 link" href="#">Blogs</a>
 
                                 </li> 
-                               
                             </ul>
                         </nav>
                     </div>
@@ -503,15 +503,9 @@ $product5="select * from add_product where cat_5=1";
                                                             <figure
                                                                 class="col-sm-6 col-md-3 col-lg-3 hover-effect-img move-down move-down-first">
                                                                 <a data-size="1000x1000"
-<<<<<<< HEAD:AIDL backup/index.php
                                                                     href="./admin/Dashboard/pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
                                                                     <img alt="Image description" class="img-responsive"
                                                                         src="./admin/Dashboard/pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
-=======
-                                                                    href="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
-                                                                    <img alt="Image description" class="img-responsive"
-                                                                        src="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
->>>>>>> 6024e582b5bf0b28af1d24b55401006813379ec4:FrontEnd/index.php
                                                                 <figcaption>
                                                                     <span
                                                                         class="img-caption"><?=strtoupper($row['tittle']);?></span>
@@ -537,15 +531,9 @@ $product5="select * from add_product where cat_5=1";
                                                             <figure
                                                                 class="col-sm-6 col-md-3 col-lg-3 hover-effect-img move-down move-down-first">
                                                                 <a data-size="1000x1000"
-<<<<<<< HEAD:AIDL backup/index.php
                                                                     href="./admin/Dashboard/pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
                                                                     <img alt="Image description" class="img-responsive"
                                                                         src="./admin/Dashboard/pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
-=======
-                                                                    href="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
-                                                                    <img alt="Image description" class="img-responsive"
-                                                                        src="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
->>>>>>> 6024e582b5bf0b28af1d24b55401006813379ec4:FrontEnd/index.php
                                                                 <figcaption>
                                                                     <span class="img-caption"><?=$row['tittle']?></span>
                                                                     <div class="hover-effect"></div>
@@ -570,15 +558,9 @@ $product5="select * from add_product where cat_5=1";
                                                             <figure
                                                                 class="col-sm-6 col-md-3 col-lg-3 hover-effect-img move-down move-down-first">
                                                                 <a data-size="1000x1000"
-<<<<<<< HEAD:AIDL backup/index.php
                                                                     href="./admin/Dashboard/pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
                                                                     <img alt="Image description" class="img-responsive"
                                                                         src="./admin/Dashboard/pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
-=======
-                                                                    href="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
-                                                                    <img alt="Image description" class="img-responsive"
-                                                                        src="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
->>>>>>> 6024e582b5bf0b28af1d24b55401006813379ec4:FrontEnd/index.php
                                                                 <figcaption>
                                                                     <span
                                                                         class="img-caption"><?=strtoupper($row['tittle']);?></span>
@@ -604,15 +586,9 @@ $product5="select * from add_product where cat_5=1";
                                                             <figure
                                                                 class="col-sm-6 col-md-3 col-lg-3 hover-effect-img move-down move-down-first">
                                                                 <a data-size="1000x1000"
-<<<<<<< HEAD:AIDL backup/index.php
                                                                     href="./admin/Dashboard/pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
                                                                     <img alt="Image description" class="img-responsive"
                                                                         src="./admin/Dashboard/pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
-=======
-                                                                    href="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
-                                                                    <img alt="Image description" class="img-responsive"
-                                                                        src="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
->>>>>>> 6024e582b5bf0b28af1d24b55401006813379ec4:FrontEnd/index.php
                                                                 <figcaption>
                                                                     <span class="img-caption"><?=$row['tittle']?></span>
                                                                     <div class="hover-effect"></div>
@@ -637,15 +613,9 @@ $product5="select * from add_product where cat_5=1";
                                                             <figure
                                                                 class="col-sm-6 col-md-3 col-lg-3 hover-effect-img move-down move-down-first">
                                                                 <a data-size="1000x1000"
-<<<<<<< HEAD:AIDL backup/index.php
                                                                     href="./admin/Dashboard/pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
                                                                     <img alt="Image description" class="img-responsive"
                                                                         src="./admin/Dashboard/pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
-=======
-                                                                    href="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
-                                                                    <img alt="Image description" class="img-responsive"
-                                                                        src="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
->>>>>>> 6024e582b5bf0b28af1d24b55401006813379ec4:FrontEnd/index.php
                                                                 <figcaption>
                                                                     <span class="img-caption"><?=$row['tittle']?></span>
                                                                     <div class="hover-effect"></div>
@@ -670,15 +640,9 @@ $product5="select * from add_product where cat_5=1";
                                                             <figure
                                                                 class="col-sm-6 col-md-3 col-lg-3 hover-effect-img move-down move-down-first">
                                                                 <a data-size="1000x1000"
-<<<<<<< HEAD:AIDL backup/index.php
                                                                     href="./admin/Dashboard/pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
                                                                     <img alt="Image description" class="img-responsive"
                                                                         src="./admin/Dashboard/pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
-=======
-                                                                    href="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
-                                                                    <img alt="Image description" class="img-responsive"
-                                                                        src="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
->>>>>>> 6024e582b5bf0b28af1d24b55401006813379ec4:FrontEnd/index.php
                                                                 <figcaption>
                                                                     <span class="img-caption"><?=$row['tittle']?></span>
                                                                     <div class="hover-effect"></div>
@@ -703,15 +667,9 @@ $product5="select * from add_product where cat_5=1";
                                                             <figure
                                                                 class="col-sm-6 col-md-3 col-lg-3 hover-effect-img move-down move-down-first">
                                                                 <a data-size="1000x1000"
-<<<<<<< HEAD:AIDL backup/index.php
                                                                     href="./admin/Dashboard/pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
                                                                     <img alt="Image description" class="img-responsive"
                                                                         src="./admin/Dashboard/pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
-=======
-                                                                    href="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
-                                                                    <img alt="Image description" class="img-responsive"
-                                                                        src="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
->>>>>>> 6024e582b5bf0b28af1d24b55401006813379ec4:FrontEnd/index.php
                                                                 <figcaption>
                                                                     <span class="img-caption"><?=$row['tittle']?></span>
                                                                     <div class="hover-effect"></div>
@@ -736,15 +694,9 @@ $product5="select * from add_product where cat_5=1";
                                                             <figure
                                                                 class="col-sm-6 col-md-3 col-lg-3 hover-effect-img move-down move-down-first">
                                                                 <a data-size="1000x1000"
-<<<<<<< HEAD:AIDL backup/index.php
                                                                     href="./admin/Dashboard/pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
                                                                     <img alt="Image description" class="img-responsive"
                                                                         src="./admin/Dashboard/pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
-=======
-                                                                    href="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
-                                                                    <img alt="Image description" class="img-responsive"
-                                                                        src="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
->>>>>>> 6024e582b5bf0b28af1d24b55401006813379ec4:FrontEnd/index.php
                                                                 <figcaption>
                                                                     <span class="img-caption"><?=$row['tittle']?></span>
                                                                     <div class="hover-effect"></div>
@@ -769,15 +721,9 @@ $product5="select * from add_product where cat_5=1";
                                                             <figure
                                                                 class="col-sm-6 col-md-3 col-lg-3 hover-effect-img move-down move-down-first">
                                                                 <a data-size="1000x1000"
-<<<<<<< HEAD:AIDL backup/index.php
                                                                     href="./admin/Dashboard/pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
                                                                     <img alt="Image description" class="img-responsive"
                                                                         src="./admin/Dashboard/pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
-=======
-                                                                    href="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
-                                                                    <img alt="Image description" class="img-responsive"
-                                                                        src="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
->>>>>>> 6024e582b5bf0b28af1d24b55401006813379ec4:FrontEnd/index.php
                                                                 <figcaption>
                                                                     <span class="img-caption"><?=$row['tittle']?></span>
                                                                     <div class="hover-effect"></div>
@@ -802,15 +748,9 @@ $product5="select * from add_product where cat_5=1";
                                                             <figure
                                                                 class="col-sm-6 col-md-3 col-lg-3 hover-effect-img move-down move-down-first">
                                                                 <a data-size="1000x1000"
-<<<<<<< HEAD:AIDL backup/index.php
                                                                     href="./admin/Dashboard/pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
                                                                     <img alt="Image description" class="img-responsive"
                                                                         src="./admin/Dashboard/pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
-=======
-                                                                    href="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
-                                                                    <img alt="Image description" class="img-responsive"
-                                                                        src="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
->>>>>>> 6024e582b5bf0b28af1d24b55401006813379ec4:FrontEnd/index.php
                                                                 <figcaption>
                                                                     <span class="img-caption"><?=$row['tittle']?></span>
                                                                     <div class="hover-effect"></div>
@@ -835,15 +775,9 @@ $product5="select * from add_product where cat_5=1";
                                                             <figure
                                                                 class="col-sm-6 col-md-3 col-lg-3 hover-effect-img move-down move-down-first">
                                                                 <a data-size="1000x1000"
-<<<<<<< HEAD:AIDL backup/index.php
                                                                     href="./admin/Dashboard/pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
                                                                     <img alt="Image description" class="img-responsive"
                                                                         src="./admin/Dashboard/pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
-=======
-                                                                    href="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
-                                                                    <img alt="Image description" class="img-responsive"
-                                                                        src="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
->>>>>>> 6024e582b5bf0b28af1d24b55401006813379ec4:FrontEnd/index.php
                                                                 <figcaption>
                                                                     <span class="img-caption"><?=$row['tittle']?></span>
                                                                     <div class="hover-effect"></div>
@@ -868,15 +802,9 @@ $product5="select * from add_product where cat_5=1";
                                                             <figure
                                                                 class="col-sm-6 col-md-3 col-lg-3 hover-effect-img move-down move-down-first">
                                                                 <a data-size="1000x1000"
-<<<<<<< HEAD:AIDL backup/index.php
                                                                     href="./admin/Dashboard/pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
                                                                     <img alt="Image description" class="img-responsive"
                                                                         src="./admin/Dashboard/pages/examples/galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
-=======
-                                                                    href="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>">
-                                                                    <img alt="Image description" class="img-responsive"
-                                                                        src="./galleryImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
->>>>>>> 6024e582b5bf0b28af1d24b55401006813379ec4:FrontEnd/index.php
                                                                 <figcaption>
                                                                     <span class="img-caption"><?=$row['tittle']?></span>
                                                                     <div class="hover-effect"></div>
@@ -1179,7 +1107,7 @@ $product5="select * from add_product where cat_5=1";
                                                     <h3 class="title"><?php echo strtoupper($row['team_post']) ?></h3>
                                                     <h3 class="title"><?php echo $row['team_email'] ?></h3>
                                                     <h3 class="title"><?php echo $row['team_num'] ?></h3>
-                                                    <?php if(strtolower($row['team_name']) == 'sohail tayyab' || strtolower($row['team_name']) == 'hussain ceen tayyab'){
+                                                    <?php if($row['team_name'] == 'sohail tayyab' || $row['team_name'] == 'hussain ceen tayyab'){
                                                    
                                                     
                                                     ?>
@@ -1265,11 +1193,7 @@ $product5="select * from add_product where cat_5=1";
                                 <div class="section-title-wrapper">
                                     <!-- section title start -->
                                     <h1 class="home-page-title-all" style="display:inline-block">
-<<<<<<< HEAD:AIDL backup/index.php
                                        Our Product
-=======
-                                        Our Product
->>>>>>> 6024e582b5bf0b28af1d24b55401006813379ec4:FrontEnd/index.php
                                     </h1>
 
                                 </div>
@@ -1687,10 +1611,6 @@ $product5="select * from add_product where cat_5=1";
                                                     if (mysqli_num_rows($result)  > 0) {
                                                     
                                                     ?>
-<<<<<<< HEAD:AIDL backup/index.php
-=======
-<<<<<<< HEAD
->>>>>>> 6024e582b5bf0b28af1d24b55401006813379ec4:FrontEnd/index.php
                                                             <h1>G</h1>
                                                             <ol>
                                                                 <?php while($row = mysqli_fetch_assoc($result)) {?>
@@ -1700,20 +1620,6 @@ $product5="select * from add_product where cat_5=1";
                                                             <?php }?>
                                                         </div>
                                                         <div class="list-type1">
-<<<<<<< HEAD:AIDL backup/index.php
-=======
-=======
-                                                        <h1>G</h1>
-                                                        <ol>
-                                                            <?php while($row = mysqli_fetch_assoc($result)) {?>
-                                                            <li><a href="#"><?=$row['cname']?></a></li>
-                                                            <?php }?> 
-                                                        </ol>
-                                                        <?php }?>
-                                                    </div>
-                                                    <div class="list-type1">
->>>>>>> 4ed2e153ee41c769b2c63224efbd52e72b7dcbd6
->>>>>>> 6024e582b5bf0b28af1d24b55401006813379ec4:FrontEnd/index.php
 
                                                             <?php $sql = "SELECT cname FROM add_client WHERE cname LIKE 'h%'";
                                                     $result = mysqli_query($link,$sql);
@@ -2101,18 +2007,13 @@ $product5="select * from add_product where cat_5=1";
                                     <div class="row1">
                                        <?php
                                         while ($row = mysqli_fetch_array($selectBlog)) { ?>
-                                         <div class="column" style=" margin-bottom: 2%;">
-                                                <div class="card1">
-                                                   
-                                                    <h1 style="color:black">
-                                                       <?= strtoupper($row['blog_name']) ?>
-                                                    </h1>
-                                                    <p>
-                                                       <a href="./admin/Dashboard/pages/examples/viewBlogDetail.php?id=<?= $row['blog_id'] ?>" target="_blank" class="button">Read More ...</a>
-                                                    </p>
-                                                </div>
+                                        <div class="columns">
+                                          <ul class="price">
+                                            <li class="header"><?= strtoupper($row['blog_name']) ?></li>
+                                           
+                                            <li class="red"><a href="./admin/Dashboard/pages/examples/viewBlogDetail.php?<?= $row['blog_id'] ?>" class="button">Read More ...</a></li>
+                                          </ul>
                                         </div>
-                                      
                                       <?php } ?>
                                     </div>
                                     <!-- row end -->
@@ -2181,11 +2082,7 @@ $product5="select * from add_product where cat_5=1";
                                                     <li class="active"><a href="#allImages" data-toggle="tab">ALL</a>
                                                     </li>
                                                     <li><a href="#images" data-toggle="tab">IMAGES</a></li>
-<<<<<<< HEAD:AIDL backup/index.php
-                                                    <li><a href="#wab" data-toggle="tab">WABINARS</a></li>
-=======
                                                     <li><a href="#wab" data-toggle="tab">WABINERS</a></li>
->>>>>>> 6024e582b5bf0b28af1d24b55401006813379ec4:FrontEnd/index.php
                                                     <li><a href="#videos" data-toggle="tab">VIDEOS</a></li>
                                                     <li><a href="#promotions" data-toggle="tab">PROMOTIONS</a></li>
 
@@ -2205,17 +2102,10 @@ $product5="select * from add_product where cat_5=1";
                                                     ?>
                                                             <figure
                                                                 class="col-sm-6 col-md-3 col-lg-3 hover-effect-img move-down move-down-first">
-<<<<<<< HEAD:AIDL backup/index.php
-                                                                <a data-size="1000x1000"
+                                                                <a data-size="1920x1080"
                                                                     href="./admin/Dashboard/pages/examples/promotionsImages/<?=$row['images']?>">
                                                                     <img alt="Image description" class="img-responsive"
                                                                         src="./admin/Dashboard/pages/examples/promotionsImages/<?=$row['images']?>"></a>
-=======
-                                                                <a data-size="1920x1080"
-                                                                    href="./admin/Dashboard/pages/examples/promotionsImages/<?=$row['tittle']?>_<?=$row['images']?>">
-                                                                    <img alt="Image description" class="img-responsive"
-                                                                        src="./admin/Dashboard/pages/examples/promotionsImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
->>>>>>> 6024e582b5bf0b28af1d24b55401006813379ec4:FrontEnd/index.php
                                                                 <figcaption>
                                                                     <span
                                                                         class="img-caption"><?=strtoupper($row['tittle']);?></span>
@@ -2241,17 +2131,10 @@ $product5="select * from add_product where cat_5=1";
                                                         ?>
                                                             <figure
                                                                 class="col-sm-6 col-md-3 col-lg-3 hover-effect-img move-down move-down-first">
-<<<<<<< HEAD:AIDL backup/index.php
-                                                                <a data-size="1000x1000"
+                                                                <a data-size="1920x1080"
                                                                     href="./admin/Dashboard/pages/examples/promotionsImages/<?=$row['images']?>">
                                                                     <img alt="Image description" class="img-responsive"
                                                                         src="./admin/Dashboard/pages/examples/promotionsImages/<?=$row['images']?>"></a>
-=======
-                                                                <a data-size="1920x1080"
-                                                                    href="./admin/Dashboard/pages/examples/promotionsImages/<?=$row['tittle']?>_<?=$row['images']?>">
-                                                                    <img alt="Image description" class="img-responsive"
-                                                                        src="./admin/Dashboard/pages/examples/promotionsImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
->>>>>>> 6024e582b5bf0b28af1d24b55401006813379ec4:FrontEnd/index.php
                                                                 <figcaption>
                                                                     <span
                                                                         class="img-caption"><?=strtoupper($row['tittle']);?></span>
@@ -2267,28 +2150,6 @@ $product5="select * from add_product where cat_5=1";
                                                         </div>
                                                     </div>
                                                     <div id="wab" class="tab-pane fade"><br>
-<<<<<<< HEAD:AIDL backup/index.php
-                                                         <div class="row1">
-                                                            <!-- gallery item 1 start -->
-                                                            <?php 
-                                                    $fetchWabiners = mysqli_query($link,"SELECT * FROM promotions where pro_type = 'wabinars'");
-                                                    while($row = mysqli_fetch_array($fetchWabiners)){
-                                                        
-                                                    
-                                                        ?>
-                                                             <div class="column" style=" margin-bottom: 2%;">
-                                                                <div class="card1">
-                                                                    <img src="./admin/Dashboard/pages/examples/promotionsImages/<?=$row['images']?>"
-                                                                        alt="John" style="width:100%">
-                                                                    <h1 style="color:black">
-                                                                       <?=strtoupper($row['tittle']);?>
-                                                                    </h1>
-                                                                    <p>
-                                                                        <a href="<?= $row['video_url'] ?>" target="_blank">View Detail</a>
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-=======
                                                         <div class="legendary-gallery">
                                                             <!-- gallery item 1 start -->
                                                             <?php 
@@ -2313,7 +2174,6 @@ $product5="select * from add_product where cat_5=1";
                                                                     </div>
                                                                 </figcaption>
                                                             </figure>
->>>>>>> 6024e582b5bf0b28af1d24b55401006813379ec4:FrontEnd/index.php
                                                             <?php }; ?>
                                                             <!-- gallery item 4 end -->
                                                         </div>
@@ -2332,11 +2192,7 @@ $product5="select * from add_product where cat_5=1";
 
                                                                     </h5>
                                                                     <div class="stream-text">
-<<<<<<< HEAD:AIDL backup/index.php
-                                                                       
-=======
                                                                         ${result.data().des}
->>>>>>> 6024e582b5bf0b28af1d24b55401006813379ec4:FrontEnd/index.php
                                                                     </div>
                                                                     <div class="stream-attachment video">
                                                                         <div class="responsive-video">
@@ -2367,17 +2223,10 @@ $product5="select * from add_product where cat_5=1";
                                                             ?>
                                                             <figure
                                                                 class="col-sm-6 col-md-3 col-lg-3 hover-effect-img move-down move-down-first">
-<<<<<<< HEAD:AIDL backup/index.php
-                                                                <a data-size="1200x3000"
+                                                                <a data-size="1920x1080"
                                                                     href="./admin/Dashboard/pages/examples/promotionsImages/<?=$row['images']?>">
                                                                     <img alt="Image description" class="img-responsive"
                                                                         src="./admin/Dashboard/pages/examples/promotionsImages/<?=$row['images']?>"></a>
-=======
-                                                                <a data-size="1920x1080"
-                                                                    href="./admin/Dashboard/pages/examples/promotionsImages/<?=$row['tittle']?>_<?=$row['images']?>">
-                                                                    <img alt="Image description" class="img-responsive"
-                                                                        src="./admin/Dashboard/pages/examples/promotionsImages/<?=$row['tittle']?>_<?=$row['images']?>"></a>
->>>>>>> 6024e582b5bf0b28af1d24b55401006813379ec4:FrontEnd/index.php
                                                                 <figcaption>
                                                                     <span
                                                                         class="img-caption"><?=strtoupper($row['tittle']);?></span>
@@ -2549,53 +2398,83 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNibPJgALZ7EFCwZgPjW105jh
 </script>
 
 <script>
+var map;
+var geocoder;
+var marker;
+var people = new Array();
+var latlng;
+var infowindow;
 
 
-    var points = [
-        ['Karachi', 24.864604, 67.022909, 12,'https://www.google.com/maps/dir//Rimpa+Plaza,+M.A+Jinnah+Rd,+Preedy+Quarters+Karachi,+Karachi+City,+Sindh,+Pakistan/@24.864568,66.952868,12z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x3eb33e6cb30efc85:0x7c1800b871868b7c!2m2!1d67.022909!2d24.8644286?hl=en-US'],
-        ['Islamabad',31.518672, 74.323958, 11,'https://www.google.com/maps/dir//Royal+Centre,+106+West%D8%8C+A.K.+Fazl-ul-Haq+Rd,+Block+I+G+7%2F2+Blue+Area,+Islamabad,+Islamabad+Capital+Territory+44000,+Pakistan%E2%80%AD%E2%80%AD/@33.7100655,72.9879655,12z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x38dfbfbb7cf11fa7:0x380b0c8014c14bfd!2m2!1d73.0580063!2d33.7099425?hl=en-US'],
-        ['Lahore', 33.710192, 73.057953, 10,'https://www.google.com/maps/dir//Faiz+Rd,+Muslim+Town,+Lahore,+Punjab+54000,+Pakistan/@31.5193557,74.3129973,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0x391904864eaf174b:0x3b7047d9ab436347!2m2!1d74.3217521!2d31.5193377?hl=en-US']
-    ];
 
-    function setMarkers(map, locations) {
-        var shape = {
-            coord: [1, 1, 1, 20, 18, 20, 18 , 1],
-            type: 'poly'
-        };
+function initMap() {
 
-        for (var i = 0; i < locations.length; i++) {
-            console.log(i+1)
-            
-            var place = locations[i];
-            var myLatLng = new google.maps.LatLng(place[1], place[2]);
-            var marker = new google.maps.Marker({
-                position: myLatLng,
-                map: map,
-                
-                title: place[0],
-                zIndex: place[3],
-                url: place[4]
-            });
-            google.maps.event.addListener(marker, 'click', function() {
-        window.open(this.url, "_blank");
+    var mapOptions = {
+        center: new google.maps.LatLng(33.710192, 73.057953), // Coimbatore = (11.0168445, 76.9558321)
+        zoom: 4,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+    // Get data from database. It should be like below format or you can alter it.
+
+    var data =
+        '[{ "DisplayText": "Rimpa Plaza", "ADDRESS": "Karachi", "LatitudeLongitude": "24.864604, 67.022909", "MarkerId": "Customer" },{ "DisplayText": "ROYAL CENTER BLUE AREA", "ADDRESS": "Islamabad", "LatitudeLongitude": "33.710192, 73.057953", "MarkerId": "Customer"},{ "DisplayText": "Lahore Office", "Lahore": "Lahore Office", "LatitudeLongitude": "31.518672, 74.323958", "MarkerId": "Customer"}]';
+
+    people = JSON.parse(data);
+
+    for (var i = 0; i < people.length; i++) {
+        setMarker(people[i]);
+    }
+
+}
+
+function setMarker(people) {
+    geocoder = new google.maps.Geocoder();
+    infowindow = new google.maps.InfoWindow();
+    if ((people["LatitudeLongitude"] == null) || (people["LatitudeLongitude"] == 'null') || (people["LatitudeLongitude"] == '')) {
+        geocoder.geocode({
+            'address': people["Address"]
+        },
+        function(results, status) {
+            if (status == google.maps.GeocoderStatus.OK) {
+                latlng = new google.maps.LatLng(results[0].geometry.location.lat(), results[0].geometry.location.lng());
+                marker = new google.maps.Marker({
+                    position: latlng,
+                    map: map,
+                    draggable: false,
+                    html: people["DisplayText"],
+                    icon: "images/marker/" + people["MarkerId"] + ".png"
+                });
+                google.maps.event.addListener(marker, 'click', function(event) {
+                    infowindow.setContent(this.html);
+                    infowindow.setPosition(event.latLng);
+                    infowindow.open(map, this);
+                });
+            } else {
+                alert(people["DisplayText"] + " -- " + people["Address"] + ". This address couldn't be found");
+            }
         });
-        }
-        
+    } else {
+        var latlngStr = people["LatitudeLongitude"].split(",");
+        var lat = parseFloat(latlngStr[0]);
+        var lng = parseFloat(latlngStr[1]);
+        latlng = new google.maps.LatLng(lat, lng);
+        marker = new google.maps.Marker({
+            position: latlng,
+            map: map,
+            draggable: false, 
+            html: people["DisplayText"]
+             
+        });
+       
+        google.maps.event.addListener(marker, 'click', function(event) {
+            infowindow.setContent(this.html);
+            infowindow.setPosition(event.latLng);
+            infowindow.open(map, this);
+        });
     }
-
-    function initMap() {
-        var myOptions = {
-            center: new google.maps.LatLng(33.710192, 73.057953),
-            zoom: 4,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
-        };
-        var map = new google.maps.Map(document.getElementById("map"),myOptions);
-        setMarkers(map, points);
-    }
-
-
-
-
+}
 
 function displaySubMenu() {
     document.getElementById('displaySubmenu').style.display = 'block'
